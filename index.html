@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제주렌터카</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<!-- 
+    참고한 사이트
+        https://www.jejupass.com/web 전체느낌
+        https://japantoyotarent.co.kr/?folder=cars&page=cars&s_category=box 렌트카추천
+-->
+<body>
+    <!-- ======================== 헤더 상단바 ======================== -->
+    <div class="top-bar">
+    <div class="container">
+        <!-- 왼쪽 메뉴 -->
+        <div class="left-menu">
+            <a href="#">고객문의</a>
+            <a href="#">공지사항</a>
+        </div>
+        <!-- 오른쪽 메뉴 -->
+        <div class="right-menu">
+            <a href="#">로그인</a>
+            <span>|</span>
+            <a href="#">비회원 조회</a>
+        </div>
+    </div>
+</div>
+    <!-- ==================== 헤더 ==================== -->
+    <header class="header">
+            <!-- 메인 네비(GNB) -->
+            <nav class="gnb" id="gnb">
+                <ul class="menu">
+                    <li>
+                        <a href="/index.html"><img src="/assets/jejurent.png" alt=""></a>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="#">렌터카 예약</a>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="#">차량 소개</a>
+                        <ul class="submenu">
+                            <li><a href="/sub/compact.html">경형</a></li>
+                            <li><a href="#">소형</a></li>
+                            <li><a href="#">중형</a></li>
+                            <li><a href="#">승합</a></li>
+                            <li><a href="#">SUV/RV</a></li>
+                            <li><a href="#">전기</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="#">이용 안내</a>
+                        <ul class="submenu">
+                            <li><a href="#">이용안내</a></li>
+                            <li><a href="#">보험안내</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="#">고객센터</a>
+                        <ul class="submenu">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">자주 묻는 질문</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="#">내 예약</a>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+
+
+    <!-- ==================== 메인 ==================== -->
+    <!-- ========== 섹션1: 검색바 ========== -->
+    <section class="section section-1" id="section-1">
+        <div class="container">
+            <div class="search-filter-bar">
+                <div class="filter-box" id="pickup-box">
+                    <label>인수 일시</label>
+                    <span class="value-display"><span>*</span> 날짜 선택</span>
+                    <div class="detail-popup">
+                        <input type="date" class="date-input">
+                    </div>
+                </div>
+                <div class="filter-box" id="return-box">
+                    <label>반납 일시</label>
+                    <span class="value-display"><span>*</span> 날짜 선택</span>
+                    <div class="detail-popup">
+                        <input type="date" class="date-input">
+                    </div>
+                </div>
+                <div class="filter-box" id="insurance-box">
+                    <label>보험</label>
+                    <span class="value-display"><span>*</span> 종류 선택</span>
+            
+                    <div class="detail-popup" id="insurance-popup">
+                        <ul class="option-list">
+                            <li>일반자차</li>
+                            <li>고급자차</li>
+                            <li>완전자차</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter-box" id="age-box">
+                    <label>운전자 연령</label>
+                    <span class="value-display"><span>*</span> 연령 선택</span>
+                    <div class="detail-popup" id="age-popup">
+                        <ul class="option-list">
+                            <li>만 21세 - 22세</li>
+                            <li>만 23세 - 25세</li>
+                            <li>만 25세 이상</li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="search-button">검색</button>
+            </div>
+        </div>
+    </section>
+
+<!-- ========== 섹션2: 진행중 이벤트 ========== -->
+    <section class="section section-2" id="section-2">
+        <div class="container">
+            <div class="event">
+                <div class="section-header">
+                    <h2>진행중인 이벤트</h2>
+                    <a href="#">
+                        <p>전체보기</p>
+                    </a>
+                </div>
+                <div class="event-banner">
+                    <div class="slides">
+                        <div class="slide">
+                            <img src="/assets/3677991.webp" alt="배너1">
+                            <div class="slide-text">
+                                <p>하리보 해피월드 X 제주패스</p>
+                                <h3>오직 제주패스에서만!<br>하리보 할인 혜택 총출동</h3>
+                                <p>입장권 및 카페 할인 받기</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="/assets/3368644.webp" alt="배너2">
+                            <div class="slide-text">
+                                <p>제휴사 혜택</p>
+                                <h3>제주패스 고객에게 드리는<br>아쿠아플라넷 20% 할인</h3>
+                                <p>입장권 및 카페 할인 받기</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="/assets/3025403.webp" alt="배너3">
+                            <div class="slide-text">
+                                <p>이전에는 없던 렌터카 서비스!</p>
+                                <h3>프리미엄 렌터카가<br>비싼 이유</h3>
+                                <p>한계를 극복한 육각형 렌터카</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="/assets/1438391.webp" alt="배너4">
+                            <div class="slide-text">
+                                <p>제주패스 | 현대캐피탈</p>
+                                <h3>현대캐피탈 EV 충전카드로<br>어디서든 편리하게 충전하세요</h3>
+                                <p>지금 신청하시면<br>충전크레딧 3,000P 제공</p>
+                            </div>
+                        </div>
+                        <!-- 첫 번째 배너 복제 -->
+                        <div class="slide">
+                            <img src="/assets/3677991.webp" alt="배너1">
+                            <div class="slide-text">
+                                <p>하리보 해피월드 X 제주패스</p>
+                                <h3>오직 제주패스에서만!<br>하리보 할인 혜택 총출동</h3>
+                                <p>입장권 및 카페 할인 받기</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- ========== 섹션3: 렌터카 추천 ========== -->
+    <section class="section section-3" id="section-3">
+        <div class="container">
+            <div class="car">
+                <div class="section-header">
+                    <h2>렌터카 추천</h2>
+                </div>
+                <div class="car-container">
+                    <div class="car-items">
+                        
+                        <a href="/sub/compact.html" class="car-card">
+                            <div class="card-image"></div>
+                            <div class="card-content">
+                                <h3>운전이 어렵다면 경차 추천</h3>
+                                <p>13,500원 ~</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="car-card">
+                            <div class="card-image"></div>
+                            <div class="card-content">
+                                <h3>경차보다 조금 더 공간이 필요할 때</h3>
+                                <p>42,000원~ ~</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="car-card">
+                            <div class="card-image"></div>
+                            <div class="card-content">
+                                <h3>3인 이상 가족끼리 여행할 때</h3>
+                                <p>15,200원 ~</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="car-card hidden">
+                            <div class="card-image"></div>
+                            <div class="card-content">
+                                <h3>4인 이상보다 편할 수 없어요</h3>
+                                <p>16,100원 ~</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="car-card hidden">
+                            <div class="card-image"></div>
+                            <div class="card-content">
+                                <h3>비포장 많은 제주에 딱 좋아</h3>
+                                <p>17,400원 ~</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="car-card hidden">
+                            <div class="card-image"></div>
+                            <div class="card-content">
+                                <h3>고유가 시대, 선택이 아닌 필수</h3>
+                                <p>23,100원~ ~</p>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="more-btn-container">
+                    <button class="more-btn">더보기</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- ========== 섹션4: 서비스 이용 안내 ========== -->
+    <section class="section section-4" id="section-4">
+        <div class="container">
+            <div class="service">
+                <div class="section-header">
+                    <h2>서비스 이용 안내</h2>
+                </div>
+                <div class="service-items">
+                    <img src="/assets/service_reservation.png" alt="예약안내">
+                    <div class="service-text">
+                        <a href="#">
+                            <h3>예약안내</h3>
+                        </a>
+                        <p>가장 쉽고 간단하게 할 수 있는 실시간 예약 방법을 알아보세요.</p>
+                    </div>
+                </div>
+                <div class="service-items">
+                    <img src="/assets/service_insurance.png" alt="보험안내">
+                    <div class="service-text">
+                        <a href="#">
+                            <h3>보험안내</h3>
+                        </a>
+                        <p>일반자차, 고급자차, 제주패스케어, 슈퍼무제한의 차이를 한눈에 확인해보세요.</p>
+                    </div>
+                </div>
+                <div class="service-items">
+                    <img src="/assets/service_car.png" alt="차량인수/반납 안내">
+                    <div class="service-text">
+                        <a href="#">
+                            <h3>차량인수/반납 안내</h3>
+                        </a>
+                        <p>렌터카 인수와 반납에 관한 사항을 한눈에 확인해보세요.</p>
+                    </div>
+                </div>
+                <div class="service-items">
+                    <img src="/assets/service_guide.png" alt="취소/환불 안내">
+                    <div class="service-text">
+                        <a href="#">
+                            <h3>취소/환불 안내</h3>
+                        </a>
+                        <p>서비스별 취소/환불 안내 내용을 알아보세요.</p>
+                    </div>
+                </div>
+
+                <img src="/assets/jeju_island.png" alt="" class="service-deco">
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== 고객센터 안내 배너 ======================== -->
+    <section class="customer-service">
+        <div class="container">
+            <p>기타 문의 사항 및 불편한 점이 있으시면 아래 연락처로 문의해주세요.</p>
+            <p><i class="fa-solid fa-phone"></i><b>1544-0445</b></p>
+            <p>(운영시간 : 평일 09:00 ~ 18:00 / 점심시간 12:00 ~ 13:00)</p>
+        </div>
+    </section>
+
+
+<!-- ==================== 푸터 ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="company-notice">
+                        <a href="#"><p><b>개인정보취급방침</b> | 이용약관</p></a>
+                    </div>
+                    <div class="company-about">
+                        <p>(주)캐플릭스 대표이사 : 윤형준 | 사업자등록번호 : 105-87-76000 | 통신판매신고 제2015-제주연동-43호 | 관광사업자 등록번호 : 제2021-08호<br>제주특별자치도 제주시 신광로 21, 4층 (우)63125</p>
+                        <p>(주)캐플릭스는 렌터카 파트너사가 제공하는 일부 렌터카에 대하여 통신판매중개자의 지위를 가지며, 해당 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게 있습니다.</p>
+                        <p>Copyright ⓒ KAFLIX All Rights Reserved</p>
+                    </div>
+                </div>
+
+                <div class="footer-sns">
+                    <a href="#" class="google-download"><i class="fa-brands fa-google-play"></i>구글플레이</a>
+                    <a href="#" class="app-download"><i class="fa-brands fa-app-store-ios"></i>앱스토어</a>
+                    <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i>인스타그램</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
