@@ -42,6 +42,7 @@ body {
 .section {
     padding-top: 50px;
     padding-bottom: 100px;
+    scroll-margin-top: 100px; /* 헤더 높이만큼 여유 */
 }
 .section-header {
     font-size: 22px;
