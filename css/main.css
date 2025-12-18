@@ -1,5 +1,42 @@
 @import url('/css/common.css');
 
+/* ======================== 메인 비쥬얼 ======================== */
+.main-visual {
+    position: relative;
+    width: 100%;
+    height: 500px; 
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.main-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 70%;
+    filter: brightness(0.8);
+}
+.visual-text {
+    position: absolute;
+    top: 50%;
+    right: 300px;
+    transform: translateY(-50%);
+    color: #fff;
+    text-shadow: 0 3px 6px rgba(0,0,0,0.5);
+    text-align: right;
+}
+.visual-text h1 {
+    font-size: 40px;
+    margin-bottom: 100px;
+    line-height: 1.4;
+}
+.visual-text h1 > span {
+    font-size: 65px;
+}
+.visual-text p {
+    font-size: 22px;
+}
+
+
 /* ======================== 섹션1 ======================== */
 .search-filter-bar {
     display: flex;
@@ -22,8 +59,6 @@
     cursor: pointer;
     transition: box-shadow 0.2s;
 }
-
-
 .filter-box:hover {
     color: #333;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -46,7 +81,7 @@
 .filter-box .value-display span {
     color: #ff5000
 }
-
+/* 달력 */
 .date-input {
     position: absolute;
     top: 0;
@@ -117,7 +152,6 @@
 .event .section-header a:hover {
     text-decoration: underline; 
 }
-
 .event-banner {
     position: relative;
     overflow: hidden;
@@ -267,12 +301,10 @@
 }
 
 
-
 /* ======================== 섹션4 ======================== */
 .section-4 .service {
     position: relative; /* 장식 이미지 배치용 */
 }
-
 .section-4 .service-items {
     display: flex;
     align-items: center; 
@@ -281,7 +313,6 @@
     border-bottom: 1px solid #ddd;
     width: 800px;
 }
-
 .section-4 .service-items img {
     height: 55px;
     width: 55px;
@@ -316,7 +347,6 @@
 }
 
 
-
 /* ======================== 고객센터 안내 배너 ======================== */
 .customer-service {
     background-color: #fff3e6;
@@ -340,6 +370,3 @@
     font-size: 45px;;
     color: #ff5000; 
 }
-
-
-
