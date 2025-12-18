@@ -1,5 +1,10 @@
 @import url('/css/common.css');
 
+/* === 해당 페이지에 있을때 메뉴 글씨색 === */
+#gnb > ul > .mainmenu:nth-child(3) > a {
+    color: #ff5000;
+}
+
 /* ======================== 메인 비쥬얼 ======================== */
 .main-visual {
     position: relative;
