@@ -41,11 +41,11 @@ body {
 }
 .section {
     padding-top: 50px;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
 }
 .section-header {
     font-size: 22px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 /* ======================== 헤더 상단바 ========================  */

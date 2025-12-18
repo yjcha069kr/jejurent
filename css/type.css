@@ -33,7 +33,7 @@
 
 /* ================== 섹션1~5 공통 ================== */
 .section h2 {
-    font-size: 32px;
+    font-size: 33px;
     margin-bottom: 15px;
 }
 .section p {
@@ -67,20 +67,6 @@
     display: block;
     margin: 0 auto;
 }
-/* 이미지만 입체감 줄때 */
-/* .card-image img {
-    width: auto;
-    max-width: 100%;
-    height: 220px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.card-image img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-} */
 
 .card-content {
     padding: 40px;
