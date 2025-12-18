@@ -1,0 +1,129 @@
+@import url('/css/common.css');
+
+/* ======================== 메인 비쥬얼 ======================== */
+.main-visual {
+    position: relative;
+    width: 100%;
+    height: 350px; 
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.main-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 75%;
+}
+.visual-text {
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: #fff;
+    text-shadow: 0 3px 6px rgba(0,0,0,0.8);
+    text-align: center; 
+}
+.visual-text h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+.visual-text p {
+    font-size: 25px;
+}
+
+/* ================== 섹션1~5 공통 ================== */
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+.section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+.section p > span {
+    color: #ff5000;
+}
+/* ==== 카드 ==== */
+.car-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.car-card {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+.card-image img {
+    width: auto;
+    max-width: 100%;
+    height: 220px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+/* 이미지만 입체감 줄때 */
+/* .card-image img {
+    width: auto;
+    max-width: 100%;
+    height: 220px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+} */
+
+.card-content {
+    padding: 40px;
+    text-align: left;
+}
+.card-content h3 {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+.card-content h3 > span {
+    font-size: 15px;
+}
+.car-content-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+.car-content-info .info {
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 6px;
+    border-bottom: 2px dotted #ddd;
+}
+.car-content-info .label {
+    margin-right: 10px;
+    color: #555;
+}
+.car-content-info .value {
+    color: #ff5000;
+    
+}
+/* ===== 상세보기 버튼 ===== */
+.btn1 {
+    display: block;
+    padding: 10px 0;
+    background-color: #ff5000;
+    color: #fff;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+}
+.btn1:hover {
+    background-color: #ff7333;
+}

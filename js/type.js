@@ -1,4 +1,4 @@
-// ==================== 탭버튼 누르면 각각 내용 설명 ==================== 
+/* // ==================== 탭버튼 누르면 각각 내용 설명 ==================== 
 const tabBtns = document.querySelectorAll(".tab-btn");
 const tabPanels = document.querySelectorAll(".tab-panel");
 
@@ -16,3 +16,4 @@ tabBtns.forEach(btn => {
         document.getElementById(target).style.display = "block";
     });
 });
+ */
