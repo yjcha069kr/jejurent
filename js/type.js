@@ -23,4 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', animateCards);
     animateCards(); // 페이지 로드 시 초기 적용
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 1f958ce71a6e08dcdc0137b605dcd0465bf6efd4
