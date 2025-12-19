@@ -1,106 +1,73 @@
-// ==================== 섹션1: 검색 바 ====================
-document.addEventListener('DOMContentLoaded', function() {
+/* ==================== 섹션1: 검색 바 ==================== */
+document.addEventListener('DOMContentLoaded', () => {
     const filterBoxes = document.querySelectorAll('.filter-box');
 
+    // 필터 박스 클릭
     filterBoxes.forEach(box => {
-        box.addEventListener('click', function(event) {
-            const isAlreadyActive = this.classList.contains('active');
+        box.addEventListener('click', e => {
+            const isActive = box.classList.contains('active');
 
-            filterBoxes.forEach(item => item.classList.remove('active'));
+            // 다른 박스 닫기
+            filterBoxes.forEach(b => b.classList.remove('active'));
 
-            if (!isAlreadyActive) {
-                this.classList.add('active');
+            if (!isActive) {
+                box.classList.add('active');
 
-                const dateInput = this.querySelector('.date-input');
-                if (dateInput && dateInput.showPicker) {
-                    setTimeout(() => {
-                        dateInput.showPicker();
-                    }, 0);
+                // 날짜 선택 자동 열기 (지원 브라우저)
+                const dateInput = box.querySelector('.date-input');
+                if (dateInput?.showPicker) {
+                    setTimeout(() => dateInput.showPicker(), 0);
                 }
             }
 
-            event.stopPropagation();
+            e.stopPropagation();
         });
     });
 
-    document.addEventListener('click', function() {
+    // 바깥 클릭 시 닫기
+    document.addEventListener('click', () => {
         filterBoxes.forEach(box => box.classList.remove('active'));
     });
 
-    // ✅ 옵션 선택
+    // 보험 / 연령 옵션 선택
     document.querySelectorAll('.option-list li').forEach(option => {
-        option.addEventListener('click', function(e) {
+        option.addEventListener('click', e => {
             e.stopPropagation();
-            const box = this.closest('.filter-box');
-            box.querySelector('.value-display').textContent = this.textContent;
+
+            const box = option.closest('.filter-box');
+            const display = box.querySelector('.value-display');
+
+            display.textContent = option.textContent;
+            display.style.color = '#ff5000';
+
             box.classList.remove('active');
         });
     });
-    // ✅ 날짜 선택
+
+    // 날짜 선택
     document.querySelectorAll('.date-input').forEach(input => {
-        input.addEventListener('change', function(e) {
+        input.addEventListener('change', e => {
             e.stopPropagation();
-            const box = this.closest('.filter-box');
-            box.querySelector('.value-display').textContent =
-                this.value.replace('T', ' ');
+
+            const box = input.closest('.filter-box');
+            const display = box.querySelector('.value-display');
+
+            display.textContent = input.value;
+            display.style.color = '#ff5000';
+
             box.classList.remove('active');
         });
     });
 });
 
-// ===옵션 선택 후 선택된 항목들 색깔 변함===
-const filterBoxes = document.querySelectorAll('.filter-box');
 
-filterBoxes.forEach(box => {
-    const valueDisplay = box.querySelector('.value-display');
+/* ==================== 섹션3: 렌터카 카드 더보기 ==================== */
+const showMoreBtn = document.querySelector('.more-btn');
+const hiddenCards = document.querySelectorAll('.car-card.hidden');
 
-    // 날짜 선택 후
-    const dateInput = box.querySelector('.date-input');
-    if(dateInput){
-        dateInput.addEventListener('change', () => {
-            if(dateInput.value){
-                valueDisplay.style.color = '#ff5000'; // 선택 완료 시 색상
-            }
-        });
-    }
-    // 보험, 운전자 연령 선택 후
-    const options = box.querySelectorAll('.option-list li');
-    options.forEach(option => {
-        option.addEventListener('click', () => {
-            valueDisplay.textContent = option.textContent; // 선택 값 표시
-            valueDisplay.style.color = '#ff5000';         // 색상 변경
-            box.classList.remove('active');               // 팝업 닫기
-        });
+if (showMoreBtn) {
+    showMoreBtn.addEventListener('click', () => {
+        hiddenCards.forEach(card => card.classList.remove('hidden'));
+        showMoreBtn.style.display = 'none';
     });
-});
-
-
-
-// ==================== 섹션2: 이벤트 배너 슬라이드 ====================
-document.addEventListener("DOMContentLoaded", () => {
-    const slider = document.querySelector(".event-items");
-    const cards = document.querySelectorAll(".event-card");
-    const total = cards.length;
-
-    let index = 0;
-
-    function moveSlide() {
-        slider.style.transform = `translateX(-${index * 100}%)`;
-    }
-
-    // 5초마다 자동 이동
-    setInterval(() => {
-        index = (index + 1) % total;
-        moveSlide();
-    }, 5000);
-});
-
-
-// ==================== 섹션3: 렌트카 카드 "더보기" 버튼 ====================
-const showMoreBtn = document.querySelector(".more-btn");
-const hiddenCards = document.querySelectorAll(".car-card.hidden");
-
-showMoreBtn.addEventListener("click", () => {
-    hiddenCards.forEach(card => card.classList.remove("hidden"));
-    showMoreBtn.style.display = "none"; // 버튼 숨기기
-});
+}

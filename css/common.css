@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /* ==================== 웹폰트 정의 ==================== */
 @font-face {
     font-family: "FlightSans";
@@ -41,11 +43,12 @@ body {
 }
 .section {
     padding-top: 50px;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
+    scroll-margin-top: 100px; /* 헤더 높이만큼 여유 */
 }
 .section-header {
     font-size: 22px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 /* ======================== 헤더 상단바 ========================  */
@@ -137,6 +140,8 @@ body {
     height: 40px;        
     display: flex;
     align-items: center;    
+
+    white-space: nowrap;
 }
 .menu > li > a:hover {
     color: #ff5500; 

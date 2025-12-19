@@ -1,4 +1,10 @@
+@charset "utf-8";
 @import url('/css/common.css');
+
+/* === 해당 페이지에 있을때 메뉴 글씨색 === */
+#gnb > ul > .mainmenu:nth-child(3) > a {
+    color: #ff5000;
+}
 
 /* ======================== 메인 비쥬얼 ======================== */
 .main-visual {
@@ -12,7 +18,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 0 75%;
+    object-position: 0 72%;
 }
 .visual-text {
     position: absolute;
@@ -33,7 +39,7 @@
 
 /* ================== 섹션1~5 공통 ================== */
 .section h2 {
-    font-size: 32px;
+    font-size: 33px;
     margin-bottom: 15px;
 }
 .section p {
@@ -45,6 +51,7 @@
 .section p > span {
     color: #ff5000;
 }
+
 /* ==== 카드 ==== */
 .car-container {
     display: grid;
@@ -58,7 +65,23 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
+    /* 스크롤 전 초기 상태 */
+    opacity: 0;
+    transform: translateY(50px);
+    /* transition 한 줄로 통합 */
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out, box-shadow 0.3s ease;
 }
+/* 스크롤 시 나타날 상태 */
+.car-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.car-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.25);
+}
+
+/* 이미지 스타일 */
 .card-image img {
     width: auto;
     max-width: 100%;
@@ -67,21 +90,8 @@
     display: block;
     margin: 0 auto;
 }
-/* 이미지만 입체감 줄때 */
-/* .card-image img {
-    width: auto;
-    max-width: 100%;
-    height: 220px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.card-image img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-} */
 
+/* 카드 내용 */
 .card-content {
     padding: 40px;
     text-align: left;
@@ -111,9 +121,9 @@
 }
 .car-content-info .value {
     color: #ff5000;
-    
 }
-/* ===== 상세보기 버튼 ===== */
+
+/* 상세보기 버튼 */
 .btn1 {
     display: block;
     padding: 10px 0;

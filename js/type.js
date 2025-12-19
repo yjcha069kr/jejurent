@@ -1,19 +1,26 @@
-/* // ==================== 탭버튼 누르면 각각 내용 설명 ==================== 
-const tabBtns = document.querySelectorAll(".tab-btn");
-const tabPanels = document.querySelectorAll(".tab-panel");
+// 스크롤할때 각각의 카드 순차적으로 나오게
+document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('.section');
 
-tabBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-        // 모든 버튼 active 제거
-        tabBtns.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
+    function animateCards() {
+        const windowHeight = window.innerHeight;
+        const scrollTop = window.scrollY;
 
-        // 모든 패널 숨기기
-        tabPanels.forEach(panel => panel.style.display = "none");
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top + scrollTop;
 
-        // 클릭한 버튼의 data-tab 패널 보이기
-        const target = btn.dataset.tab;
-        document.getElementById(target).style.display = "block";
-    });
+            if (scrollTop > sectionTop - windowHeight + 100) {
+                const cards = section.querySelectorAll('.car-card');
+                cards.forEach((card, index) => {
+                    // 순차적으로 나타나게 0.2초 간격
+                    setTimeout(() => {
+                        card.classList.add('show');
+                    }, index * 200);
+                });
+            }
+        });
+    }
+
+    window.addEventListener('scroll', animateCards);
+    animateCards(); // 페이지 로드 시 초기 적용
 });
- */
