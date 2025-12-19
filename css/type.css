@@ -137,3 +137,53 @@
 .btn1:hover {
     background-color: #ff7333;
 }
+
+
+/* ==================== 모바일 반응형 ==================== */
+@media (max-width: 768px) {
+    .main-visual {
+        height: 230px;
+    }
+    .visual-text {
+        width: 100%;
+        text-shadow: 0 3px 6px rgba(0,0,0,0.8);
+    }
+    .visual-text h1 {
+        font-size: 23px;
+        margin-bottom: 10px;
+    }
+    .visual-text p {
+        font-size: 13px;
+    }
+    .section h2 {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+    .section p {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+    .car-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+        padding: 0 80px; 
+        margin: 0 auto; 
+    }
+    .card-image img {
+        height: 180px;
+    }
+    .card-content {
+        padding: 20px;
+    }
+    .card-content h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .car-content-info .info {
+        font-size: 14px;
+    }
+    .btn1 {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+}
