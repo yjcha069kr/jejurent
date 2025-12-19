@@ -390,33 +390,31 @@
 
 /* ==================== 모바일 반응형 ==================== */
 @media (max-width: 768px) {
-
     /* ===== 공통 ===== */
     .container {
-        padding: 0 16px;
+        padding: 0 6px;
     }
-
     /* ===== 메인 비주얼 ===== */
     .main-visual {
-        height: 320px;
+        height: 230px;
     }
-
     .visual-text {
+        margin-top: 20px;
         right: 20px;
         text-align: right;
     }
 
     .visual-text h1 {
-        font-size: 26px;
+        font-size: 18px;
         margin-bottom: 30px;
     }
 
     .visual-text h1 span {
-        font-size: 38px;
+        font-size: 30px;
     }
 
     .visual-text p {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     /* ===== 검색 바 ===== */
