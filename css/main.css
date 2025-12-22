@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url('/css/common.css');
+/* @import url('/css/common.css'); */
 
 /* ======================== 메인 비쥬얼 ======================== */
 .main-visual {
@@ -135,6 +135,17 @@
     border-radius: 8px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
+/* 날짜 선택 박스용 */
+.date-box {
+    position: relative;
+}
+.date-input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
 .filter-box.active .detail-popup {
     display: block; 
 }
