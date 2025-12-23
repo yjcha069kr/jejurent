@@ -53,7 +53,6 @@
     color: #ff5000;
 }
 
-/* ==== 카드 ==== */
 .car-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -80,7 +79,7 @@
 }
 .card-image img {
     width: auto;
-    max-width: 100%;
+    width: 220px;
     height: 220px;
     object-fit: contain;
     display: block;

@@ -52,6 +52,9 @@
 .guide-ready {
     border: 1px solid #ddd;
     background-color: #fff3e6;
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto; 
     padding: 25px;
     text-align: center;
     margin-bottom: 50px;
@@ -99,6 +102,54 @@
     font-size: 22px;
     color: #ff5000;
 }
+
+/* ==================== 섹션: 렌터카 예약 안내 ==================== */
+.section-1-1 h2 {
+    font-size: 33px;
+    margin-bottom: 15px;
+}
+.section-1-1 p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+.reserve-guide-boxes {
+    display: flex;
+    flex-direction: column; 
+    gap: 30px; 
+    margin-top: 30px;
+    max-width: 1100px;  
+    margin-left: auto;
+    margin-right: auto;  
+}
+.reserve-box-container {
+    display: flex;
+    justify-content: space-between; 
+    gap: 30px;
+    flex-wrap: wrap; 
+}
+.reserve-box {
+    flex: 1;
+    min-width: 280px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.reserve-box h3 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #ff5000;
+}
+.reserve-box p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    text-align: left;
+    padding-left: 20px;
+}
+
 
 
 
@@ -155,50 +206,47 @@
 
 
 /* ========== 섹션3: 기타 유의사항 ========== */
-.accident-box {
+.todo p {
+    color: #333;
+    line-height: 1.7;
+    margin: 10px 0 40px 0;
+}
+.accident-box, .other-box {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     margin-bottom: 40px;
 }
-.accident-box h4 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    
-}
-.accident-box p {
-    width: 100%;
-    font-size: 15px;
-    color: #555;
-}
-.accident-box span {
-    font-size: 13px;
-    color: #ff5000;
-}
-.accident-card {
+
+.accident-card, .other-card {
     border: 1px solid #ddd;
     padding: 30px 20px;
     text-align: center;
     background-color: #fff;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 10px;
+    margin: 10px;
 }
-.accident-card i {
+
+.accident-card i, .other-card i {
     font-size: 40px;
     color: #555;
+    margin: 15px;
+}
+
+.accident-card h4, .other-card h4 {
+    font-size: 20px;
     margin-bottom: 15px;
 }
-.accident-card p {
+
+.accident-card p, .other-card p {
     margin: 0;
-}
-.guide-block h3 {
-    font-size: 25px;
-    margin-bottom: 10px;
-}
-.guide-block .other-text {
-    font-size: 18px;
-    line-height: 1.7;
+    font-size: 15px;
     color: #555;
+}
+
+.accident-box span, .other-box span {
+    font-size: 13px;
+    color: #ff5000;
 }
