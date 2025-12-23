@@ -15,7 +15,7 @@
     justify-content: flex-end;
     gap: 10px;
     margin-bottom: 30px;
-    margin-right: 250px;
+    margin-right: 200px;
 }
 .search-bar input,
 .search-bar button {
@@ -40,7 +40,7 @@
 
 /* 공지사항 리스트 */
 .notice-list {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0;
     list-style: none;
@@ -49,7 +49,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 20px;
+    padding: 20px 20px;
     border-bottom: 1px solid #ddd;
     background-color: #fff;
     font-size: 16px;
