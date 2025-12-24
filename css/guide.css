@@ -40,7 +40,7 @@
 .section {
     padding-bottom: 40px;
 }
-/* ========== 섹션1: 렌터카 이용 안내 ========== */
+/* ========== 1-1 렌터카 이용 안내 ========== */
 .section-1 h3 {
     font-size: 22px;
     margin-bottom: 15px;
@@ -103,7 +103,7 @@
     color: #ff5000;
 }
 
-/* ==================== 섹션: 렌터카 예약 안내 ==================== */
+/* ========== 1-2 렌터카 예약 안내 ========== */
 .section-1-1 h2 {
     font-size: 33px;
     margin-bottom: 15px;
@@ -168,12 +168,12 @@
     color: #ff5000;
 }
 .insurance-table {
-    width: 100%;
+    width: 80%;
+    /* margin: 0 auto 30px; */
     border-collapse: collapse;
     color: #333;
     font-size: 16px;
     text-align: center;
-    margin-bottom: 30px;
 }
 .insurance-table th,
 .insurance-table td {
@@ -226,7 +226,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px;
+    margin: 20px 0;
 }
 
 .accident-card i, .other-card i {

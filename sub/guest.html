@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/notice.css">
+    <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
+
 <body>
     <!-- ======================== 헤더 상단바 ======================== -->
     <div class="top-bar">
@@ -21,7 +23,7 @@
         <div class="right-menu">
             <a href="/sub/login.html">로그인</a>
             <span>|</span>
-            <a href="/sub/non_member.html">비회원 조회</a>
+            <a href="/sub/guest.html">비회원 조회</a>
         </div>
     </div>
 </div>
@@ -69,65 +71,48 @@
             </nav>
     </header>
 
-    <!-- ==================== 메인 ====================-->
-    <!-- ==================== 섹션: 공지사항 ==================== -->
-    <section class="section section-1" id="notice">
+
+
+    <!-- ======================== 로그인창 ======================== -->
+    <section class="login">
         <div class="container">
-            <h2>공지사항</h2>
-            <div class="search-bar">
-                <div class="total-count">( 총 8건 )</div>
-                <div class="search-input-group">
-                    <input type="text" id="search-input" placeholder="검색어를 입력해주세요.">
-                    <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
+            <div class="tabs">
+                <button class="tab-button" data-tab="member">회원</button>
+                <button class="tab-button active" data-tab="guest">비회원</button>
             </div>
-            <div class="notice-list">
-                <!-- 공지사항 항목 -->
-                <div class="notice-item">
-                    <div class="notice-number">8</div>
-                    <div class="notice-title"><a href="#">개인정보처리방침 개정 안내 (2025.04.15)</a></div>
-                    <div class="notice-date">2025.04.15</div>
+            <!-- 회원 로그인(현재 창에선 안보임) -->
+            <form id="member" class="tab-content">
+                <label for="email">아이디(이메일)</label>
+                <input type="email" id="email" placeholder="아이디(이메일)를 입력해주세요.">
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" placeholder="비밀번호를 입력해주세요.">
+                <div class="checkbox-group">
+                    <label><input type="checkbox"> 로그인 유지</label>
+                    <label><input type="checkbox"> 아이디 저장</label>
                 </div>
-                <div class="notice-item">
-                    <div class="notice-number">7</div>
-                    <div class="notice-title"><a href="#">항공편 결항으로 인한 취소 안내.</a></div>
-                    <div class="notice-date">2025.04.09</div>
+                <button type="submit" class="login-btn">로그인</button>
+                <div class="links">
+                    <a href="#">아이디 찾기</a> |
+                    <a href="#">비밀번호 찾기</a> |
+                    <a href="#">회원가입</a>
                 </div>
-                <div class="notice-item">
-                    <div class="notice-number">6</div>
-                    <div class="notice-title"><a href="#">[해외렌터카] 괌 지역 오픈!</a></div>
-                    <div class="notice-date">2025.04.09</div>
+                <div class="social-login">
+                    <span>간편 로그인</span>
+                    <button type="button" class="social-btn naver">N</button>
+                    <button type="button" class="social-btn kakaotalk"><i class="fa-brands fa-kakao-talk"></i></button>
                 </div>
-                <div class="notice-item">
-                    <div class="notice-number">5</div>
-                    <div class="notice-title"><a href="#">[해외렌터카] 오사카 지역 지점 소개!</a></div>
-                    <div class="notice-date">2025.03.20</div>
-                </div>
-                <div class="notice-item">
-                    <div class="notice-number">4</div>
-                    <div class="notice-title"><a href="#">렌터카 유아용품 대여 안내</a></div>
-                    <div class="notice-date">2025.03.18</div>
-                </div>
-                <div class="notice-item">
-                    <div class="notice-number">3</div>
-                    <div class="notice-title"><a href="#">렌터카 인수/반납 안내</a></div>
-                    <div class="notice-date">2025.03.15</div>
-                </div>
-                <div class="notice-item">
-                    <div class="notice-number">2</div>
-                    <div class="notice-title"><a href="#">취소/환불 안내</a></div>
-                    <div class="notice-date">2025.03.10</div>
-                </div>
-                <div class="notice-item">
-                    <div class="notice-number">1</div>
-                    <div class="notice-title"><a href="#">렌터카 보험 안내</a></div>
-                    <div class="notice-date">2025.02.28</div>
-                </div>
-            </div>
-            <div class="pagination">
-                <button class="page-number active">1</button>
-                <button class="page-number">2</button>
-            </div>
+            </form>
+            <!-- 비회원 로그인 -->
+            <form id="guest" class="tab-content active">
+                <p class="notice">비회원으로 구매 시 고객정보와 발급된 예약번호를 입력해주세요.</p>
+                <label for="guest-name">이름</label>
+                <input type="text" id="guest-name" placeholder="이름을 입력해주세요.">
+                <label for="phone">휴대전화</label>
+                <input type="tel" id="phone" placeholder="- 없이 번호만 입력해주세요.">
+                <label for="reservation-number">예약번호</label>
+                <input type="text" id="reservation-number" placeholder="예약번호를 입력해주세요.">
+                <button type="submit" class="confirm-btn" disabled>확인</button>
+            </form>
         </div>
     </section>
 
@@ -155,5 +140,9 @@
             </div>
         </div>
     </footer>
+
+
+    <script src="/js/login.js"></script>
 </body>
+
 </html>
