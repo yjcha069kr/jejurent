@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- ======================== 헤더 상단바 ======================== -->
+    <div class="top-bar">
+    <div class="container">
+        <!-- 왼쪽 메뉴 -->
+        <div class="left-menu">
+            <a href="/sub/notice.html">공지사항</a>
+            <a href="/sub/ask.html">자주 묻는 질문</a>
+        </div>
+        <!-- 오른쪽 메뉴 -->
+        <div class="right-menu">
+            <a href="/sub/login.html">로그인</a>
+            <span>|</span>
+            <a href="/sub/guest.html">비회원 조회</a>
+        </div>
+    </div>
+</div>
+    <!-- ==================== 헤더 ==================== -->
+    <header class="header">
+            <!-- 메인 네비(GNB) -->
+            <nav class="gnb" id="gnb">
+                <ul class="menu">
+                    <li>
+                        <a href="/index.html"><img src="/assets/jejurent.png" alt=""></a>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="/sub/rent.html">렌터카 예약</a>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="#">차량소개</a>
+                        <ul class="submenu">
+                            <li><a href="/sub/type_small.html">경형/소형</a></li>
+                            <li><a href="/sub/type_medium.html">중형</a></li>
+                            <li><a href="/sub/type_van.html">승합</a></li>
+                            <li><a href="/sub/type_suv.html">SUV/RV</a></li>
+                            <li><a href="/sub/type_electric.html">전기</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="/sub/event.html">이벤트</a>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="#">이용안내</a>
+                        <ul class="submenu">
+                            <li><a href="/sub/guide_use.html">렌터카 이용 안내</a></li>
+                            <li><a href="/sub/guide_insurance.html">보험 안내</a></li>
+                            <li><a href="/sub/guide_other.html">기타 유의사항</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="/sub/notice.html">고객센터</a>
+                        <ul class="submenu">
+                            <li><a href="/sub/notice.html">공지사항</a></li>
+                            <li><a href="/sub/ask.html">자주 묻는 질문</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </nav>
+    </header>
+
+
+
+    <!-- ======================== 로그인창 ======================== -->
+    <section class="login">
+        <div class="container">
+            <div class="tabs">
+                <button class="tab-button" data-tab="member">회원</button>
+                <button class="tab-button active" data-tab="guest">비회원</button>
+            </div>
+            <!-- 회원 로그인(현재 창에선 안보임) -->
+            <form id="member" class="tab-content">
+                <label for="email">아이디(이메일)</label>
+                <input type="email" id="email" placeholder="아이디(이메일)를 입력해주세요.">
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" placeholder="비밀번호를 입력해주세요.">
+                <div class="checkbox-group">
+                    <label><input type="checkbox"> 로그인 유지</label>
+                    <label><input type="checkbox"> 아이디 저장</label>
+                </div>
+                <button type="submit" class="login-btn">로그인</button>
+                <div class="links">
+                    <a href="#">아이디 찾기</a> |
+                    <a href="#">비밀번호 찾기</a> |
+                    <a href="#">회원가입</a>
+                </div>
+                <div class="social-login">
+                    <span>간편 로그인</span>
+                    <button type="button" class="social-btn naver">N</button>
+                    <button type="button" class="social-btn kakaotalk"><i class="fa-brands fa-kakao-talk"></i></button>
+                </div>
+            </form>
+            <!-- 비회원 로그인 -->
+            <form id="guest" class="tab-content active">
+                <p class="notice">비회원으로 구매 시 고객정보와 발급된 예약번호를 입력해주세요.</p>
+                <label for="guest-name">이름</label>
+                <input type="text" id="guest-name" placeholder="이름을 입력해주세요.">
+                <label for="phone">휴대전화</label>
+                <input type="tel" id="phone" placeholder="- 없이 번호만 입력해주세요.">
+                <label for="reservation-number">예약번호</label>
+                <input type="text" id="reservation-number" placeholder="예약번호를 입력해주세요.">
+                <button type="submit" class="confirm-btn" disabled>확인</button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- ==================== 푸터 ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="company-notice">
+                        <a href="#"><p><b>개인정보취급방침</b> | 이용약관</p></a>
+                    </div>
+                    <div class="company-about">
+                        <p>(주)캐플릭스 대표이사 : 윤형준 | 사업자등록번호 : 105-87-76000 | 통신판매신고 제2015-제주연동-43호 | 관광사업자 등록번호 : 제2021-08호<br>제주특별자치도 제주시 신광로 21, 4층 (우)63125</p>
+                        <p>(주)캐플릭스는 렌터카 파트너사가 제공하는 일부 렌터카에 대하여 통신판매중개자의 지위를 가지며, 해당 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게 있습니다.</p>
+                        <p>Copyright ⓒ KAFLIX All Rights Reserved</p>
+                    </div>
+                </div>
+
+                <div class="footer-sns">
+                    <a href="#" class="google-download"><i class="fa-brands fa-google-play"></i>구글플레이</a>
+                    <a href="#" class="app-download"><i class="fa-brands fa-app-store-ios"></i>앱스토어</a>
+                    <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i>인스타그램</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="/js/login.js"></script>
+</body>
+
+</html>

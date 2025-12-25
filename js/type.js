@@ -23,4 +23,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', animateCards);
     animateCards(); // 페이지 로드 시 초기 적용
+
 });

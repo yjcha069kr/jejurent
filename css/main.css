@@ -1,18 +1,20 @@
-@import url('/css/common.css');
+@charset "utf-8";
+/* @import url('/css/common.css'); */
 
 /* ======================== 메인 비쥬얼 ======================== */
 .main-visual {
     position: relative;
     width: 100%;
-    height: 500px; 
+    height: 780px;
     overflow: hidden;
+    
 }
 .main-visual img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 0 70%;
     filter: brightness(0.8);
+    object-position: 0 70%;
 }
 .visual-text {
     position: absolute;
@@ -133,6 +135,17 @@
     border-radius: 8px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
+/* 날짜 선택 박스용 */
+.date-box {
+    position: relative;
+}
+.date-input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
 .filter-box.active .detail-popup {
     display: block; 
 }
@@ -172,7 +185,7 @@
     overflow: hidden;
     width: 100%;
     max-width: 1400px;
-    height: 380px;
+    height: 400px;
     margin: 0 auto;
     border-radius: 15px;
 }
@@ -190,6 +203,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 0 90%;
     display: block;
 }
 .slide-text {
@@ -362,7 +376,7 @@
 }
 
 
-/* ======================== 고객센터 안내 배너 ======================== */
+/* ======================== 고객센터 안내 ======================== */
 .customer-service {
     background-color: #fff3e6;
     text-align: center;
@@ -389,40 +403,32 @@
 
 /* ==================== 모바일 반응형 ==================== */
 @media (max-width: 768px) {
-
-    /* ===== 공통 ===== */
-    .container {
-        padding: 0 16px;
-    }
-
-    /* ===== 메인 비주얼 ===== */
+    /* 메인 비주얼 */
     .main-visual {
-        height: 320px;
+        height: 230px;
     }
-
     .visual-text {
+        margin-top: 20px;
         right: 20px;
         text-align: right;
     }
-
     .visual-text h1 {
-        font-size: 26px;
+        font-size: 18px;
         margin-bottom: 30px;
     }
-
     .visual-text h1 span {
-        font-size: 38px;
+        font-size: 30px;
     }
-
     .visual-text p {
-        font-size: 16px;
+        font-size: 12px;
     }
-
-    /* ===== 검색 바 ===== */
+    /*  섹션1: 검색  */
+    .section-header h2 {
+        font-size: 25px;
+    }
     .search-title {
         font-size: 24px;
     }
-
     .search-sub {
         font-size: 14px;
         margin-bottom: 25px;
@@ -432,89 +438,83 @@
         gap: 12px;
         padding: 16px;
     }
-
     .filter-box {
         width: 100%;
         max-width: none;
         margin-right: 0;
         padding: 20px;
     }
-
     .detail-popup {
         width: 100%;
         left: 0;
     }
-
     .search-button {
-        width: 100%;
-        padding: 18px;
-        font-size: 18px;
-        margin-left: 0;
+        margin-top: 10px;
+        font-size: 14px;   
+        padding: 15px 26px;
+        height: auto;
     }
-
-    /* ===== 이벤트 배너 ===== */
+    /*  섹션2: 이벤트  */
+    
+    .section-header p {
+        font-size: 14px;
+    }
     .event-banner {
-        height: 240px;
+        height: auto;
     }
-
     .slide-text {
         left: 20px;
         right: 20px;
     }
-
     .slide-text h3 {
-        font-size: 20px;
+        font-size: 16px;
     }
-
     .slide-text p {
-        font-size: 14px;
+        font-size: 12px;
         line-height: 1.6;
     }
-
-    /* ===== 렌터카 추천 ===== */
+    /*  섹션3: 렌터카 추천  */
     .car-items {
-        grid-template-columns: 1fr;
-        gap: 24px;
+        grid-template-columns: repeat(1, auto);
+        gap: 26px;
     }
-
     .card-image {
         height: 220px;
+        width: 100%; 
     }
-
-    /* ===== 서비스 안내 ===== */
+    .car-card h3 {
+        font-size: 18px;
+    }
+    .car-card p {
+        font-size: 15px;
+    }
+    .more-btn {
+        font-size: 14px;   
+        padding: 8px 16px;
+        height: auto;
+    }
+    /*  섹션4: 서비스 안내  */
     .section-4 .service-items {
         width: 100%;
         gap: 16px;
     }
-
     .section-4 .service-text h3 {
         font-size: 18px;
     }
-
     .section-4 .service-text p {
         font-size: 14px;
     }
-
     .section-4 .service-deco {
         display: none;
     }
-
-    /* ===== 고객센터 ===== */
+    /* 문의사항 안내 */
+    .customer-service p:nth-of-type(1) {
+        font-size: 15px;
+    }
     .customer-service p > b {
-        font-size: 32px;
+        font-size: 33px;
     }
-
-    /* ===== 푸터 ===== */
-    .footer-content {
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
-    }
-
-    .footer-sns {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        align-items: center;
+    .customer-service p:nth-of-type(3) {
+        font-size: 13px;
     }
 }

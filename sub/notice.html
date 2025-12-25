@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/notice.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <!-- ======================== 헤더 상단바 ======================== -->
+    <div class="top-bar">
+    <div class="container">
+        <!-- 왼쪽 메뉴 -->
+        <div class="left-menu">
+            <a href="/sub/notice.html">공지사항</a>
+            <a href="/sub/ask.html">자주 묻는 질문</a>
+        </div>
+        <!-- 오른쪽 메뉴 -->
+        <div class="right-menu">
+            <a href="/sub/login.html">로그인</a>
+            <span>|</span>
+            <a href="/sub/non_member.html">비회원 조회</a>
+        </div>
+    </div>
+</div>
+    <!-- ==================== 헤더 ==================== -->
+    <header class="header">
+            <!-- 메인 네비(GNB) -->
+            <nav class="gnb" id="gnb">
+                <ul class="menu">
+                    <li>
+                        <a href="/index.html"><img src="/assets/jejurent.png" alt=""></a>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="/sub/rent.html">렌터카 예약</a>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="#">차량소개</a>
+                        <ul class="submenu">
+                            <li><a href="/sub/type_small.html">경형/소형</a></li>
+                            <li><a href="/sub/type_medium.html">중형</a></li>
+                            <li><a href="/sub/type_van.html">승합</a></li>
+                            <li><a href="/sub/type_suv.html">SUV/RV</a></li>
+                            <li><a href="/sub/type_electric.html">전기</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="/sub/event.html">이벤트</a>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="#">이용안내</a>
+                        <ul class="submenu">
+                            <li><a href="/sub/guide_use.html">렌터카 이용 안내</a></li>
+                            <li><a href="/sub/guide_insurance.html">보험 안내</a></li>
+                            <li><a href="/sub/guide_other.html">기타 유의사항</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="/sub/notice.html">고객센터</a>
+                        <ul class="submenu">
+                            <li><a href="/sub/notice.html">공지사항</a></li>
+                            <li><a href="/sub/ask.html">자주 묻는 질문</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </nav>
+    </header>
+
+    <!-- ==================== 메인 ====================-->
+    <!-- ==================== 섹션: 공지사항 ==================== -->
+    <section class="section section-1" id="notice">
+        <div class="container">
+            <h2>공지사항</h2>
+            <div class="search-bar">
+                <div class="total-count">( 총 8건 )</div>
+                <div class="search-input-group">
+                    <input type="text" id="search-input" placeholder="검색어를 입력해주세요.">
+                    <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+            <div class="notice-list">
+                <!-- 공지사항 항목 -->
+                <div class="notice-item">
+                    <div class="notice-number">8</div>
+                    <div class="notice-title"><a href="#">개인정보처리방침 개정 안내 (2025.04.15)</a></div>
+                    <div class="notice-date">2025.04.15</div>
+                </div>
+                <div class="notice-item">
+                    <div class="notice-number">7</div>
+                    <div class="notice-title"><a href="#">항공편 결항으로 인한 취소 안내.</a></div>
+                    <div class="notice-date">2025.04.09</div>
+                </div>
+                <div class="notice-item">
+                    <div class="notice-number">6</div>
+                    <div class="notice-title"><a href="#">[해외렌터카] 괌 지역 오픈!</a></div>
+                    <div class="notice-date">2025.04.09</div>
+                </div>
+                <div class="notice-item">
+                    <div class="notice-number">5</div>
+                    <div class="notice-title"><a href="#">[해외렌터카] 오사카 지역 지점 소개!</a></div>
+                    <div class="notice-date">2025.03.20</div>
+                </div>
+                <div class="notice-item">
+                    <div class="notice-number">4</div>
+                    <div class="notice-title"><a href="#">렌터카 유아용품 대여 안내</a></div>
+                    <div class="notice-date">2025.03.18</div>
+                </div>
+                <div class="notice-item">
+                    <div class="notice-number">3</div>
+                    <div class="notice-title"><a href="#">렌터카 인수/반납 안내</a></div>
+                    <div class="notice-date">2025.03.15</div>
+                </div>
+                <div class="notice-item">
+                    <div class="notice-number">2</div>
+                    <div class="notice-title"><a href="#">취소/환불 안내</a></div>
+                    <div class="notice-date">2025.03.10</div>
+                </div>
+                <div class="notice-item">
+                    <div class="notice-number">1</div>
+                    <div class="notice-title"><a href="#">렌터카 보험 안내</a></div>
+                    <div class="notice-date">2025.02.28</div>
+                </div>
+            </div>
+            <div class="pagination">
+                <button class="page-number active">1</button>
+                <button class="page-number">2</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==================== 푸터 ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="company-notice">
+                        <a href="#"><p><b>개인정보취급방침</b> | 이용약관</p></a>
+                    </div>
+                    <div class="company-about">
+                        <p>(주)캐플릭스 대표이사 : 윤형준 | 사업자등록번호 : 105-87-76000 | 통신판매신고 제2015-제주연동-43호 | 관광사업자 등록번호 : 제2021-08호<br>제주특별자치도 제주시 신광로 21, 4층 (우)63125</p>
+                        <p>(주)캐플릭스는 렌터카 파트너사가 제공하는 일부 렌터카에 대하여 통신판매중개자의 지위를 가지며, 해당 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게 있습니다.</p>
+                        <p>Copyright ⓒ KAFLIX All Rights Reserved</p>
+                    </div>
+                </div>
+
+                <div class="footer-sns">
+                    <a href="#" class="google-download"><i class="fa-brands fa-google-play"></i>구글플레이</a>
+                    <a href="#" class="app-download"><i class="fa-brands fa-app-store-ios"></i>앱스토어</a>
+                    <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i>인스타그램</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

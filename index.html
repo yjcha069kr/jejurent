@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <!-- 
-    참고한 사이트
-        https://www.jejupass.com/web 전체적인 느낌
+    벤치마킹
+        https://www.jejupass.com/web 
 -->
 <body>
     <!-- ======================== 헤더 상단바 ======================== -->
@@ -18,14 +18,14 @@
     <div class="container">
         <!-- 왼쪽 메뉴 -->
         <div class="left-menu">
-            <a href="#">고객문의</a>
-            <a href="#">공지사항</a>
+            <a href="/sub/notice.html">공지사항</a>
+            <a href="/sub/ask.html">자주 묻는 질문</a>
         </div>
         <!-- 오른쪽 메뉴 -->
         <div class="right-menu">
-            <a href="#">로그인</a>
+            <a href="/sub/login.html">로그인</a>
             <span>|</span>
-            <a href="#">비회원 조회</a>
+            <a href="/sub/guest.html">비회원 조회</a>
         </div>
     </div>
 </div>
@@ -38,37 +38,34 @@
                         <a href="/index.html"><img src="/assets/jejurent.png" alt=""></a>
                     </li>
                     <li class="mainmenu">
-                        <a href="#search">렌터카 예약</a>
+                        <a href="/sub/rent.html">렌터카 예약</a>
                     </li>
                     <li class="mainmenu">
-                        <a href="#type">차량 소개</a>
+                        <a href="#">차량소개</a>
                         <ul class="submenu">
-                            <li><a href="/sub/type.html">경형/소형</a></li>
-                            <li><a href="#">중형</a></li>
-                            <li><a href="#">승합</a></li>
-                            <li><a href="#">SUV/RV</a></li>
-                            <li><a href="#">전기</a></li>
+                            <li><a href="/sub/type_small.html">경형/소형</a></li>
+                            <li><a href="/sub/type_medium.html">중형</a></li>
+                            <li><a href="/sub/type_van.html">승합</a></li>
+                            <li><a href="/sub/type_suv.html">SUV/RV</a></li>
+                            <li><a href="/sub/type_electric.html">전기</a></li>
                         </ul>
                     </li>
                     <li class="mainmenu">
-                        <a href="#event">이벤트</a>
-                        <ul class="submenu">
-                            <li><a href="#">진행 중인 이벤트</a></li>
-                        </ul>
+                        <a href="/sub/event.html">이벤트</a>
                     </li>
                     <li class="mainmenu">
-                        <a href="#guide">이용 안내</a>
+                        <a href="#">이용안내</a>
                         <ul class="submenu">
-                            <li><a href="#">이용안내</a></li>
-                            <li><a href="#">보험안내</a></li>
+                            <li><a href="/sub/guide_use.html">렌터카 이용 안내</a></li>
+                            <li><a href="/sub/guide_insurance.html">보험 안내</a></li>
+                            <li><a href="/sub/guide_other.html">기타 유의사항</a></li>
                         </ul>
                     </li>
-                    
                     <li class="mainmenu">
                         <a href="#">고객센터</a>
                         <ul class="submenu">
-                            <li><a href="#">공지사항</a></li>
-                            <li><a href="#">자주 묻는 질문</a></li>
+                            <li><a href="/sub/notice.html">공지사항</a></li>
+                            <li><a href="/sub/ask.html">자주 묻는 질문</a></li>
                         </ul>
                     </li>
                     
@@ -94,19 +91,16 @@
                 <p>인수·반납 일정과 조건에 맞는 렌터카를 바로 찾아보세요</p>
             </div>
             <div class="search-filter-bar">
-                <div class="filter-box" id="pickup-box">
+                <div class="filter-box date-box" id="pickup-box">
                     <label>인수 일시</label>
                     <span class="value-display"><span>*</span> 날짜 선택</span>
-                    <div class="detail-popup">
-                        <input type="date" class="date-input">
-                    </div>
+                    <input type="date" class="date-input">
                 </div>
-                <div class="filter-box" id="return-box">
+
+                <div class="filter-box date-box" id="return-box">
                     <label>반납 일시</label>
                     <span class="value-display"><span>*</span> 날짜 선택</span>
-                    <div class="detail-popup">
-                        <input type="date" class="date-input">
-                    </div>
+                    <input type="date" class="date-input">
                 </div>
                 <div class="filter-box" id="insurance-box">
                     <label>보험</label>
@@ -131,7 +125,7 @@
                         </ul>
                     </div>
                 </div>
-                <button class="search-button">검색</button>
+                <a href="#"><button class="search-button">검색</button></a>
             </div>
         </div>
     </section>
@@ -142,7 +136,7 @@
             <div class="event">
                 <div class="section-header">
                     <h2>진행 중인 이벤트</h2>
-                    <a href="#">
+                    <a href="/sub/event.html">
                         <p>전체보기</p>
                     </a>
                 </div>
@@ -205,7 +199,7 @@
                 <div class="car-container">
                     <div class="car-items">
                         
-                        <a href="/sub/type.html" class="car-card">
+                        <a href="/sub/type_small.html" class="car-card">
                             <div class="card-image"></div>
                             <div class="card-content">
                                 <h3>운전이 어렵다면 경차 추천</h3>
@@ -213,7 +207,7 @@
                             </div>
                         </a>
 
-                        <a href="#" class="car-card">
+                        <a href="/sub/type_small.html" class="car-card">
                             <div class="card-image"></div>
                             <div class="card-content">
                                 <h3>경차보다 조금 더 공간이 필요할 때</h3>
@@ -221,7 +215,7 @@
                             </div>
                         </a>
 
-                        <a href="#" class="car-card">
+                        <a href="/sub/type_medium.html" class="car-card">
                             <div class="card-image"></div>
                             <div class="card-content">
                                 <h3>3인 이상 가족끼리 여행할 때</h3>
@@ -229,7 +223,7 @@
                             </div>
                         </a>
 
-                        <a href="#" class="car-card hidden">
+                        <a href="/sub/type_van.html" class="car-card hidden">
                             <div class="card-image"></div>
                             <div class="card-content">
                                 <h3>4인 이상보다 편할 수 없어요</h3>
@@ -237,7 +231,7 @@
                             </div>
                         </a>
 
-                        <a href="#" class="car-card hidden">
+                        <a href="/sub/type_suv.html" class="car-card hidden">
                             <div class="card-image"></div>
                             <div class="card-content">
                                 <h3>비포장 많은 제주에 딱 좋아</h3>
@@ -245,7 +239,7 @@
                             </div>
                         </a>
 
-                        <a href="#" class="car-card hidden">
+                        <a href="/sub/type_electric.html" class="car-card hidden">
                             <div class="card-image"></div>
                             <div class="card-content">
                                 <h3>고유가 시대, 선택이 아닌 필수</h3>
@@ -273,7 +267,7 @@
                 <div class="service-items">
                     <img src="/assets/service_reservation.png" alt="예약안내">
                     <div class="service-text">
-                        <a href="#">
+                        <a href="/sub/guide_use.html">
                             <h3>예약안내</h3>
                         </a>
                         <p>가장 쉽고 간단하게 할 수 있는 실시간 예약 방법을 알아보세요.</p>
@@ -282,10 +276,10 @@
                 <div class="service-items">
                     <img src="/assets/service_insurance.png" alt="보험안내">
                     <div class="service-text">
-                        <a href="#">
+                        <a href="/sub/guide_insurance.html">
                             <h3>보험안내</h3>
                         </a>
-                        <p>일반자차, 고급자차, 제주패스케어, 슈퍼무제한의 차이를 한눈에 확인해보세요.</p>
+                        <p>일반자차, 고급자차, 제주렌트케어, 슈퍼무제한의 차이를 한눈에 확인해보세요.</p>
                     </div>
                 </div>
                 <div class="service-items">

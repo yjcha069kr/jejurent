@@ -1,6 +1,6 @@
-@import url('/css/common.css');
+@charset "utf-8";
+/* @import url('/css/common.css'); */
 
-/* === 해당 페이지에 있을때 메뉴 글씨색 === */
 #gnb > ul > .mainmenu:nth-child(3) > a {
     color: #ff5000;
 }
@@ -17,10 +17,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 0 72%;
+    object-position: 0 76%;
 }
 .visual-text {
     position: absolute;
+    width: 100%;
     top: 50%;
     left: 50%; 
     transform: translate(-50%, -50%); 
@@ -48,10 +49,10 @@
     line-height: 1.5;
 }
 .section p > span {
+    font-size: 10px;
     color: #ff5000;
 }
 
-/* ==== 카드 ==== */
 .car-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -64,13 +65,10 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
-    /* 스크롤 전 초기 상태 */
     opacity: 0;
     transform: translateY(50px);
-    /* transition 한 줄로 통합 */
     transition: transform 0.6s ease-out, opacity 0.6s ease-out, box-shadow 0.3s ease;
 }
-/* 스크롤 시 나타날 상태 */
 .car-card.show {
     opacity: 1;
     transform: translateY(0);
@@ -79,18 +77,14 @@
     transform: translateY(-10px);
     box-shadow: 0 12px 20px rgba(0,0,0,0.25);
 }
-
-/* 이미지 스타일 */
 .card-image img {
     width: auto;
-    max-width: 100%;
+    width: 220px;
     height: 220px;
     object-fit: contain;
     display: block;
     margin: 0 auto;
 }
-
-/* 카드 내용 */
 .card-content {
     padding: 40px;
     text-align: left;
@@ -121,8 +115,6 @@
 .car-content-info .value {
     color: #ff5000;
 }
-
-/* 상세보기 버튼 */
 .btn1 {
     display: block;
     padding: 10px 0;
@@ -135,4 +127,54 @@
 }
 .btn1:hover {
     background-color: #ff7333;
+}
+
+
+/* ==================== 모바일 반응형 ==================== */
+@media (max-width: 768px) {
+    .main-visual {
+        height: 230px;
+    }
+    .visual-text {
+        width: 100%;
+        text-shadow: 0 3px 6px rgba(0,0,0,0.8);
+    }
+    .visual-text h1 {
+        font-size: 23px;
+        margin-bottom: 10px;
+    }
+    .visual-text p {
+        font-size: 13px;
+    }
+    .section h2 {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+    .section p {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+    .car-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+        padding: 0 80px; 
+        margin: 0 auto; 
+    }
+    .card-image img {
+        height: 180px;
+    }
+    .card-content {
+        padding: 20px;
+    }
+    .card-content h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .car-content-info .info {
+        font-size: 14px;
+    }
+    .btn1 {
+        font-size: 14px;
+        padding: 10px 0;
+    }
 }

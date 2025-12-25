@@ -1,0 +1,149 @@
+/* ============ 메인 비쥬얼 ========== */
+.main-visual {
+    position: relative;
+    width: 100%;
+    height: 350px; 
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.main-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 76%;
+}
+.visual-text {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: #fff;
+    text-shadow: 0 3px 6px rgba(0,0,0,0.8);
+    text-align: center; 
+}
+.visual-text h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+.visual-text p {
+    font-size: 25px;
+}
+
+
+/* ===================== 렌터카예약 ========================== */
+body {
+    background-color: #fffbf7;
+}
+.box {
+    width: 80%;
+    margin: 0 auto 30px;
+    border-radius: 12px;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+.box h3 {
+    font-size: 22px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px dotted #ddd;
+}
+.datetime-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.datetime-grid input {
+  margin-top: 15px;
+}
+
+input, select {
+    width: 100%;
+    padding: 15px 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 15px;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table th {
+    font-size: 18px;
+    width: 200px;
+    text-align: left;
+    padding: 12px 0;
+}
+.table td {
+    padding: 12px 0;
+}
+
+.type-list {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.type-btn {
+    font-size: 16px;
+    padding: 12px 18px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+}
+.type-btn.active {
+    color: #fff;
+    background: #ff5000;
+    border-color: #ff5000;
+}
+.car-list {
+    width: 150px;
+    text-align: center;
+    display: none;
+    gap: 12px;
+}
+.car-item {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.car-item.active {
+    background: #f8c084;
+}
+
+.license-tabs {
+    display: flex;
+    gap: 10px;
+}
+.license-tab {
+    width: 100px;
+    text-align: center;
+    padding: 12px 18px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.license-tab.active {
+    background: #ff5000;
+    color: #fff;
+}
+
+.birth-grid {
+    display: flex;
+    gap: 12px;
+}
+
+.dropdown {
+    padding: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.dropdown-content {
+    display: none;
+    margin-top: 12px;
+}
