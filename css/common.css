@@ -52,7 +52,10 @@ body {
 
 /* ======================== 헤더 상단바 ========================  */
 .top-bar {
+<<<<<<< HEAD
     background: #fff;
+=======
+>>>>>>> 5e50f22c6773872f2b5c4b55c009f7c9ea1b9cc5
     padding: 10px 10px 15px;
     font-size: 13px;
     color: #333;
