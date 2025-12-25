@@ -42,8 +42,5 @@ function checkMemberInputs() {
     memberBtn.style.cursor = allFilled ? "pointer" : "default";
 }
 
-<<<<<<< HEAD
 memberInputs.forEach(input => input.addEventListener("input", checkMemberInputs));
-=======
 memberInputs.forEach(input => input.addEventListener("input", checkMemberInputs));
->>>>>>> 5e50f22c6773872f2b5c4b55c009f7c9ea1b9cc5

@@ -4,10 +4,7 @@
 .section h2 {
     font-size: 33px;
     margin-bottom: 40px;
-<<<<<<< HEAD
-=======
     margin-left: 200px;
->>>>>>> 5e50f22c6773872f2b5c4b55c009f7c9ea1b9cc5
 }
 .search-bar {
     border-top: 2px dotted #ddd;
@@ -16,11 +13,8 @@
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
-<<<<<<< HEAD
-=======
     margin-left: 200px;
     margin-right: 200px;
->>>>>>> 5e50f22c6773872f2b5c4b55c009f7c9ea1b9cc5
 }
 .total-count {
     font-size: 14px;
@@ -53,10 +47,7 @@
 
 /* 공지사항 리스트 */
 .notice-list {
-<<<<<<< HEAD
-=======
     max-width: 1000px;
->>>>>>> 5e50f22c6773872f2b5c4b55c009f7c9ea1b9cc5
     margin: 0 auto;
     padding: 0;
     list-style: none;
