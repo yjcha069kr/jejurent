@@ -45,7 +45,7 @@
     margin: 0 200px;
 }
 
-/* ==================== 이벤트 리스트 ==================== */
+/* ==================== 카드공통 ==================== */
 .event-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -57,8 +57,9 @@
     cursor: pointer;
 }
 .event-thumb {
+    position: relative;
     border-radius: 8px;
-    overflow: hidden; 
+    overflow: hidden;
 }
 .event-thumb img {
     width: 100%;
@@ -82,13 +83,13 @@
     color: #888;
     margin-bottom: 10px;
 }
-
 .pagination {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 12px;
     margin-top: 40px;
+    grid-column: 1 / -1;
 }
 .pagination button {
     background-color: #fff;
@@ -110,6 +111,24 @@
     background-color: #ff5000;
     color: #fff;
 }
+
+/* 종료된이벤트 */
+#tab-end .event-thumb img {
+    filter: brightness(25%);
+}
+.event-badge.end {
+    position: absolute;
+    color: #fff;
+    border: 1px solid;
+    font-size: 14px;
+    padding: 12px 24px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 
 
 

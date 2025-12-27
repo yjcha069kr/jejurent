@@ -12,63 +12,64 @@
 <body>
     <!-- ======================== 헤더 상단바 ======================== -->
     <div class="top-bar">
-        <div class="container">
-            <!-- 왼쪽 메뉴 -->
-            <div class="left-menu">
-                <a href="/sub/notice.html">공지사항</a>
-                <a href="/sub/ask.html">자주 묻는 질문</a>
-            </div>
-            <!-- 오른쪽 메뉴 -->
-            <div class="right-menu">
-                <a href="/sub/login.html">로그인</a>
-                <span>|</span>
-                <a href="/sub/non_member.html">비회원 조회</a>
-            </div>
+    <div class="container">
+        <!-- 왼쪽 메뉴 -->
+        <div class="left-menu">
+            <a href="/sub/notice.html">공지사항</a>
+            <a href="/sub/ask.html">자주 묻는 질문</a>
+        </div>
+        <!-- 오른쪽 메뉴 -->
+        <div class="right-menu">
+            <a href="/sub/login.html">로그인</a>
+            <span>|</span>
+            <a href="/sub/guest.html">비회원 조회</a>
         </div>
     </div>
+</div>
     <!-- ==================== 헤더 ==================== -->
     <header class="header">
-        <!-- 메인 네비(GNB) -->
-        <nav class="gnb" id="gnb">
-            <ul class="menu">
-                <li>
-                    <a href="/index.html"><img src="/assets/jejurent.png" alt=""></a>
-                </li>
-                <li class="mainmenu">
-                    <a href="/sub/rent.html">렌터카 예약</a>
-                </li>
-                <li class="mainmenu">
-                    <a href="#">차량소개</a>
-                    <ul class="submenu">
-                        <li><a href="/sub/type_small.html">경형/소형</a></li>
-                        <li><a href="/sub/type_medium.html">중형</a></li>
-                        <li><a href="/sub/type_van.html">승합</a></li>
-                        <li><a href="/sub/type_suv.html">SUV/RV</a></li>
-                        <li><a href="/sub/type_electric.html">전기</a></li>
-                    </ul>
-                </li>
-                <li class="mainmenu">
-                    <a href="/sub/event.html">이벤트</a>
-                </li>
-                <li class="mainmenu">
-                    <a href="#">이용안내</a>
-                    <ul class="submenu">
-                        <li><a href="/sub/guide_use.html">렌터카 이용 안내</a></li>
-                        <li><a href="/sub/guide_insurance.html">보험 안내</a></li>
-                        <li><a href="/sub/guide_other.html">기타 유의사항</a></li>
-                    </ul>
-                </li>
-                <li class="mainmenu">
-                    <a href="/sub/notice.html">고객센터</a>
-                    <ul class="submenu">
-                        <li><a href="/sub/notice.html">공지사항</a></li>
-                        <li><a href="/sub/ask.html">자주 묻는 질문</a></li>
-                    </ul>
-                </li>
-
-            </ul>
-        </nav>
+            <!-- 메인 네비(GNB) -->
+            <nav class="gnb" id="gnb">
+                <ul class="menu">
+                    <li>
+                        <a href="/index.html"><img src="/assets/jejurent.png" alt=""></a>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="/sub/rent.html">렌터카 예약</a>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="#">차량소개</a>
+                        <ul class="submenu">
+                            <li><a href="/sub/type_small.html">경형/소형</a></li>
+                            <li><a href="/sub/type_medium.html">중형</a></li>
+                            <li><a href="/sub/type_van.html">승합</a></li>
+                            <li><a href="/sub/type_suv.html">SUV/RV</a></li>
+                            <li><a href="/sub/type_electric.html">전기</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="/sub/event.html">이벤트</a>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="#">이용안내</a>
+                        <ul class="submenu">
+                            <li><a href="/sub/guide_use.html">렌터카 이용 안내</a></li>
+                            <li><a href="/sub/guide_insurance.html">보험 안내</a></li>
+                            <li><a href="/sub/guide_other.html">기타 유의사항</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="#">고객센터</a>
+                        <ul class="submenu">
+                            <li><a href="/sub/notice.html">공지사항</a></li>
+                            <li><a href="/sub/ask.html">자주 묻는 질문</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </nav>
     </header>
+    
 
     <!-- ==================== 섹션 ==================== -->
     <section class="section section-event" id="event-ing">
@@ -192,23 +193,123 @@
                         <p class="event-date">2024.06.30 ~ 2025.12.31</p>
                     </div>
                 </div>
-            </div>
-            <!-- 페이지 버튼 -->
+                <!-- 페이지 버튼 -->
                 <div class="pagination">
                     <button class="page-number active">1</button>
                     <button class="page-number">2</button>
                 </div>
+            </div>
+            
 
             <!-- ========== 종료된 이벤트 ========== -->
             <div class="event-list tab-content" id="tab-end">
                 <div class="event-item">
                     <div class="event-thumb">
                         <img src="/assets/event_end10.png" alt="승합차할인">
+                        <span class="event-badge end">종료</span>
                     </div>
                     <div class="event-text">
-                        <h3 class="event-title">연말연시 카운트다운 할인 쿠폰</h3>
-                        <p class="event-date">2025.12.01 ~ 2026.03.31</p>
+                        <h3 class="event-title">10월의 렌터카: SUV/승합차 10% 할인</h3>
+                        <p class="event-date">2022.10.17 ~ 2022.10.23</p>
                     </div>
+                </div>
+                <div class="event-item">
+                    <div class="event-thumb">
+                        <img src="/assets/event_end09.jpg" alt="쓰리콤보할인">
+                        <span class="event-badge end">종료</span>
+                    </div>
+                    <div class="event-text">
+                        <h3 class="event-title">쓰리콤보할인 쿠폰팩</h3>
+                        <p class="event-date">2025.08.18 ~ 2025.09.30</p>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="event-thumb">
+                        <img src="/assets/event_end08.png" alt="카카오페이">
+                        <span class="event-badge end">종료</span>
+                    </div>
+                    <div class="event-text">
+                        <h3 class="event-title">제주패스 X 카카오페이 Co-promotion</h3>
+                        <p class="event-date">2022.06.01 ~ 2022.06.25</p>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="event-thumb">
+                        <img src="/assets/event_end07.png" alt="카페패스">
+                        <span class="event-badge end">종료</span>
+                    </div>
+                    <div class="event-text">
+                        <h3 class="event-title">카페패스 이용권 증정 이벤트</h3>
+                        <p class="event-date">2022.04.25 ~ 2022.05.24</p>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="event-thumb">
+                        <img src="/assets/event_end06.png" alt="SAFE">
+                        <span class="event-badge end">종료</span>
+                    </div>
+                    <div class="event-text">
+                        <h3 class="event-title">SAFE LOVE, SAFE DRIVING</h3>
+                        <p class="event-date">2022.08.26 ~ 2022.09.30</p>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="event-thumb">
+                        <img src="/assets/event_end05.png" alt="릴레이할인">
+                        <span class="event-badge end">종료</span>
+                    </div>
+                    <div class="event-text">
+                        <h3 class="event-title">항공X렌터카X숙박 릴레이 할인!</h3>
+                        <p class="event-date">2022.08.26 ~ 2022.09.30</p>
+                    </div>
+                </div>
+                <div class="event-item hidden">
+                    <div class="event-thumb">
+                        <img src="/assets/event_end04.jfif" alt="추캉스">
+                        <span class="event-badge end">종료</span>
+                    </div>
+                    <div class="event-text">
+                        <h3 class="event-title">황금연휴, 가을 추캉스 초특가</h3>
+                        <p class="event-date">2023.08.29 ~ 2023.10.09</p>
+                    </div>
+                </div>
+                <div class="event-item hidden">
+                    <div class="event-thumb">
+                        <img src="/assets/event_end03.jfif" alt="수국">
+                        <span class="event-badge end">종료</span>
+                    </div>
+                    <div class="event-text">
+                        <h3 class="event-title">수국수국 할인 대작전</h3>
+                        <p class="event-date">2023.05.09 ~ 2023.05.31</p>
+                    </div>
+                </div>
+                <div class="event-item hidden">
+                    <div class="event-thumb">
+                        <img src="/assets/event_end02.jfif" alt="썸머얼리버드">
+                        <span class="event-badge end">종료</span>
+                    </div>
+                    <div class="event-text">
+                        <h3 class="event-title">썸머 얼리버드 세일전</h3>
+                        <p class="event-date">2023.06.01 ~ 2023.06.30</p>
+                    </div>
+                </div>
+                <div class="event-item hidden">
+                    <div class="event-thumb">
+                        <img src="/assets/event_end01.jfif" alt="캠핑카">
+                        <span class="event-badge end">종료</span>
+                    </div>
+                    <div class="event-text">
+                        <h3 class="event-title">캠핑카 할인 기획전</h3>
+                        <p class="event-date">2023.12.06 ~ 2023.12.31</p>
+                    </div>
+                </div>
+                <!-- 페이지 버튼 -->
+                <div class="pagination">
+                    <button class="page-number active">1</button>
+                    <button class="page-number">2</button>
+                    <button class="page-number">3</button>
+                    <button class="page-number">4</button>
+                    <button class="page-number">5</button>
                 </div>
             </div>
 
