@@ -12,67 +12,67 @@
 </head>
 
 <body>
-    <!-- ======================== 헤더 상단바 ======================== -->
-    <div class="top-bar">
-    <div class="container">
-        <!-- 왼쪽 메뉴 -->
-        <div class="left-menu">
-            <a href="/sub/notice.html">공지사항</a>
-            <a href="/sub/ask.html">자주 묻는 질문</a>
-        </div>
-        <!-- 오른쪽 메뉴 -->
-        <div class="right-menu">
-            <a href="/sub/login.html">로그인</a>
-            <span>|</span>
-            <a href="/sub/guest.html">비회원 조회</a>
-        </div>
-    </div>
-</div>
     <!-- ==================== 헤더 ==================== -->
     <header class="header">
-            <!-- 메인 네비(GNB) -->
-            <nav class="gnb" id="gnb">
-                <ul class="menu">
-                    <li>
-                        <a href="/index.html"><img src="/assets/jejurent.png" alt=""></a>
-                    </li>
-                    <li class="mainmenu">
-                        <a href="/sub/rent.html">렌터카 예약</a>
-                    </li>
-                    <li class="mainmenu">
-                        <a href="#">차량소개</a>
-                        <ul class="submenu">
-                            <li><a href="/sub/type_small.html">경형/소형</a></li>
-                            <li><a href="/sub/type_medium.html">중형</a></li>
-                            <li><a href="/sub/type_van.html">승합</a></li>
-                            <li><a href="/sub/type_suv.html">SUV/RV</a></li>
-                            <li><a href="/sub/type_electric.html">전기</a></li>
-                        </ul>
-                    </li>
-                    <li class="mainmenu">
-                        <a href="/sub/event.html">이벤트</a>
-                    </li>
-                    <li class="mainmenu">
-                        <a href="#">이용안내</a>
-                        <ul class="submenu">
-                            <li><a href="/sub/guide_use.html">렌터카 이용 안내</a></li>
-                            <li><a href="/sub/guide_insurance.html">보험 안내</a></li>
-                            <li><a href="/sub/guide_other.html">기타 유의사항</a></li>
-                        </ul>
-                    </li>
-                    <li class="mainmenu">
-                        <a href="#">고객센터</a>
-                        <ul class="submenu">
-                            <li><a href="/sub/notice.html">공지사항</a></li>
-                            <li><a href="/sub/ask.html">자주 묻는 질문</a></li>
-                        </ul>
-                    </li>
-                    
-                </ul>
-            </nav>
+        <!-- ========== 헤더 상단바 ========== -->
+        <div class="top-bar">
+            <div class="container">
+                <!-- 왼쪽 메뉴 -->
+                <div class="left-menu">
+                    <a href="/sub/notice.html"><i class="fa-solid fa-bullhorn"></i> 공지사항</a>
+                    <span>|</span>
+                    <a href="/sub/ask.html"><i class="fa-regular fa-circle-question"></i> 자주 묻는 질문</a>
+                </div>
+                <!-- 오른쪽 메뉴 -->
+                <div class="right-menu">
+                    <a href="/sub/login.html"><i class="fa-regular fa-user"></i> 로그인</a>
+                    <span>|</span>
+                    <a href="/sub/guest.html"><i class="fa-solid fa-bag-shopping"></i> 비회원 예약조회</a>
+                </div>
+            </div>
+        </div>
+        <!-- ========== 메인 네비(GNB) ========== -->
+        <nav class="gnb" id="gnb">
+            <ul class="menu">
+                <li>
+                    <a href="/index.html"><img src="/assets/jejurent.png" alt=""></a>
+                </li>
+                <li class="mainmenu">
+                    <a href="/sub/rent.html">렌터카 예약</a>
+                </li>
+                <li class="mainmenu">
+                    <a href="#">차량소개</a>
+                    <ul class="submenu">
+                        <li><a href="/sub/type_small.html">경형/소형</a></li>
+                        <li><a href="/sub/type_medium.html">중형</a></li>
+                        <li><a href="/sub/type_van.html">승합</a></li>
+                        <li><a href="/sub/type_suv.html">SUV/RV</a></li>
+                        <li><a href="/sub/type_electric.html">전기</a></li>
+                    </ul>
+                </li>
+                <li class="mainmenu">
+                    <a href="/sub/event.html">이벤트</a>
+                </li>
+                <li class="mainmenu">
+                    <a href="#">이용안내</a>
+                    <ul class="submenu">
+                        <li><a href="/sub/guide_use.html">렌터카 이용 안내</a></li>
+                        <li><a href="/sub/guide_insurance.html">보험 안내</a></li>
+                        <li><a href="/sub/guide_other.html">기타 유의사항</a></li>
+                    </ul>
+                </li>
+                <li class="mainmenu">
+                    <a href="#">고객센터</a>
+                    <ul class="submenu">
+                        <li><a href="/sub/notice.html">공지사항</a></li>
+                        <li><a href="/sub/ask.html">자주 묻는 질문</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </header>
 
-    
+
 
     <!-- ================ 메인 ============ -->
     <!-- 메인 비쥬얼 -->
@@ -84,139 +84,174 @@
         </div>
     </section>
 
-<!-- ============================ 렌터카예약 ============================ -->
+    <!-- ============================ 렌터카예약 ============================ -->
     <section class="section">
         <div class="container">
-            <div class="section-header">
-                <h2>렌터카 예약</h2>
-            </div>
+            <h2>렌터카 예약<span>* 모든 사항은 필수 입력 사항입니다.</span></h2>
+
+            <!-- 인수/반납 -->
             <div class="box">
                 <div class="box-header">
                     <h3>인수 / 반납 일시</h3>
                 </div>
-                <div class="datetime-grid">
-                    <div>
-                        <label>인수 일시</label>
-                        <input type="datetime-local">
-                    </div>
-                    <div>
-                        <label>반납 일시</label>
-                        <input type="datetime-local">
-                    </div>
+                <div class="form-group">
+                    <label>인수 일시</label>
+                    <input type="date">
+                </div>
+                <div class="form-group">
+                    <label>반납 일시</label>
+                    <input type="date">
                 </div>
             </div>
+
+            <!-- 차량 선택 -->
             <div class="box">
                 <div class="box-header">
                     <h3>차량 선택</h3>
                 </div>
-
-                <div class="type-list">
-                    <button class="type-btn" data-type="small">경형/소형</button>
-                    <button class="type-btn" data-type="medium">중형</button>
-                    <button class="type-btn" data-type="van">승합</button>
-                    <button class="type-btn" data-type="suv">SUV/RV</button>
-                    <button class="type-btn" data-type="electric">전기</button>
-                </div>
-
-                <div class="car-list" id="small">
-                    <div class="car-item">모닝</div>
-                    <div class="car-item">스파크</div>
-                    <div class="car-item">캐스퍼</div>
-                    <div class="car-item">레이</div>
-                </div>
-
-                <div class="car-list" id="medium">
-                    <div class="car-item">소나타</div>
-                    <div class="car-item">K5</div>
-                    <div class="car-item">아반떼</div>
-                    <div class="car-item">그랜저</div>
-                </div>
-
-                <div class="car-list" id="van">
-                    <div class="car-item">스타리아</div>
-                    <div class="car-item">카니발</div>
-                    <div class="car-item">스타렉스</div>
-                </div>
-
-                <div class="car-list" id="suv">
-                    <div class="car-item">베뉴</div>
-                    <div class="car-item">펠리세이드</div>
-                    <div class="car-item">싼타페</div>
-                    <div class="car-item">쏘렌토</div>
-                </div>
-
-                <div class="car-list" id="electric">
-                    <div class="car-item">아이오닉5</div>
-                    <div class="car-item">아이오닉6</div>
-                    <div class="car-item">EV6</div>
+                <div class="form-group">
+                    <div class="type-list">
+                        <button class="type-btn" data-type="small">경형/소형</button>
+                        <button class="type-btn" data-type="medium">중형</button>
+                        <button class="type-btn" data-type="van">승합</button>
+                        <button class="type-btn" data-type="suv">SUV/RV</button>
+                        <button class="type-btn" data-type="electric">전기</button>
+                    </div>
+                    <div class="car-lists">
+                        <div class="car-list" id="small">
+                            <div class="car-item">모닝</div>
+                            <div class="car-item">스파크</div>
+                            <div class="car-item">캐스퍼</div>
+                            <div class="car-item">레이</div>
+                        </div>
+                        <div class="car-list" id="medium">
+                            <div class="car-item">소나타</div>
+                            <div class="car-item">K5</div>
+                            <div class="car-item">아반떼</div>
+                            <div class="car-item">그랜저</div>
+                        </div>
+                        <div class="car-list" id="van">
+                            <div class="car-item">스타리아</div>
+                            <div class="car-item">카니발</div>
+                            <div class="car-item">스타렉스</div>
+                        </div>
+                        <div class="car-list" id="suv">
+                            <div class="car-item">베뉴</div>
+                            <div class="car-item">펠리세이드</div>
+                            <div class="car-item">싼타페</div>
+                            <div class="car-item">쏘렌토</div>
+                        </div>
+                        <div class="car-list" id="electric">
+                            <div class="car-item">아이오닉5</div>
+                            <div class="car-item">아이오닉6</div>
+                            <div class="car-item">EV6</div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- 예약자 정보 -->
             <div class="box">
                 <div class="box-header">
                     <h3>예약자 정보</h3>
                 </div>
-                <table class="table">
-                    <tr>
-                        <th>이름</th>
-                        <td><input type="text" placeholder="실명을 입력해주세요."></td>
-                    </tr>
-                    <tr>
-                        <th>휴대전화번호</th>
-                        <td><input type="tel" placeholder="- 빼고 숫자만 입력해주세요."></td>
-                    </tr>
-                </table>
+                <div class="form-group">
+                    <label>예약자 이름</label>
+                    <input type="text" placeholder="실명을 입력해주세요.">
+                </div>
+                <div class="form-group">
+                    <label>휴대전화번호</label>
+                    <input type="tel" placeholder="- 빼고 숫자만 입력해주세요.">
+                </div>
             </div>
+
+            <!-- 운전자 정보 -->
             <div class="box">
                 <div class="box-header">
                     <h3>운전자 정보</h3>
                 </div>
-                <table class="table">
-                    <tr>
-                        <th>이름</th>
-                        <td><input type="text" placeholder="실명을 입력해주세요."></td>
-                    </tr>
-                    <tr>
-                        <th>휴대전화번호</th>
-                        <td><input type="tel" placeholder="- 빼고 숫자만 입력해주세요."></td>
-                    </tr>
-                    <tr>
-                        <th>면허종류</th>
-                        <td>
-                            <div class="license-tabs">
-                                <div class="license-tab" data-value="1종">1종</div>
-                                <div class="license-tab" data-value="2종">2종</div>
-                            </div>
-                            <input type="hidden" id="licenseValue">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>생년월일</th>
-                        <td>
-                            <div class="birth-grid">
-                                <select>
-                                    <option>년</option>
-                                </select>
-                                <select>
-                                    <option>월</option>
-                                </select>
-                                <select>
-                                    <option>일</option>
-                                </select>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
+                <div class="form-group">
+                    <label>운전자 이름</label>
+                    <input type="text" placeholder="실명을 입력해주세요.">
+                </div>
+                <div class="form-group">
+                    <label>휴대전화번호</label>
+                    <input type="tel" placeholder="- 빼고 숫자만 입력해주세요.">
+                </div>
+                <div class="form-group">
+                    <label>면허종류</label>
+                    <div class="license-tabs">
+                        <div class="license-tab active" data-value="1종">1종</div>
+                        <div class="license-tab" data-value="2종">2종</div>
+                    </div>
+                    <input type="hidden" name="license">
+                </div>
+
+                <div class="form-group">
+                    <label>생년월일</label>
+                    <div class="birth-grid">
+                        <select>
+                            <option value="" disabled selected>년</option>
+                            <option value="2004">2004년</option>
+                            <option value="2003">2003년</option>
+                            <option value="2002">2002년</option>
+                            <option value="2001">2001년</option>
+                            <option value="2000">2000년</option>
+                            <option value="1999">1999년</option>
+                            <option value="1998">1998년</option>
+                        </select>
+                        <select>
+                            <option value="" disabled selected>월</option>
+                            <option value="12">12월</option>
+                            <option value="11">11월</option>
+                            <option value="10">10월</option>
+                            <option value="9">9월</option>
+                            <option value="8">8월</option>
+                            <option value="7">7월</option>
+                            <option value="6">6월</option>
+                            <option value="5">5월</option>
+                            <option value="4">4월</option>
+                            <option value="3">3월</option>
+                            <option value="2">2월</option>
+                            <option value="1">1월</option>
+
+                        </select>
+                        <select>
+                            <option value="" disabled selected>일</option>
+                            <option value="31">31일</option>
+                            <option value="30">30일</option>
+                            <option value="29">29일</option>
+                            <option value="28">28일</option>
+                            <option value="27">27일</option>
+                            <option value="26">26일</option>
+                            <option value="25">25일</option>
+                            <option value="24">24일</option>
+                            <option value="23">23일</option>
+                            <option value="22">22일</option>
+                            <option value="21">21일</option>
+                            <option value="20">20일</option>
+                        </select>
+                    </div>
+                </div>
             </div>
+
+            <!-- 부가서비스 -->
             <div class="box">
                 <div class="box-header">
-                    <h3>부가서비스</h3>
+                    <h3>부가 서비스<span>* 1일 기준 요금입니다.</span></h3>
                 </div>
-                <div class="dropdown" id="serviceBtn">유아용품 선택 ▾</div>
-                <div class="dropdown-content" id="serviceContent">
-                    <label><input type="checkbox"> 카시트</label><br>
-                    <label><input type="checkbox"> 유모차</label>
+                <div class="form-group">
+                    <select>
+                        <option value="" disabled selected>유아용품</option>
+                        <option value="carseat">카시트</option>
+                        <option value="stroller">유모차</option>
+                        <option value="none">선택안함</option>
+                    </select>
                 </div>
             </div>
+
+            <button type="submit" class="rent-btn">예약하기</button>
+
         </div>
     </section>
 
@@ -253,14 +288,4 @@
     <script src="/js/rent.js"></script>
 </body>
 
-=======
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>제주 렌터카-예약</title>
-</head>
-<body>
-    <h2>ㅇㅇ</h2>
-</body>
->>>>>>> 5e50f22c6773872f2b5c4b55c009f7c9ea1b9cc5
 </html>

@@ -31,24 +31,51 @@
 }
 
 
-/* ===================== 렌터카예약 ========================== */
+/* ===================== 렌터카예약 공통 ========================== */
+.section h2 {
+    font-size: 33px;
+    margin-bottom: 40px;
+    margin-left: 200px;
+}
+.section span {
+    margin-left: 20px;
+    font-size: 12px;
+    color: #ff5000;
+}
 body {
     background-color: #fffbf7;
 }
 .box {
-    width: 80%;
+    width: 60%;
     margin: 0 auto 30px;
     border-radius: 12px;
     padding: 30px;
     background: #fff;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
 .box h3 {
-    font-size: 22px;
+    font-size: 25px;
     margin-bottom: 30px;
     padding-bottom: 20px;
     border-bottom: 2px dotted #ddd;
 }
+.form-group {
+    margin-bottom: 25px;
+}
+.form-group label {
+    font-size: 18px;
+    font-weight: bold;
+}
+input, select {
+    width: 100%;
+    padding: 15px; 
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+/* 인수/반납 일시 */
 .datetime-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -57,93 +84,88 @@ body {
     font-weight: bold;
 }
 .datetime-grid input {
-  margin-top: 15px;
+    margin-top: 15px;
 }
 
-input, select {
-    width: 100%;
-    padding: 15px 15px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    font-size: 15px;
-}
-.table {
-    width: 100%;
-    border-collapse: collapse;
-}
-.table th {
-    font-size: 18px;
-    width: 200px;
-    text-align: left;
-    padding: 12px 0;
-}
-.table td {
-    padding: 12px 0;
-}
-
+/* 차량 선택 */
 .type-list {
     display: flex;
+    justify-content: center;
     gap: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .type-btn {
     font-size: 16px;
-    padding: 12px 18px;
+    padding: 12px 20px;
     border-radius: 20px;
-    border: 1px solid #ddd;
+    font-weight: bold;
+    color: #333;
+    border: 2px solid #ddd;
     background: #fff;
     cursor: pointer;
 }
 .type-btn.active {
-    color: #fff;
-    background: #ff5000;
-    border-color: #ff5000;
+    font-weight: bold;
+    color: #ff5000;
+    border: 2px solid #ff5000;
 }
 .car-list {
-    width: 150px;
+    width: 40%;
+    margin: 0 auto;
     text-align: center;
     display: none;
-    gap: 12px;
+    gap: 20px;
 }
 .car-item {
-    padding: 12px;
+    padding: 15px;
     border: 1px solid #ddd;
     border-radius: 12px;
     cursor: pointer;
 }
 .car-item.active {
-    background: #f8c084;
+    color: #fff;
+    background: #ff5000;
+    border: none;
 }
 
+/* 운전자 정보 */
 .license-tabs {
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 .license-tab {
     width: 100px;
     text-align: center;
-    padding: 12px 18px;
+    padding: 15px;
     border: 1px solid #ddd;
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
+    margin-top: 5px;
 }
 .license-tab.active {
     background: #ff5000;
     color: #fff;
 }
-
 .birth-grid {
     display: flex;
-    gap: 12px;
+    gap: 10px;
 }
 
-.dropdown {
-    padding: 12px;
-    border: 1px solid #e5e7eb;
+
+/* 예약하기 버튼 */
+.rent-btn {
+    width: 10%;
+    display: block;
+    margin: 0 auto;
+    background: #ff5000;
+    color: #fff;
+    border: none;
     border-radius: 12px;
+    padding: 17px;
+    font-weight: bold;
+    font-size: 16px;
     cursor: pointer;
 }
-.dropdown-content {
-    display: none;
-    margin-top: 12px;
+.rent-btn:hover {
+    background: #ff7333;
 }

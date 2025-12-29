@@ -1,104 +1,235 @@
-경형/소형: 가볍고 경제적인 기본 차량
+<!DOCTYPE html>
+<html lang="ko">
 
-중형: 넉넉한 공간과 안정성
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제주 렌터카 예약</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-승합: 단체 여행에 딱 맞는 대형 차량
+<body>
+    <!-- 상단바 -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="left-menu">
+                <a href="/sub/notice.html">공지사항</a>
+                <a href="/sub/ask.html">자주 묻는 질문</a>
+            </div>
+            <div class="right-menu">
+                <a href="/sub/login.html">로그인</a>
+                <span>|</span>
+                <a href="/sub/guest.html">비회원 조회</a>
+            </div>
+        </div>
+    </div>
 
-SUV: 제주 오프로드와 가족 여행에 최적
+    <!-- 헤더 / GNB -->
+    <header class="header">
+        <nav class="gnb" id="gnb">
+            <ul class="menu">
+                <li><a href="/index.html"><img src="/assets/jejurent.png" alt="로고"></a></li>
+                <li class="mainmenu">
+                    <a href="/sub/rent.html">렌터카 예약</a>
+                </li>
+                <li class="mainmenu">
+                    <a href="#">차량소개</a>
+                    <ul class="submenu">
+                        <li><a href="/sub/type_small.html">경형/소형</a></li>
+                        <li><a href="/sub/type_medium.html">중형</a></li>
+                        <li><a href="/sub/type_van.html">승합</a></li>
+                        <li><a href="/sub/type_suv.html">SUV/RV</a></li>
+                        <li><a href="/sub/type_electric.html">전기</a></li>
+                    </ul>
+                </li>
+                <li class="mainmenu"><a href="/sub/event.html">이벤트</a></li>
+                <li class="mainmenu">
+                    <a href="#">이용안내</a>
+                    <ul class="submenu">
+                        <li><a href="/sub/guide_use.html">렌터카 이용 안내</a></li>
+                        <li><a href="/sub/guide_insurance.html">보험 안내</a></li>
+                        <li><a href="/sub/guide_other.html">기타 유의사항</a></li>
+                    </ul>
+                </li>
+                <li class="mainmenu">
+                    <a href="#">고객센터</a>
+                    <ul class="submenu">
+                        <li><a href="/sub/notice.html">공지사항</a></li>
+                        <li><a href="/sub/ask.html">자주 묻는 질문</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-전기차: 친환경 제주 여행을 원한다면!
--------------------------------------------------------------------------------------------
+    <!-- 메인 비주얼 -->
+    <section class="main-visual">
+        <img src="/assets/hyundai-motor-group-WfqxYnP8exQ-unsplash.jpg" alt="제주렌트카 메인 이미지">
+        <div class="visual-text">
+            <h1>단체 여행도 걱정 없다!</h1>
+            <p>승합차로 모든 인원이 편안하게 여행을 떠나세요.</p>
+        </div>
+    </section>
 
-[제주패스 렌터카 보험종류 총정리]
-일반자차, 고급자차, 제주패스케어, 슈퍼무제한의 차이를 한눈에 확인하실 수 있습니다.
+    <!-- 렌터카 예약 -->
+    <section class="section">
+        <div class="container">
+            <h2>렌터카 예약</h2>
 
-제주패스와 제휴된 모든 렌터카 회사는 종합보험에 가입되어 있습니다.
-렌터카 회사가 가입한 종합보험의 보상 범위는 대인(상대방 신체) / 대물(상대방 차량) / 자손(나의 신체)에 한정하며, 대여한 렌터카의 파손(자차)은 보상범위에 포함되어 있지 않습니다.
-불필요한 비용지출을 방지하고자, 제주패스를 통한 모든 차량 예약은 자차보험(차량손해면책제도) 가입을 의무화하고 있습니다.
+            <!-- 인수/반납 -->
+            <div class="box">
+                <div class="form-group">
+                    <label>인수 일시</label>
+                    <input type="date">
+                </div>
+                <div class="form-group">
+                    <label>반납 일시</label>
+                    <input type="date">
+                </div>
+            </div>
 
-구분
+            <!-- 차량 선택 -->
+            <div class="box">
+                <div class="form-group">
+                    <label>차량 선택</label>
+                    <div class="type-list">
+                        <button class="type-btn" data-type="small">경형/소형</button>
+                        <button class="type-btn" data-type="medium">중형</button>
+                        <button class="type-btn" data-type="van">승합</button>
+                        <button class="type-btn" data-type="suv">SUV/RV</button>
+                        <button class="type-btn" data-type="electric">전기</button>
+                    </div>
+                    <div class="car-lists">
+                        <div class="car-list" id="small">
+                            <div class="car-item">모닝</div>
+                            <div class="car-item">스파크</div>
+                            <div class="car-item">캐스퍼</div>
+                            <div class="car-item">레이</div>
+                        </div>
+                        <div class="car-list" id="medium">
+                            <div class="car-item">소나타</div>
+                            <div class="car-item">K5</div>
+                            <div class="car-item">아반떼</div>
+                            <div class="car-item">그랜저</div>
+                        </div>
+                        <div class="car-list" id="van">
+                            <div class="car-item">스타리아</div>
+                            <div class="car-item">카니발</div>
+                            <div class="car-item">스타렉스</div>
+                        </div>
+                        <div class="car-list" id="suv">
+                            <div class="car-item">베뉴</div>
+                            <div class="car-item">펠리세이드</div>
+                            <div class="car-item">싼타페</div>
+                            <div class="car-item">쏘렌토</div>
+                        </div>
+                        <div class="car-list" id="electric">
+                            <div class="car-item">아이오닉5</div>
+                            <div class="car-item">아이오닉6</div>
+                            <div class="car-item">EV6</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-일반자차
+            <!-- 예약자 정보 -->
+            <div class="box">
+                <div class="form-group">
+                    <label>예약자 이름</label>
+                    <input type="text" placeholder="실명을 입력해주세요.">
+                </div>
+                <div class="form-group">
+                    <label>휴대전화번호</label>
+                    <input type="tel" placeholder="- 없이 숫자만 입력">
+                </div>
+            </div>
 
-고급자차
+            <!-- 운전자 정보 -->
+            <div class="box">
+                <div class="form-group">
+                    <label>운전자 이름</label>
+                    <input type="text" placeholder="실명을 입력해주세요.">
+                </div>
+                <div class="form-group">
+                    <label>휴대전화번호</label>
+                    <input type="tel" placeholder="- 없이 숫자만 입력">
+                </div>
+                <div class="form-group">
+                    <label>면허종류</label>
+                    <select>
+                        <option>1종</option>
+                        <option>2종</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>생년월일</label>
+                    <div class="birth-grid">
+                        <select><option>년</option></select>
+                        <select><option>월</option></select>
+                        <select><option>일</option></select>
+                    </div>
+                </div>
+            </div>
 
-제주패스케어
+            <!-- 부가서비스 -->
+            <div class="box">
+                <div class="form-group">
+                    <label>부가서비스</label>
+                    <select>
+                        <option>카시트</option>
+                        <option>유모차</option>
+                    </select>
+                </div>
+            </div>
 
-슈퍼무제한
+        </div>
+    </section>
 
-면책금
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; KAFLIX All Rights Reserved</p>
+        </div>
+    </footer>
 
-면책금 발생
-
-면제
-
-면제
-
-면제
-
-휴차보상료
-
-보장불가
-
-보장불가
-
-(일부 업체 보장)
-
-면제
-
-면제
-
-보상한도
-
-차종별 한도 내 보장
-
-차종별 한도 내 보장
-
-
-
-
-
-통합 500만원
-
-한도 내 보상
-
-무제한
-
-단독사고
-
-보장불가
-
-보장불가
-
-(일부 업체 보장)
-
-면제
-
-휠/타이어
-
-보장불가
-
-보장불가
-
-면제
-
-특별 보장 항목
-
--
-
--
-
-비행기 연착 시간만큼 보상
-
-차량 변경 시 120% 보상
-
-인수 당일 노쇼 처리 없음
-
--
+</body>
+</html>
 
 
-* 면책금: 차량 손해 발생 시, 운전자가 지불해야하는 비용
-* 보상한도: 가입한 자차보험(차량손해면책제도)의 사고 처리비용 한도
-* 휴차보상료: 사고로 인해 차량 운행 불가 시, 운전자가 렌터카사에 보상해야 하는 금액
-* 단독사고: 과실 유무와 상관없이 주/정차된 차량 및 시설물을 접촉하거나 본인 과실 100% 사고의 경우
-* 특별 보장 항목: 제주패스케어 고객에게만 드리는 특별 보장
+
+
+
+
+
+/* 메인 비주얼 */
+.main-visual {position:relative; height:350px; overflow:hidden; margin-bottom:30px;}
+.main-visual img {width:100%; height:100%; object-fit:cover;}
+.visual-text {position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); color:#fff; text-align:center;}
+.visual-text h1 {font-size:48px; margin-bottom:15px;}
+.visual-text p {font-size:25px;}
+
+/* 박스 및 폼 */
+.box {background:#fff; padding:30px; border-radius:12px; margin-bottom:30px; box-shadow:0 2px 12px rgba(0,0,0,0.08);}
+.form-group {margin-bottom:20px;}
+.form-group label {display:block; margin-bottom:8px; font-weight:bold;}
+.form-group input, .form-group select {width:100%; padding:12px; border:1px solid #ddd; border-radius:10px; font-size:15px;}
+.birth-grid {display:flex; gap:10px;}
+.birth-grid select {flex:1;}
+
+/* 차량 선택 버튼 */
+.type-list {display:flex; gap:10px; margin-bottom:15px;}
+.type-btn {padding:10px 15px; border:1px solid #ddd; border-radius:10px;}
+.type-btn.active {background:#ff5000; color:#fff;}
+
+/* 차량 리스트 */
+.car-list {display:none; margin-top:10px;}
+.car-item {padding:10px; border:1px solid #ddd; border-radius:10px; margin-bottom:5px; cursor:pointer;}
+.car-item.active {background:#f8c084;}
+
+
+/* 반응형 */
+@media(max-width:768px){
+    .menu {flex-direction:column; gap:10px;}
+    .birth-grid {flex-direction:column;}
+}
+

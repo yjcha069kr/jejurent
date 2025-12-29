@@ -1,0 +1,126 @@
+/* ================= notice_*** 모두 공통 ====================*/
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.section .container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    font-size: 33px;
+    text-align: left; 
+    border-bottom: 2px dotted #ddd;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+.sub_title {
+    width: 1000px; 
+    margin: 0 auto 20px auto;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #777;
+    
+}
+.sub_title h3 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.sub_title span {
+    font-size: 14px;
+    color: #555;
+}
+
+.content {
+    width: 1000px;
+    margin: 40px auto 0;
+}
+
+.content h4 {
+    font-size: 15px;
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.content p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* 목록보기 */
+.list-button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px 15px;
+    border: 1px solid #555;
+    background-color: #fff;
+    color: #333;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    margin: 100px auto; 
+    width: 150px;
+}
+.list-button:hover {
+    background-color: #ff5000;
+    border-color: #ff5000;
+    color: #fff;
+}
+
+/* 이전글/다음글 */
+.post-navigation {
+    width: 1000px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #333;
+}
+
+.post-navigation .post {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.post-navigation .post:nth-child(1) {
+    border-bottom: 1px solid #ddd;
+}
+
+.post-navigation .post span {
+    min-width: 80px;
+    color: #888;
+    font-weight: 500;
+}
+
+.post-navigation .post a {
+    color: #333;
+    text-decoration: none;
+    flex-grow: 1;
+}
+
+
+
+/* notice_insurance.html 표 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 14px;
+}
+
+thead {
+    background-color: black;
+    color: white;
+}
+
+th, td {
+    border: 1px solid #ddd; 
+    padding: 10px;
+}

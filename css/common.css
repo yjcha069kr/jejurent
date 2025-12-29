@@ -51,50 +51,50 @@ body {
 }
 
 /* ======================== 헤더 상단바 ========================  */
-.top-bar {
+.header .top-bar {
     background: #fff;
     padding: 10px 10px 15px;
     font-size: 13px;
     color: #333;
 }
 
-.top-bar .container {
+.header .top-bar .container {
     display: flex;
     justify-content: space-between; /* 양쪽 끝으로 배치 */
     align-items: center;
 }
 
 /* 왼쪽 메뉴 */
-.top-bar .left-menu {
+.header .top-bar .left-menu {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-.top-bar .left-menu a img {
+.header .top-bar .left-menu a img {
     width: 20px;
     height: 20px;
 }
-.top-bar .left-menu a {
+.header .top-bar .left-menu a {
     text-decoration: none;
     color: #333;
     transition: color 0.2s;
 }
 
 /* 오른쪽 메뉴 */
-.top-bar .right-menu {
+.header .top-bar .right-menu {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.top-bar .right-menu a {
+.header .top-bar .right-menu a {
     text-decoration: none;
     color: #333;
     transition: color 0.2s;
 }
 
-.top-bar .right-menu a:hover {
+.header .top-bar .right-menu a:hover {
     color: #ff5000;
 }
 
