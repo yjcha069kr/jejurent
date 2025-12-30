@@ -4,7 +4,8 @@
     display: none;
 }
 /* ==================== 이벤트 섹션 ==================== */
-.section-event h2 {
+.section h2 {
+    margin-bottom: 40px;
     margin-left: 200px;
 }
 .event-header {
@@ -56,7 +57,7 @@
 }
 .event-thumb {
     position: relative;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
 }
 .event-thumb img {
@@ -68,16 +69,16 @@
     transform: scale(1.08);
 }
 .event-text {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 .event-title {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     color: #333;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
 .event-date {
-    font-size: 14px;
+    font-size: 12px;
     color: #888;
     margin-bottom: 10px;
 }
