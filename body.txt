@@ -1,235 +1,99 @@
-<!DOCTYPE html>
-<html lang="ko">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>제주 렌터카 예약</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+#제주필수코스#제주도서쪽카페#제주카페#천혜향카페#제주빵지순례#제주이색카페#제주여행
 
-<body>
-    <!-- 상단바 -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="left-menu">
-                <a href="/sub/notice.html">공지사항</a>
-                <a href="/sub/ask.html">자주 묻는 질문</a>
-            </div>
-            <div class="right-menu">
-                <a href="/sub/login.html">로그인</a>
-                <span>|</span>
-                <a href="/sub/guest.html">비회원 조회</a>
-            </div>
-        </div>
-    </div>
+테마스토리
 
-    <!-- 헤더 / GNB -->
-    <header class="header">
-        <nav class="gnb" id="gnb">
-            <ul class="menu">
-                <li><a href="/index.html"><img src="/assets/jejurent.png" alt="로고"></a></li>
-                <li class="mainmenu">
-                    <a href="/sub/rent.html">렌터카 예약</a>
-                </li>
-                <li class="mainmenu">
-                    <a href="#">차량소개</a>
-                    <ul class="submenu">
-                        <li><a href="/sub/type_small.html">경형/소형</a></li>
-                        <li><a href="/sub/type_medium.html">중형</a></li>
-                        <li><a href="/sub/type_van.html">승합</a></li>
-                        <li><a href="/sub/type_suv.html">SUV/RV</a></li>
-                        <li><a href="/sub/type_electric.html">전기</a></li>
-                    </ul>
-                </li>
-                <li class="mainmenu"><a href="/sub/event.html">이벤트</a></li>
-                <li class="mainmenu">
-                    <a href="#">이용안내</a>
-                    <ul class="submenu">
-                        <li><a href="/sub/guide_use.html">렌터카 이용 안내</a></li>
-                        <li><a href="/sub/guide_insurance.html">보험 안내</a></li>
-                        <li><a href="/sub/guide_other.html">기타 유의사항</a></li>
-                    </ul>
-                </li>
-                <li class="mainmenu">
-                    <a href="#">고객센터</a>
-                    <ul class="submenu">
-                        <li><a href="/sub/notice.html">공지사항</a></li>
-                        <li><a href="/sub/ask.html">자주 묻는 질문</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
+/* ==================== 섹션4 : NEW 새로 오픈했어요 ==================== */
 
-    <!-- 메인 비주얼 -->
-    <section class="main-visual">
-        <img src="/assets/hyundai-motor-group-WfqxYnP8exQ-unsplash.jpg" alt="제주렌트카 메인 이미지">
-        <div class="visual-text">
-            <h1>단체 여행도 걱정 없다!</h1>
-            <p>승합차로 모든 인원이 편안하게 여행을 떠나세요.</p>
-        </div>
-    </section>
-
-    <!-- 렌터카 예약 -->
-    <section class="section">
-        <div class="container">
-            <h2>렌터카 예약</h2>
-
-            <!-- 인수/반납 -->
-            <div class="box">
-                <div class="form-group">
-                    <label>인수 일시</label>
-                    <input type="date">
-                </div>
-                <div class="form-group">
-                    <label>반납 일시</label>
-                    <input type="date">
-                </div>
-            </div>
-
-            <!-- 차량 선택 -->
-            <div class="box">
-                <div class="form-group">
-                    <label>차량 선택</label>
-                    <div class="type-list">
-                        <button class="type-btn" data-type="small">경형/소형</button>
-                        <button class="type-btn" data-type="medium">중형</button>
-                        <button class="type-btn" data-type="van">승합</button>
-                        <button class="type-btn" data-type="suv">SUV/RV</button>
-                        <button class="type-btn" data-type="electric">전기</button>
-                    </div>
-                    <div class="car-lists">
-                        <div class="car-list" id="small">
-                            <div class="car-item">모닝</div>
-                            <div class="car-item">스파크</div>
-                            <div class="car-item">캐스퍼</div>
-                            <div class="car-item">레이</div>
-                        </div>
-                        <div class="car-list" id="medium">
-                            <div class="car-item">소나타</div>
-                            <div class="car-item">K5</div>
-                            <div class="car-item">아반떼</div>
-                            <div class="car-item">그랜저</div>
-                        </div>
-                        <div class="car-list" id="van">
-                            <div class="car-item">스타리아</div>
-                            <div class="car-item">카니발</div>
-                            <div class="car-item">스타렉스</div>
-                        </div>
-                        <div class="car-list" id="suv">
-                            <div class="car-item">베뉴</div>
-                            <div class="car-item">펠리세이드</div>
-                            <div class="car-item">싼타페</div>
-                            <div class="car-item">쏘렌토</div>
-                        </div>
-                        <div class="car-list" id="electric">
-                            <div class="car-item">아이오닉5</div>
-                            <div class="car-item">아이오닉6</div>
-                            <div class="car-item">EV6</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 예약자 정보 -->
-            <div class="box">
-                <div class="form-group">
-                    <label>예약자 이름</label>
-                    <input type="text" placeholder="실명을 입력해주세요.">
-                </div>
-                <div class="form-group">
-                    <label>휴대전화번호</label>
-                    <input type="tel" placeholder="- 없이 숫자만 입력">
-                </div>
-            </div>
-
-            <!-- 운전자 정보 -->
-            <div class="box">
-                <div class="form-group">
-                    <label>운전자 이름</label>
-                    <input type="text" placeholder="실명을 입력해주세요.">
-                </div>
-                <div class="form-group">
-                    <label>휴대전화번호</label>
-                    <input type="tel" placeholder="- 없이 숫자만 입력">
-                </div>
-                <div class="form-group">
-                    <label>면허종류</label>
-                    <select>
-                        <option>1종</option>
-                        <option>2종</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>생년월일</label>
-                    <div class="birth-grid">
-                        <select><option>년</option></select>
-                        <select><option>월</option></select>
-                        <select><option>일</option></select>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 부가서비스 -->
-            <div class="box">
-                <div class="form-group">
-                    <label>부가서비스</label>
-                    <select>
-                        <option>카시트</option>
-                        <option>유모차</option>
-                    </select>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- 푸터 -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; KAFLIX All Rights Reserved</p>
-        </div>
-    </footer>
-
-</body>
-</html>
-
-
-
-
-
-
-
-/* 메인 비주얼 */
-.main-visual {position:relative; height:350px; overflow:hidden; margin-bottom:30px;}
-.main-visual img {width:100%; height:100%; object-fit:cover;}
-.visual-text {position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); color:#fff; text-align:center;}
-.visual-text h1 {font-size:48px; margin-bottom:15px;}
-.visual-text p {font-size:25px;}
-
-/* 박스 및 폼 */
-.box {background:#fff; padding:30px; border-radius:12px; margin-bottom:30px; box-shadow:0 2px 12px rgba(0,0,0,0.08);}
-.form-group {margin-bottom:20px;}
-.form-group label {display:block; margin-bottom:8px; font-weight:bold;}
-.form-group input, .form-group select {width:100%; padding:12px; border:1px solid #ddd; border-radius:10px; font-size:15px;}
-.birth-grid {display:flex; gap:10px;}
-.birth-grid select {flex:1;}
-
-/* 차량 선택 버튼 */
-.type-list {display:flex; gap:10px; margin-bottom:15px;}
-.type-btn {padding:10px 15px; border:1px solid #ddd; border-radius:10px;}
-.type-btn.active {background:#ff5000; color:#fff;}
-
-/* 차량 리스트 */
-.car-list {display:none; margin-top:10px;}
-.car-item {padding:10px; border:1px solid #ddd; border-radius:10px; margin-bottom:5px; cursor:pointer;}
-.car-item.active {background:#f8c084;}
-
-
-/* 반응형 */
-@media(max-width:768px){
-    .menu {flex-direction:column; gap:10px;}
-    .birth-grid {flex-direction:column;}
+/* 섹션 제목 */
+.section-4 .section-header h2 {
+    margin-left: 200px;
 }
 
+/* 카드 영역 래퍼 */
+.section-4 .cafe-container {
+    margin-top: 40px;
+}
+
+/* 카드 리스트 (섹션3 car-items와 동일한 느낌) */
+.section-4 .cafe-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* 카드 전체 */
+.section-4 .cafe-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+/* 이미지 영역 */
+.section-4 .card-image {
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #eee;
+}
+
+/* 이미지 */
+.section-4 .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* hover 효과 */
+.section-4 .cafe-card:hover img {
+    transform: scale(1.08);
+}
+
+/* 텍스트 영역 */
+.section-4 .card-content {
+    margin-top: 12px;
+}
+
+/* 카페 이름 */
+.section-4 .card-content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+/* 설명 텍스트 */
+.section-4 .card-content p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 해시태그 */
+.section-4 .card-content span {
+    color: #ff5000;
+    font-weight: 500;
+}
+
+/* ==================== 반응형 (선택) ==================== */
+@media (max-width: 1024px) {
+    .section-4 .cafe-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .section-4 .cafe-items {
+        grid-template-columns: 1fr;
+    }
+
+    .section-4 .section-header h2 {
+        margin-left: 0;
+        text-align: center;
+    }
+}

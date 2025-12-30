@@ -1,5 +1,4 @@
 @charset "utf-8";
-/* @import url('/css/common.css'); */
 
 /* ======================== 메인 비쥬얼 ======================== */
 .main-visual {
@@ -41,8 +40,7 @@
 /* ======================== 섹션1 ======================== */
 .section-1 {
     background-color: #FFF3E6;
-    padding: 60px 0;
-    margin-bottom: 100px;
+    padding-bottom: 50px;
 }
 .section-1 .section-header p {
     font-size: 16px;
@@ -183,9 +181,8 @@
 .event-banner {
     position: relative;
     overflow: hidden;
-    width: 100%;
-    max-width: 1400px;
-    height: 400px;
+    width: 90%;
+    height: 350px;
     margin: 0 auto;
     border-radius: 15px;
 }
@@ -245,13 +242,13 @@
 
 
 /* ======================== 섹션3 ======================== */
-.car-items {
+.section-3 .car-items {
     display: grid;
-    grid-template-columns: repeat(3, 382px); /* 382px짜리 카드 3개 */
+    grid-template-columns: repeat(3, 330px); 
     justify-content: center;
     gap: 50px; 
 }
-.car-card {
+.section-3 .car-card {
     text-decoration: none;
     color: #333;
     border-radius: 10px;
@@ -262,116 +259,167 @@
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
-.car-card:hover {
+.section-3 .car-card:hover {
     transform: translateY(-15px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
-.card-image {
+.section-3 .card-image {
     width: 100%;
-    height: 286px; 
+    height: 250px; 
     background-size: cover;
     background-position: center;
 }
-.card-content {
+.section-3 .card-content {
     padding: 30px 21px;
     background-color: #fff;
     flex: 0 0 auto; /* 이미지 아래로 위치 고정 */
 }
-.card-content h3 {
-    font-size: 20px;
+.section-3 .card-content h3 {
+    font-size: 18px;
     margin-bottom: 6px;
     color: #555;
 }
-.card-content p {
+.section-3 .card-content p {
     font-size: 16px;
     font-weight: bold;
     color: #ff5000;
 }
-.car-items .car-card:nth-of-type(1) .card-image {
+.section-3 .car-card:nth-of-type(1) .card-image {
     background-image: url(/assets/01-1.jpg);
 }
-.car-items .car-card:nth-of-type(2) .card-image {
+.section-3 .car-card:nth-of-type(2) .card-image {
     background-image: url(/assets/02-1.jpg);
 }
-.car-items .car-card:nth-of-type(3) .card-image {
+.section-3 .car-card:nth-of-type(3) .card-image {
     background-image: url(/assets/03-1.jpg);
 }
-.car-items .car-card:nth-of-type(4) .card-image {
+.section-3 .car-card:nth-of-type(4) .card-image {
     background-image: url(/assets/06-1.jpg);
 }
-.car-items .car-card:nth-of-type(5) .card-image {
+.section-3 .car-card:nth-of-type(5) .card-image {
     background-image: url(/assets/05-1.jpg);
 }
-.car-items .car-card:nth-of-type(6) .card-image {
+.section-3 .car-card:nth-of-type(6) .card-image {
     background-image: url(/assets/08-1.jpg);
 }
 
-.hidden {
+.section-3 .hidden {
     display: none;
 }
-.more-btn-container {
+.section-3 .more-btn-container {
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
-.more-btn {
-    font-size: 18px;
-    margin-top: 20px;
-    padding: 20px 35px;
+.section-3 .more-btn {
+    font-size: 15px;
+    margin-top: 30px;
+    padding: 20px 30px;
     background: #ff5000;
     color: #fff;
     border: none;
     border-radius: 8px;
     cursor: pointer;
 }
-.more-btn:hover {
+.section-3 .more-btn:hover {
     background: #ff7333;
     transition:  0.5s ease;
 }
 
 
 /* ======================== 섹션4 ======================== */
-.section-4 .service {
-    position: relative; /* 장식 이미지 배치용 */
+.section-4 .cafe-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
-.section-4 .service-items {
+.section-4 .cafe-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+.section-4 .card-image {
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #eee;
+}
+.section-4 .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+.section-4 .cafe-card img:hover {
+    transform: scale(1.08);
+}
+.section-4 .card-content {
+    margin-top: 25px;
+}
+.section-4 .card-content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 6px;
+}
+.section-4 .card-content p {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+}
+.section-4 .card-content span {
+    color: #777;
+    font-size: 13px;
+}
+
+
+
+/* ======================== 섹션5 ======================== */
+.section-5 .service {
+    position: relative;
+}
+.section-5 .service-items {
     display: flex;
     align-items: center; 
     gap: 30px;
     padding: 20px 0; 
+    padding-left: 70px;
     border-bottom: 1px solid #ddd;
     width: 800px;
 }
-.section-4 .service-items img {
-    height: 55px;
-    width: 55px;
+.section-5 .service-items img {
+    height: 40px;
+    width: 40px;
     object-fit: contain;
     flex-shrink: 0;
 }
-.section-4 .service-text a {
+.section-5 a {
     text-decoration: none;
     color: inherit;
     display: inline-block; 
 }
-.section-4 .service-text h3 {
+.section-5 h3 {
     margin: 8px 0;
     font-size: 22px;
     color: #333;
 }
-.section-4 .service-text h3:hover {
+.section-5 h3:hover {
     color:#ff5000
 }
-.section-4 .service-text p {
-    font-size: 18px;
+.section-5 p {
+    font-size: 16px;
     color: #333;
     line-height: 1.7;
 }
-.section-4 .service-deco {
+.section-5 .service-deco {
     position: absolute;
     right: 0;   
     top: 50%;
-    transform: translateY(-35%);
-    width: 600px;
+    transform: translateY(-25%);
+    width: 500px;
     opacity: 0.8;
 }
 

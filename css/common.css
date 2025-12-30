@@ -42,12 +42,13 @@ body {
     margin: 0 auto;
 }
 .section {
-    padding: 50px 0 100px;
-    scroll-margin-top: 100px; /* 헤더 높이만큼 여유 */
+    padding: 50px 0 70px;
 }
 .section-header {
-    font-size: 22px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+}
+h2 {
+    font-size: 30px;
 }
 
 /* ======================== 헤더 상단바 ========================  */

@@ -62,12 +62,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 /* ==================== 섹션3: 렌터카 카드 더보기 ==================== */
-const showMoreBtn = document.querySelector('.more-btn');
-const hiddenCards = document.querySelectorAll('.car-card.hidden');
+const section3 = document.querySelector('.section-3');
 
-if (showMoreBtn) {
-    showMoreBtn.addEventListener('click', () => {
-        hiddenCards.forEach(card => card.classList.remove('hidden'));
-        showMoreBtn.style.display = 'none';
-    });
+if (section3) {
+    const showMoreBtn = section3.querySelector('.more-btn');
+    const hiddenCards = section3.querySelectorAll('.car-card.hidden');
+
+    if (showMoreBtn) {
+        showMoreBtn.addEventListener('click', () => {
+            hiddenCards.forEach(card => {
+                card.classList.remove('hidden');
+            });
+            showMoreBtn.style.display = 'none';
+        });
+    }
 }
