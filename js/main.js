@@ -1,3 +1,19 @@
+/* ==================== 메인비쥬얼 풀페이지 ==================== */
+const mainVisual = document.querySelector('.main-visual');
+let scrolling = false;
+
+mainVisual.addEventListener('wheel', (e) => {
+    if (scrolling) return; // 연속 스크롤 방지
+    if (e.deltaY > 0) { // 아래로 스크롤
+        scrolling = true;
+        window.scrollTo({
+            top: mainVisual.offsetHeight,
+            behavior: 'smooth'
+        });
+        setTimeout(() => scrolling = false, 1000); // 1초 후 스크롤 가능
+    }
+});
+
 /* ==================== 섹션1: 검색 바 ==================== */
 document.addEventListener('DOMContentLoaded', () => {
     const filterBoxes = document.querySelectorAll('.filter-box');

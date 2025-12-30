@@ -50,7 +50,7 @@
     grid-template-columns: repeat(2, 1fr);
     max-width: 900px;
     margin: 40px auto 0;
-    gap: 30px;
+    gap: 50px;
 }
 .event-item {
     cursor: pointer;
@@ -87,7 +87,7 @@
     justify-content: center;
     align-items: center;
     gap: 12px;
-    margin-top: 40px;
+    margin-top: 30px;
     grid-column: 1 / -1;
 }
 .pagination button {
