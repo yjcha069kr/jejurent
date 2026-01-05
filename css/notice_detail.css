@@ -93,7 +93,7 @@
     gap: 25px;
 }
 .post-navigation .post:nth-child(1) {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px dotted #ddd;
 }
 
 .post-navigation .post span {

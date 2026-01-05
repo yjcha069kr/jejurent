@@ -93,3 +93,44 @@ if (section3) {
         });
     }
 }
+
+
+
+/* ==================== 섹션4: 카페패스 ==================== */
+document.querySelectorAll('.cafe-card').forEach(card => {
+    const wrapper = card.querySelector('.slide-wrapper');
+    const slides = card.querySelectorAll('.slide');
+    const prevBtn = card.querySelector('.prev-btn');
+    const nextBtn = card.querySelector('.next-btn');
+    const totalSlides = slides.length;
+    const countSpan = card.querySelector('.slide-count'); // 숫자 span
+
+    let currentIndex = 0;
+
+    function updateSlide() {
+        // 슬라이드 이동
+        wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+        // 숫자만 업데이트
+        countSpan.textContent = `${currentIndex + 1}/${totalSlides}`;
+    }
+
+    prevBtn.addEventListener('click', e => {
+        e.preventDefault();
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateSlide();
+    });
+
+    nextBtn.addEventListener('click', e => {
+        e.preventDefault();
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlide();
+    });
+
+    // 초기 설정
+    updateSlide();
+});
+
+
+
+
+

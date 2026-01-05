@@ -1,3 +1,9 @@
+@charset "utf-8";
+
+#gnb > ul > .mainmenu:nth-child(2) > a {
+    color: #ff5000;
+}
+
 /* ============ 메인 비쥬얼 ========== */
 .main-visual {
     position: relative;
