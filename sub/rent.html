@@ -100,7 +100,10 @@
                     <div class="form-group">
                         <label>인수 일시</label>
                         <div class="custom-date-box calendar-box">
-                            <input type="text" readonly placeholder="날짜 선택" class="date-display">
+                            <div class="date-input-wrap">
+                                <i class="fa-regular fa-calendar"></i>
+                                <input type="text" readonly placeholder="날짜 선택" class="date-display">
+                            </div>
                             <div class="calendar">
                                 <div class="calendar-header">
                                     <button type="button" class="prev-month">&lt;</button>
@@ -114,7 +117,10 @@
                     <div class="form-group">
                         <label>반납 일시</label>
                         <div class="custom-date-box calendar-box">
-                            <input type="text" readonly placeholder="날짜 선택" class="date-display">
+                            <div class="date-input-wrap">
+                                <i class="fa-regular fa-calendar"></i>
+                                <input type="text" readonly placeholder="날짜 선택" class="date-display">
+                            </div>
                             <div class="calendar">
                                 <div class="calendar-header">
                                     <button type="button" class="prev-month">&lt;</button>
@@ -284,9 +290,11 @@
                 </div>
                 <div class="form-group">
                     <select>
-                        <option value="" disabled selected>유아용품</option>
-                        <option value="carseat">카시트</option>
+                        <option value="" disabled selected>선택해주세요.</option>
+                        <option value="carseat">유아 카시트</option>
                         <option value="stroller">유모차</option>
+                        <option value="fishing">낚시용품</option>
+                        <option value="pet">반려견 방석</option>
                         <option value="none">선택안함</option>
                     </select>
                 </div>

@@ -85,9 +85,28 @@ input, select {
     margin-top: 5px;
     font-size: 15px;
 }
-/* 달력 */
+/* 인수/반납 */
 .custom-date-box {
     position: relative;
+}
+.date-input-wrap {
+    width: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+.date-display {
+  padding-right: 40px;
+  height: 40px;
+}
+
+.date-input-wrap i {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  pointer-events: none; /* 클릭 방해 안 하게 */
 }
 .calendar {
     position: absolute;
@@ -156,20 +175,18 @@ input, select {
 }
 .dropdown-btn {
     width: 100%;
-    padding: 13px 20px;
-    font-size: 16px;
+    padding: 11px;
+    font-size: 15px;
     text-align: left;
     border: 1px solid #ddd;
     border-radius: 12px;
     background-color: #fff;
     cursor: pointer;
-    color: #333;
+    color: #777;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-/* 드롭다운 옵션 */
 .dropdown-options {
     display: none;
     position: absolute;
@@ -181,11 +198,9 @@ input, select {
     border-radius: 12px;
     z-index: 999;
 }
-
-/* 드롭다운 옵션 항목 */
 .dropdown-option {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 15px;
     cursor: pointer;
     color: #333;
     background: #fff;
@@ -230,7 +245,7 @@ input, select {
     max-width: 150px;
     background-color: #fff;
     color: #333;
-    font-size: 16px;
+    font-size: 15px;
 }
 .car-item.active {
     background-color: #ff5000;
@@ -253,6 +268,7 @@ input, select {
     gap: 5px;
 }
 .license-tab {
+    font-size: 15px;
     width: 100px;
     text-align: center;
     padding: 13px;
@@ -265,16 +281,14 @@ input, select {
     background: #ff5000;
     color: #fff;
 }
-
-/* 생년월일 정보 */
 .birth-grid {
     display: flex;
     gap: 10px;
+    margin-top: 5px;
 }
-
 .birth-grid select {
     width: 100%;
-    padding: 13px;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 12px;
     font-size: 15px;
