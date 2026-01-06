@@ -14,8 +14,7 @@ mainVisual.addEventListener('wheel', (e) => {
     }
 });
 
-// ==================== 섹션1: 검색바 + 커스텀 달력 ====================
-// ==================== 섹션1: 검색바 + 커스텀 달력 ====================
+// ==================== 섹션1: 검색바 ====================
 document.addEventListener('DOMContentLoaded', () => {
 
     let pickupDate = null;

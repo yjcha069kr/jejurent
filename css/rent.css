@@ -88,15 +88,6 @@ input, select {
 .custom-date-box {
     position: relative;
 }
-.date-display {
-    width: 100%;
-    padding: 13px;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    margin-top: 5px;
-    font-size: 15px;
-    cursor: pointer;
-}
 .calendar {
     position: absolute;
     left: 0;
@@ -113,16 +104,21 @@ input, select {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    font-size: 16px;
     font-weight: bold;
-    color: #ff5000;
 }
 .calendar-header button {
     background: #ff5000;
     border: none;
     color: #fff;
-    border-radius: 8px;
-    padding: 6px 8px;
+    border-radius: 50%;
+    padding: 5px 8px;
     cursor: pointer;
+}
+.calendar-header .month-year {
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
 }
 .calendar-body {
     display: grid;
@@ -131,10 +127,11 @@ input, select {
     text-align: center;
 }
 .calendar-day {
+    font-size: 15px;
     font-weight: bold;
-    color: #ff5500;
 }
 .calendar-date {
+    font-size: 13px;
     padding: 10px 0;
     border-radius: 8px;
     cursor: pointer;

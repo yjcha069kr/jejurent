@@ -1,114 +1,130 @@
-// ===== 인수/반납 일시 =====
-let pickupDate = null;
-let returnDate = null;
+// ===== 인수/반납일시 =====
+document.addEventListener('DOMContentLoaded', () => {
+    let pickupDate = null;
+    let returnDate = null;
 
-document.querySelectorAll('.custom-date-box').forEach((box, index) => {
-    const input = box.querySelector('.date-display');
-    const calendar = box.querySelector('.calendar');
-    const body = box.querySelector('.calendar-body');
-    const monthYear = box.querySelector('.month-year');
-    const prevBtn = box.querySelector('.prev-month');
-    const nextBtn = box.querySelector('.next-month');
+    // .calendar-box 클래스를 가진 모든 박스를 처리
+    document.querySelectorAll('.calendar-box').forEach((box, index) => {
+        const display = box.querySelector('.date-display');
+        const calendar = box.querySelector('.calendar');
+        const body = box.querySelector('.calendar-body');
+        const monthYear = box.querySelector('.month-year');
+        const prevBtn = box.querySelector('.prev-month');
+        const nextBtn = box.querySelector('.next-month');
 
-    const days = ['일', '월', '화', '수', '목', '금', '토'];
-    let currentDate = new Date();
+        let currentDate = new Date();
+        const days = ['일', '월', '화', '수', '목', '금', '토'];
 
-    function formatDate(date) {
-        return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
-    }
-
-    function renderCalendar(date) {
-        body.innerHTML = '';
-
-        // 요일
-        days.forEach(d => {
-            const el = document.createElement('div');
-            el.textContent = d;
-            el.className = 'calendar-day';
-            body.appendChild(el);
-        });
-
-        const year = date.getFullYear();
-        const month = date.getMonth();
-        monthYear.textContent = `${year}년 ${month + 1}월`;
-
-        const firstDay = new Date(year, month, 1).getDay();
-        const lastDate = new Date(year, month + 1, 0).getDate();
-
-        for (let i = 0; i < firstDay; i++) {
-            body.appendChild(document.createElement('div'));
+        // 날짜 포맷 함수
+        function formatDate(d) {
+            return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
         }
 
-        for (let i = 1; i <= lastDate; i++) {
-            const dateEl = document.createElement('div');
-            dateEl.textContent = i;
-            dateEl.className = 'calendar-date';
+        // 달력 렌더링 함수
+        function renderCalendar(date) {
+            body.innerHTML = '';  // 달력 내용 초기화
 
-            const selected = new Date(year, month, i);
-            const today = new Date();
-            today.setHours(0, 0, 0, 0);
-
-            // 지난 날짜 회색 처리
-            if (selected < today) dateEl.classList.add('disabled');
-
-            dateEl.addEventListener('click', () => {
-                // 지난 날짜는 클릭 안됨
-                if (dateEl.classList.contains('disabled')) return;
-
-                if (index === 0) { // 인수
-                    pickupDate = selected;
-                    input.value = formatDate(selected);
-                    // 반납 날짜가 인수보다 빠르면 초기화
-                    if (returnDate && returnDate < pickupDate) {
-                        returnDate = null;
-                        document.querySelectorAll('.date-display')[1].value = '';
-                    }
-                }
-
-                if (index === 1) { // 반납
-                    if (!pickupDate) {
-                        alert('먼저 인수 날짜를 선택해주세요.');
-                        return;
-                    }
-
-                    if (selected < pickupDate) {
-                        alert('반납 날짜는 인수 날짜 이후여야 합니다.');
-                        return;
-                    }
-
-                    returnDate = selected;
-                    input.value = formatDate(selected);
-                }
-
-                calendar.style.display = 'none';
+            // 요일 표시
+            days.forEach(d => {
+                const el = document.createElement('div');
+                el.className = 'calendar-day';
+                el.textContent = d;
+                body.appendChild(el);
             });
 
-            body.appendChild(dateEl);
+            const y = date.getFullYear();
+            const m = date.getMonth();
+            monthYear.textContent = `${y}년 ${m + 1}월`;
+
+            const first = new Date(y, m, 1).getDay(); // 해당 월의 첫 번째 날짜가 시작되는 요일
+            const last = new Date(y, m + 1, 0).getDate(); // 해당 월의 마지막 날짜
+
+            // 빈 공간 채우기 (요일에 맞게)
+            for (let i = 0; i < first; i++) body.appendChild(document.createElement('div'));
+
+            const today = new Date();
+            today.setHours(0, 0, 0, 0); // 오늘 날짜 기준으로 초기화
+
+            // 날짜 생성
+            for (let i = 1; i <= last; i++) {
+                const d = new Date(y, m, i);
+                const el = document.createElement('div');
+                el.className = 'calendar-date';
+                el.textContent = i;
+
+                if (d < today) el.classList.add('disabled'); // 오늘 이전 날짜는 비활성화
+
+                // 날짜 선택 이벤트
+                el.onclick = () => {
+                    if (el.classList.contains('disabled')) return;
+
+                    if (index % 2 === 0) {
+                        // 인수일시 선택 (홀수번째 박스)
+                        pickupDate = d;
+                        display.value = formatDate(d);
+                        display.style.color = ''; 
+                        
+                        // 선택된 날짜의 색상을 기본 텍스트 색상으로 설정
+                        el.style.color = ''; 
+
+                        if (returnDate && returnDate < pickupDate) {
+                            alert('반납 날짜는 인수 날짜 이후여야 합니다.');
+                            returnDate = null;
+                        }
+                    } else {
+                        // 반납일시 선택 (짝수번째 박스)
+                        if (!pickupDate) {
+                            alert('먼저 인수 날짜를 선택해주세요.');
+                            return;
+                        }
+                        if (d < pickupDate) {
+                            alert('반납 날짜는 인수 날짜 이후여야 합니다.');
+                            return;
+                        }
+                        returnDate = d;
+                        display.value = formatDate(d);
+                        display.style.color = '';
+
+                        // 선택된 날짜의 색상을 기본 텍스트 색상으로 설정
+                        el.style.color = ''; 
+                    }
+
+                    // 날짜 선택 후 달력 닫기
+                    setTimeout(() => {
+                        calendar.style.display = 'none';
+                    }, 0);
+                };
+
+                body.appendChild(el);
+            }
         }
-    }
 
-    input.addEventListener('click', e => {
-        e.stopPropagation();
-        calendar.style.display = calendar.style.display === 'block' ? 'none' : 'block';
-        renderCalendar(currentDate);
-    });
+        // 달력 표시 토글
+        display.onclick = e => {
+            e.stopPropagation();
+            calendar.style.display = 'block';
+            renderCalendar(currentDate);
+        };
 
-    prevBtn.addEventListener('click', e => {
-        e.stopPropagation();
-        currentDate.setMonth(currentDate.getMonth() - 1);
-        renderCalendar(currentDate);
-    });
+        // 이전/다음 달 이동
+        prevBtn.onclick = e => {
+            e.stopPropagation();
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            renderCalendar(currentDate);
+        };
 
-    nextBtn.addEventListener('click', e => {
-        e.stopPropagation();
-        currentDate.setMonth(currentDate.getMonth() + 1);
-        renderCalendar(currentDate);
-    });
+        nextBtn.onclick = e => {
+            e.stopPropagation();
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            renderCalendar(currentDate);
+        };
 
-    document.addEventListener('click', e => {
-        if (!box.contains(e.target)) {
-            calendar.style.display = 'none';
-        }
+        // 달력 외부 클릭 시 닫기
+        document.addEventListener('click', e => {
+            if (!box.contains(e.target)) {
+                calendar.style.display = 'none';
+            }
+        });
     });
 });
 
