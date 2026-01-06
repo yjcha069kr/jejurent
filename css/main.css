@@ -127,7 +127,7 @@
     white-space: nowrap; 
 }
 .filter-box .value-display span {
-    color: #ff5000
+    color: #ff5000;
 }
 
 /* 선택 박스 */
@@ -136,11 +136,67 @@
 }
 .date-input {
     position: absolute;
-    inset: 0; /* t,b,r,l: 0; */
+    inset: 0;
     opacity: 0;
     cursor: pointer;
 }
 
+/* 달력 팝업 */
+.date-box .calendar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    display: none;
+    z-index: 50;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #ff5000;
+}
+.calendar-header button {
+    background: #ff5000;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    padding: 6px 8px;
+    cursor: pointer;
+}
+.calendar-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    text-align: center;
+}
+.calendar-day {
+    font-weight: bold;
+    color: #ff5500;
+}
+.calendar-date {
+    padding: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.calendar-date:hover {
+    background: #ff5000;
+    color: #fff;
+}
+.calendar-date.disabled {
+    color: #ccc;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* 옵션 팝업 */
 .option-list {
     list-style: none;
     padding: 0;
@@ -171,6 +227,8 @@
 .filter-box.active .detail-popup {
     display: block; 
 }
+
+/* 검색 버튼 */
 .search-button {
     padding: 20px 35px;
     background-color: #ff5000;
