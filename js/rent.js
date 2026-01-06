@@ -1,3 +1,117 @@
+// ===== 인수/반납 일시 =====
+let pickupDate = null;
+let returnDate = null;
+
+document.querySelectorAll('.custom-date-box').forEach((box, index) => {
+    const input = box.querySelector('.date-display');
+    const calendar = box.querySelector('.calendar');
+    const body = box.querySelector('.calendar-body');
+    const monthYear = box.querySelector('.month-year');
+    const prevBtn = box.querySelector('.prev-month');
+    const nextBtn = box.querySelector('.next-month');
+
+    const days = ['일', '월', '화', '수', '목', '금', '토'];
+    let currentDate = new Date();
+
+    function formatDate(date) {
+        return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+    }
+
+    function renderCalendar(date) {
+        body.innerHTML = '';
+
+        // 요일
+        days.forEach(d => {
+            const el = document.createElement('div');
+            el.textContent = d;
+            el.className = 'calendar-day';
+            body.appendChild(el);
+        });
+
+        const year = date.getFullYear();
+        const month = date.getMonth();
+        monthYear.textContent = `${year}년 ${month + 1}월`;
+
+        const firstDay = new Date(year, month, 1).getDay();
+        const lastDate = new Date(year, month + 1, 0).getDate();
+
+        for (let i = 0; i < firstDay; i++) {
+            body.appendChild(document.createElement('div'));
+        }
+
+        for (let i = 1; i <= lastDate; i++) {
+            const dateEl = document.createElement('div');
+            dateEl.textContent = i;
+            dateEl.className = 'calendar-date';
+
+            const selected = new Date(year, month, i);
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            // 지난 날짜 회색 처리
+            if (selected < today) dateEl.classList.add('disabled');
+
+            dateEl.addEventListener('click', () => {
+                // 지난 날짜는 클릭 안됨
+                if (dateEl.classList.contains('disabled')) return;
+
+                if (index === 0) { // 인수
+                    pickupDate = selected;
+                    input.value = formatDate(selected);
+                    // 반납 날짜가 인수보다 빠르면 초기화
+                    if (returnDate && returnDate < pickupDate) {
+                        returnDate = null;
+                        document.querySelectorAll('.date-display')[1].value = '';
+                    }
+                }
+
+                if (index === 1) { // 반납
+                    if (!pickupDate) {
+                        alert('먼저 인수 날짜를 선택해주세요.');
+                        return;
+                    }
+
+                    if (selected < pickupDate) {
+                        alert('반납 날짜는 인수 날짜 이후여야 합니다.');
+                        return;
+                    }
+
+                    returnDate = selected;
+                    input.value = formatDate(selected);
+                }
+
+                calendar.style.display = 'none';
+            });
+
+            body.appendChild(dateEl);
+        }
+    }
+
+    input.addEventListener('click', e => {
+        e.stopPropagation();
+        calendar.style.display = calendar.style.display === 'block' ? 'none' : 'block';
+        renderCalendar(currentDate);
+    });
+
+    prevBtn.addEventListener('click', e => {
+        e.stopPropagation();
+        currentDate.setMonth(currentDate.getMonth() - 1);
+        renderCalendar(currentDate);
+    });
+
+    nextBtn.addEventListener('click', e => {
+        e.stopPropagation();
+        currentDate.setMonth(currentDate.getMonth() + 1);
+        renderCalendar(currentDate);
+    });
+
+    document.addEventListener('click', e => {
+        if (!box.contains(e.target)) {
+            calendar.style.display = 'none';
+        }
+    });
+});
+
 // ===== 차량 타입 선택 =====
 const typeBtns = document.querySelectorAll('.type-btn');
 const carLists = document.querySelectorAll('.car-list');

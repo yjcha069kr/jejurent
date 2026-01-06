@@ -48,7 +48,7 @@
     font-weight: bold;
 }
 .section:nth-of-type(odd) {
-    background: #F8F7F9;
+    background: #f8f7f9;
 }
 /* 더 알아보기 링크버튼 */
 .link-wrap {
