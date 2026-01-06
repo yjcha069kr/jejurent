@@ -64,6 +64,11 @@ body {
     padding-bottom: 20px;
     border-bottom: 2px dotted #ddd;
 }
+.form-group-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
 .form-group {
     margin-bottom: 25px;
 }
