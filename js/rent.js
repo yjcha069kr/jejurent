@@ -129,26 +129,55 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ===== 차량 타입 선택 =====
-const typeBtns = document.querySelectorAll('.type-btn');
-const carLists = document.querySelectorAll('.car-list');
+document.addEventListener('DOMContentLoaded', function () {
+    const dropdownBtn = document.querySelector('.dropdown-btn');
+    const dropdownOptions = document.querySelector('.dropdown-options');
+    const dropdownItems = document.querySelectorAll('.dropdown-option');
+    const carLists = document.querySelectorAll('.car-list');
+    const carItems = document.querySelectorAll('.car-item');
 
-typeBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        typeBtns.forEach(b => b.classList.remove('active'));
-        carLists.forEach(list => list.style.display = 'none');
+    // 드롭다운 버튼 클릭 시 옵션 보여주기/숨기기
+    dropdownBtn.addEventListener('click', function () {
+        dropdownOptions.classList.toggle('active');
+        dropdownBtn.classList.toggle('active');
+    });
 
-        btn.classList.add('active');
-        document.getElementById(btn.dataset.type).style.display = 'grid';
+    // 각 드롭다운 옵션 클릭 시
+    dropdownItems.forEach(function (item) {
+        item.addEventListener('click', function () {
+            // 선택된 옵션에 맞는 카테고리 표시
+            const selectedCategory = item.getAttribute('data-value');
+            carLists.forEach(function (list) {
+                if (list.id === selectedCategory) {
+                    list.classList.add('active');
+                } else {
+                    list.classList.remove('active');
+                }
+            });
+
+            // 드롭다운 버튼 텍스트 업데이트
+            dropdownBtn.textContent = item.textContent + ' ';
+
+            // 드롭다운 숨기기
+            dropdownOptions.classList.remove('active');
+            dropdownBtn.classList.remove('active');
+        });
+    });
+
+    // 차량 항목 클릭 시
+    carItems.forEach(function (item) {
+        item.addEventListener('click', function () {
+            // 차량 선택 상태 표시
+            carItems.forEach(function (car) {
+                car.classList.remove('active');  // 모든 항목에서 active 클래스 제거
+            });
+            item.classList.add('active');  // 선택된 차량에 active 클래스 추가
+        });
     });
 });
 
-// ===== 차량 선택 =====
-document.querySelectorAll('.car-item').forEach(item => {
-    item.addEventListener('click', () => {
-        document.querySelectorAll('.car-item').forEach(i => i.classList.remove('active'));
-        item.classList.add('active');
-    });
-});
+
+
 
 // ===== 면허 종류 선택 =====
 const licenseTabs = document.querySelectorAll('.license-tab');

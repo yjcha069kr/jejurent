@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 드롭다운 스타일 */
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 32%; /* 각 드롭다운의 너비를 3개로 나누어줌 */
+    margin-right: 10px; /* 각 드롭다운 사이 간격 */
+}
+
+.dropdown-btn {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    text-align: left;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dropdown-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    z-index: 999;
+}
+
+.dropdown-option {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+    background: #fff;
+    border: none;
+    border-radius: 12px;
+    width: 100%;
+    text-align: left;
+}
+
+.dropdown-option:hover {
+    background-color: #ff5000;
+    color: #fff;
+}
+
+/* 활성화된 드롭다운 */
+.dropdown-btn.active + .dropdown-options {
+    display: block;
+}
+
+/* 활성화된 옵션 */
+.dropdown-option.active {
+    background-color: #ff5000;
+    color: #fff;
+}
+
+/* 활성화된 버튼 */
+.custom-dropdown .dropdown-btn.active {
+    background-color: #fff;
+    color: #333;
+}
+
+/* 선택된 날짜 표시 */
+.custom-dropdown .dropdown-btn i {
+    margin-left: 10px;
+}
+
+/* 마지막 드롭다운(일)의 여백을 조정 */
+.birth-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 각 드롭다운 요소에 균등한 간격 추가 */
+.birth-grid .custom-dropdown {
+    margin-right: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="form-group">
+    <label>생년월일</label>
+    <div class="birth-grid">
+        <!-- 년 드롭다운 -->
+        <div class="custom-dropdown">
+            <button class="dropdown-btn">년 <i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-options">
+                <div class="dropdown-option">2004년</div>
+                <div class="dropdown-option">2003년</div>
+                <div class="dropdown-option">2002년</div>
+                <div class="dropdown-option">2001년</div>
+                <div class="dropdown-option">2000년</div>
+                <div class="dropdown-option">1999년</div>
+                <div class="dropdown-option">1998년</div>
+            </div>
+        </div>
+
+        <!-- 월 드롭다운 -->
+        <div class="custom-dropdown">
+            <button class="dropdown-btn">월 <i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-options">
+                <div class="dropdown-option">12월</div>
+                <div class="dropdown-option">11월</div>
+                <div class="dropdown-option">10월</div>
+                <div class="dropdown-option">9월</div>
+                <div class="dropdown-option">8월</div>
+                <div class="dropdown-option">7월</div>
+                <div class="dropdown-option">6월</div>
+                <div class="dropdown-option">5월</div>
+                <div class="dropdown-option">4월</div>
+                <div class="dropdown-option">3월</div>
+                <div class="dropdown-option">2월</div>
+                <div class="dropdown-option">1월</div>
+            </div>
+        </div>
+
+        <!-- 일 드롭다운 -->
+        <div class="custom-dropdown">
+            <button class="dropdown-btn">일 <i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-options">
+                <div class="dropdown-option">31일</div>
+                <div class="dropdown-option">30일</div>
+                <div class="dropdown-option">29일</div>
+                <div class="dropdown-option">28일</div>
+                <div class="dropdown-option">27일</div>
+                <div class="dropdown-option">26일</div>
+                <div class="dropdown-option">25일</div>
+                <div class="dropdown-option">24일</div>
+                <div class="dropdown-option">23일</div>
+                <div class="dropdown-option">22일</div>
+                <div class="dropdown-option">21일</div>
+                <div class="dropdown-option">20일</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // 운전자 정보 (이름 + 전화번호 + 생년월일 + 면허)
+const driverBox = document.querySelectorAll('.box')[3];
+const driverName = driverBox.querySelectorAll('input[type="text"]')[0].value.trim();
+const driverPhone = driverBox.querySelectorAll('input[type="tel"]')[0].value.trim();
+const birthSelects = driverBox.querySelectorAll('.birth-grid select');
+const birthValid = Array.from(birthSelects).every(sel => sel.value !== "");
+const licenseInput = driverBox.querySelector('#license');
+const licenseValid = licenseInput.value !== "";
+
+// 이름 검증: 한글, 알파벳만 허용
+const isDriverNameValid = driverName && /^[가-힣a-zA-Z\s]+$/.test(driverName);
+
+// 전화번호 검증: 10자리 또는 11자리 숫자만 허용
+const isDriverPhoneValid = driverPhone && /^\d{10,11}$/.test(driverPhone);
+
+// 생년월일 검증: 년, 월, 일이 모두 선택되었는지 확인
+const isBirthValid = birthValid;
+
+// 면허증 검증: 면허 종류가 선택되었는지 확인
+const isLicenseValid = licenseValid;
+
+// 모든 검증이 통과하지 않으면 오류 메시지 추가
+if (!isDriverNameValid || !isDriverPhoneValid || !isBirthValid || !isLicenseValid) {
+    errors.push("운전자 정보가 올바르지 않습니다.");
+}
+
+</script>
+</body>
+</html>
