@@ -62,10 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         // 인수일시 선택 (홀수번째 박스)
                         pickupDate = d;
                         display.value = formatDate(d);
-                        display.style.color = ''; 
-                        
+                        display.style.color = '';
+
                         // 선택된 날짜의 색상을 기본 텍스트 색상으로 설정
-                        el.style.color = ''; 
+                        el.style.color = '';
 
                         if (returnDate && returnDate < pickupDate) {
                             alert('반납 날짜는 인수 날짜 이후여야 합니다.');
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         display.style.color = '';
 
                         // 선택된 날짜의 색상을 기본 텍스트 색상으로 설정
-                        el.style.color = ''; 
+                        el.style.color = '';
                     }
 
                     // 날짜 선택 후 달력 닫기
@@ -174,7 +174,7 @@ if (carDropdown) {
 
                 // 선택 차량 active
                 item.classList.add('active');
-                
+
             });
         });
     });
@@ -277,4 +277,100 @@ if (serviceDropdown) {
 
 
 
-// ===== 예약 버튼 클릭 시 검증 =====
+// ===== 예약 버튼 작동 =====
+document.addEventListener("DOMContentLoaded", () => {
+    const rentBtn = document.querySelector(".rent-btn");
+
+    rentBtn.addEventListener("click", (e) => {
+        // ===== 이름 / 전화번호 체크 =====
+        const bookerName = document.getElementById("bookerName").value.trim();
+        const bookerPhone = document.getElementById("bookerPhone").value.trim();
+        const driverName = document.getElementById("driverName").value.trim();
+        const driverPhone = document.getElementById("driverPhone").value.trim();
+
+        if (bookerName && !isKoreanOnly(bookerName)) {
+            alert("이름은 한글만 가능합니다.");
+            return;
+        }
+
+        if (bookerPhone && !isPhoneValid(bookerPhone)) {
+            alert("번호는 숫자만 11자리로 입력해주세요.");
+            return;
+        }
+
+        if (driverName && !isKoreanOnly(driverName)) {
+            alert("이름은 한글만 가능합니다.");
+            return;
+        }
+
+        if (driverPhone && !isPhoneValid(driverPhone)) {
+            alert("번호는 숫자만 11자리로 입력해주세요.");
+            return;
+        }
+        const errors = [];
+
+        // 인수 / 반납 일시
+        document.querySelectorAll(".date-display").forEach(input => {
+            if (!input.value.trim()) {
+                if (!errors.includes("인수 / 반납 일시")) errors.push("인수 / 반납 일시");
+            }
+        });
+
+        // 차량 종류
+        const carBtn = document.querySelector(".car-dropdown .dropdown-btn");
+        const selectedCarList = document.querySelector(".car-lists .car-list.active .car-item.active");
+
+        if (
+            !carBtn.classList.contains("selected") || // 종류 선택 안됨
+            !selectedCarList // 세부 차량 선택 안됨
+        ) {
+            errors.push("차량 종류");
+        }
+
+        // 예약자 정보
+        if (
+            !document.getElementById("bookerName").value.trim() ||
+            !document.getElementById("bookerPhone").value.trim()
+        ) {
+            errors.push("예약자 정보");
+        }
+
+        // 운전자 정보
+        if (
+            !document.getElementById("driverName").value.trim() ||
+            !document.getElementById("driverPhone").value.trim() ||
+            !document.getElementById("license").value
+        ) {
+            errors.push("운전자 정보");
+        }
+
+        // 부가 서비스
+        const serviceBtn = document.querySelector(".service-dropdown .dropdown-btn");
+        if (!serviceBtn.classList.contains("selected")) {
+            errors.push("부가 서비스");
+        }
+
+        // ❌ 선택항목 하나라도 빠졌으면
+        if (errors.length > 0) {
+            e.preventDefault();
+            alert(
+                "아래 항목을 확인해주세요.\n\n" +
+                errors.map(item => `- ${item}`).join("\n")
+            );
+            return;
+        }
+
+        // ✅ 전부 입력되면
+        alert("예약이 완료되었습니다.");
+    });
+});
+
+// ===== 이름 / 전화번호 유효성 검사 =====
+// 한글만
+function isKoreanOnly(value) {
+    return /^[가-힣]+$/.test(value);
+}
+// 숫자만 11자리
+function isPhoneValid(value) {
+    return /^[0-9]{11}$/.test(value);
+}

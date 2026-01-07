@@ -305,7 +305,10 @@ input:focus,
     font-size: 16px;
     cursor: pointer;
 }
-
 .rent-btn:hover {
     background: #ff7333;
+}
+.rent-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
 }
