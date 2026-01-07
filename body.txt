@@ -1,14 +1,321 @@
-<!-- 검색 -->
-<span class="section-sub">SEARCH</span>
+@charset "utf-8";
 
-<!-- 이벤트 -->
-<span class="section-sub">EVENT</span>
+#gnb > ul > .mainmenu:nth-child(2) > a {
+    color: #ff5000;
+}
 
-<!-- 렌터카 추천 -->
-<span class="section-sub">RECOMMEND</span>
+/* ============ 메인 비쥬얼 ========== */
+.main-visual {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.main-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 73%;
+}
+.visual-text {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: #fff;
+    text-shadow: 0 3px 6px rgba(0,0,0,0.8);
+    text-align: center; 
+}
+.visual-text h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+.visual-text p {
+    font-size: 25px;
+}
 
-<!-- 새로 오픈 -->
-<span class="section-sub">NEW OPEN</span>
 
-<!-- 서비스 안내 -->
-<span class="section-sub">GUIDE</span>
+/* ===================== 렌터카예약 공통 ========================== */
+.section h2 {
+    margin-left: 200px;
+}
+.section span {
+    margin-left: 20px;
+    font-size: 12px;
+    font-weight: lighter;
+    color: #ff5000;
+}
+body {
+    background-color: #f8f7f9;
+}
+.box {
+    border: 1px solid #ddd;
+    width: 60%;
+    margin: 0 auto 30px;
+    border-radius: 12px;
+    padding: 30px;
+    background: #fff;
+}
+.box h3 {
+    font-size: 22px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px dotted #ddd;
+}
+.form-group-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: bold;
+}
+input, select {
+    width: 100%;
+    padding: 13px; 
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    margin-top: 5px;
+    font-size: 15px;
+}
+::placeholder {
+    color: #ddd;
+}
+
+/* 인수/반납 */
+.custom-date-box {
+    position: relative;
+}
+.date-input-wrap {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.date-display {
+    padding-right: 40px;
+    height: 40px;
+}
+
+.date-input-wrap i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none; /* 클릭 방해 안 하게 */
+}
+.calendar {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    display: none;
+    z-index: 50;
+}
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.calendar-header button {
+    background: #ff5000;
+    border: none;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+.calendar-header .month-year {
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+}
+.calendar-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    text-align: center;
+}
+.calendar-day {
+    font-size: 15px;
+    font-weight: bold;
+}
+.calendar-date {
+    font-size: 13px;
+    padding: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.calendar-date:hover {
+    background: #ff5000;
+    color: #fff;
+}
+.calendar-date.disabled {
+    color: #ccc;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+
+/* 차량 선택 & 생년월일 드롭다운 */
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.fa-caret-down {
+    color: #333;
+}
+.dropdown-btn {
+    width: 100%;
+    padding: 11px;
+    font-size: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #fff;
+    cursor: pointer;
+    color: #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.custom-dropdown .dropdown-btn.selected {
+    color: #000;
+    height: 45px;
+}
+.dropdown-btn.active {
+    background-color: #fff; 
+    color: #000;
+}
+.dropdown-btn.active + .dropdown-options {
+    display: block;
+}
+.dropdown-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    z-index: 999;
+}
+.dropdown-option {
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    color: #333;
+    background: #fff;
+    border: none;
+    border-radius: 12px;
+    width: 100%;
+    text-align: left;
+}
+.dropdown-option:hover {
+    background-color: #ff5000;
+    color: #fff;
+}
+.dropdown-option.active {
+    background-color: #ff5000;
+    color: #fff;
+}
+.car-lists {
+    margin-top: 20px;
+}
+.car-list {
+    display: none;
+    margin-top: 15px;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.car-item {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 150px;
+    background-color: #fff;
+    color: #333;
+    font-size: 15px;
+}
+.car-item.active {
+    background-color: #ff5000;
+    border-color: #ff5000;
+    color: #fff;
+}
+#small.active,
+#medium.active,
+#suv.active,
+#van.active,
+#electric.active {
+    display: flex !important;
+}
+
+
+
+/* 운전자 정보 */
+.license-tabs {
+    display: flex;
+    gap: 5px;
+}
+.license-tab {
+    font-size: 15px;
+    width: 100px;
+    height: 45px;
+    text-align: center;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.license-tab.active {
+    background: #ff5000;
+    color: #fff;
+}
+.birth-grid {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+.birth-grid .custom-dropdown {
+    flex: 1;
+}
+
+
+/* 예약하기 버튼 */
+.rent-btn {
+    width: 10%;
+    display: block;
+    margin: 0 auto;
+    background: #ff5000;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 17px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.rent-btn:hover {
+    background: #ff7333;
+}

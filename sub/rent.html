@@ -140,8 +140,9 @@
                 <div class="box-header">
                     <h3>차량 선택</h3>
                 </div>
-                <div class="form-group">
+                <div class="form-group car-dropdown">
                     <div class="custom-dropdown">
+                        <label>종류 선택</label>
                         <button class="dropdown-btn">차량을 선택해주세요.<i class="fa fa-caret-down"></i></button>
                         <div class="dropdown-options">
                             <button class="dropdown-option" data-value="small">경형/소형</button>
@@ -226,59 +227,81 @@
                 <div class="form-group">
                     <label>생년월일</label>
                     <div class="birth-grid">
-                        <!-- 년 드롭다운 -->
-                        <div class="custom-dropdown">
+
+                        <!-- 년 -->
+                        <div class="custom-dropdown birth-dropdown">
                             <button class="dropdown-btn">년 <i class="fa fa-caret-down"></i></button>
                             <div class="dropdown-options">
-                                <div class="dropdown-option">2004년</div>
-                                <div class="dropdown-option">2003년</div>
-                                <div class="dropdown-option">2002년</div>
-                                <div class="dropdown-option">2001년</div>
-                                <div class="dropdown-option">2000년</div>
-                                <div class="dropdown-option">1999년</div>
-                                <div class="dropdown-option">1998년</div>
+                                <button class="dropdown-option">2004년</button>
+                                <button class="dropdown-option">2003년</button>
+                                <button class="dropdown-option">2002년</button>
+                                <button class="dropdown-option">2001년</button>
+                                <button class="dropdown-option">2000년</button>
+                                <button class="dropdown-option">1999년</button>
+                                <button class="dropdown-option">1998년</button>
                             </div>
                         </div>
 
-                        <!-- 월 드롭다운 -->
-                        <div class="custom-dropdown">
+                        <!-- 월 -->
+                        <div class="custom-dropdown birth-dropdown">
                             <button class="dropdown-btn">월 <i class="fa fa-caret-down"></i></button>
                             <div class="dropdown-options">
-                                <div class="dropdown-option">12월</div>
-                                <div class="dropdown-option">11월</div>
-                                <div class="dropdown-option">10월</div>
-                                <div class="dropdown-option">9월</div>
-                                <div class="dropdown-option">8월</div>
-                                <div class="dropdown-option">7월</div>
-                                <div class="dropdown-option">6월</div>
-                                <div class="dropdown-option">5월</div>
-                                <div class="dropdown-option">4월</div>
-                                <div class="dropdown-option">3월</div>
-                                <div class="dropdown-option">2월</div>
-                                <div class="dropdown-option">1월</div>
+                                <button class="dropdown-option">1월</button>
+                                <button class="dropdown-option">2월</button>
+                                <button class="dropdown-option">3월</button>
+                                <button class="dropdown-option">4월</button>
+                                <button class="dropdown-option">5월</button>
+                                <button class="dropdown-option">6월</button>
+                                <button class="dropdown-option">7월</button>
+                                <button class="dropdown-option">8월</button>
+                                <button class="dropdown-option">9월</button>
+                                <button class="dropdown-option">10월</button>
+                                <button class="dropdown-option">11월</button>
+                                <button class="dropdown-option">12월</button>
                             </div>
                         </div>
 
-                        <!-- 일 드롭다운 -->
-                        <div class="custom-dropdown">
+                        <!-- 일 -->
+                        <div class="custom-dropdown birth-dropdown">
                             <button class="dropdown-btn">일 <i class="fa fa-caret-down"></i></button>
                             <div class="dropdown-options">
-                                <div class="dropdown-option">31일</div>
-                                <div class="dropdown-option">30일</div>
-                                <div class="dropdown-option">29일</div>
-                                <div class="dropdown-option">28일</div>
-                                <div class="dropdown-option">27일</div>
-                                <div class="dropdown-option">26일</div>
-                                <div class="dropdown-option">25일</div>
-                                <div class="dropdown-option">24일</div>
-                                <div class="dropdown-option">23일</div>
-                                <div class="dropdown-option">22일</div>
-                                <div class="dropdown-option">21일</div>
-                                <div class="dropdown-option">20일</div>
+                                <button class="dropdown-option">1일</button>
+                                <button class="dropdown-option">2일</button>
+                                <button class="dropdown-option">3일</button>
+                                <button class="dropdown-option">4일</button>
+                                <button class="dropdown-option">5일</button>
+                                <button class="dropdown-option">6일</button>
+                                <button class="dropdown-option">7일</button>
+                                <button class="dropdown-option">8일</button>
+                                <button class="dropdown-option">9일</button>
+                                <button class="dropdown-option">10일</button>
+                                <button class="dropdown-option">11일</button>
+                                <button class="dropdown-option">12일</button>
+                                <button class="dropdown-option">13일</button>
+                                <button class="dropdown-option">14일</button>
+                                <button class="dropdown-option">15일</button>
+                                <button class="dropdown-option">16일</button>
+                                <button class="dropdown-option">17일</button>
+                                <button class="dropdown-option">18일</button>
+                                <button class="dropdown-option">19일</button>
+                                <button class="dropdown-option">20일</button>
+                                <button class="dropdown-option">21일</button>
+                                <button class="dropdown-option">22일</button>
+                                <button class="dropdown-option">23일</button>
+                                <button class="dropdown-option">24일</button>
+                                <button class="dropdown-option">25일</button>
+                                <button class="dropdown-option">26일</button>
+                                <button class="dropdown-option">27일</button>
+                                <button class="dropdown-option">28일</button>
+                                <button class="dropdown-option">29일</button>
+                                <button class="dropdown-option">30일</button>
+                                <button class="dropdown-option">31일</button>
                             </div>
                         </div>
+
                     </div>
                 </div>
+
 
 
             </div>
@@ -288,15 +311,16 @@
                 <div class="box-header">
                     <h3>부가 서비스<span>* 1일 기준 요금입니다.</span></h3>
                 </div>
-                <div class="form-group">
-                    <select>
-                        <option value="" disabled selected>선택해주세요.</option>
-                        <option value="carseat">유아 카시트</option>
-                        <option value="stroller">유모차</option>
-                        <option value="fishing">낚시용품</option>
-                        <option value="pet">반려견 방석</option>
-                        <option value="none">선택안함</option>
-                    </select>
+                <div class="custom-dropdown service-dropdown">
+                    <button class="dropdown-btn">선택해주세요.<i class="fa fa-caret-down"></i></button>
+
+                    <div class="dropdown-options">
+                        <button class="dropdown-option" data-value="carseat">유아 카시트</button>
+                        <button class="dropdown-option" data-value="stroller">유모차</button>
+                        <button class="dropdown-option" data-value="fishing">낚시용품</button>
+                        <button class="dropdown-option" data-value="pet">반려견 방석</button>
+                        <button class="dropdown-option" data-value="none">선택안함</button>
+                    </div>
                 </div>
             </div>
 

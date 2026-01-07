@@ -129,53 +129,66 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ===== 차량 타입 선택 =====
-document.addEventListener('DOMContentLoaded', function () {
-    const dropdownBtn = document.querySelector('.dropdown-btn');
-    const dropdownOptions = document.querySelector('.dropdown-options');
-    const dropdownItems = document.querySelectorAll('.dropdown-option');
+const carDropdown = document.querySelector('.car-dropdown');
+
+if (carDropdown) {
+    const carBtn = carDropdown.querySelector('.dropdown-btn');
+    const typeOptions = carDropdown.querySelectorAll('.dropdown-option');
     const carLists = document.querySelectorAll('.car-list');
-    const carItems = document.querySelectorAll('.car-item');
 
-    // 드롭다운 버튼 클릭 시 옵션 보여주기/숨기기
-    dropdownBtn.addEventListener('click', function () {
-        dropdownOptions.classList.toggle('active');
-        dropdownBtn.classList.toggle('active');
+    // 차량 타입 드롭다운 열기
+    carBtn.addEventListener('click', e => {
+        e.stopPropagation();
+        carBtn.classList.toggle('active');
     });
 
-    // 각 드롭다운 옵션 클릭 시
-    dropdownItems.forEach(function (item) {
-        item.addEventListener('click', function () {
-            // 선택된 옵션에 맞는 카테고리 표시
-            const selectedCategory = item.getAttribute('data-value');
-            carLists.forEach(function (list) {
-                if (list.id === selectedCategory) {
-                    list.classList.add('active');
-                } else {
-                    list.classList.remove('active');
-                }
-            });
+    // 1️⃣ 차량 타입 선택
+    typeOptions.forEach(option => {
+        option.addEventListener('click', e => {
+            e.stopPropagation();
 
-            // 드롭다운 버튼 텍스트 업데이트
-            dropdownBtn.textContent = item.textContent + ' ';
+            const targetId = option.dataset.value;
 
-            // 드롭다운 숨기기
-            dropdownOptions.classList.remove('active');
-            dropdownBtn.classList.remove('active');
+            // 버튼 텍스트
+            carBtn.innerHTML =
+                option.innerText + ' <i class="fa fa-caret-down"></i>';
+            carBtn.classList.add('selected');
+            carBtn.classList.remove('active');
+
+            // 차량 목록 표시
+            carLists.forEach(list => list.classList.remove('active'));
+            document.getElementById(targetId)?.classList.add('active');
         });
     });
 
-    // 차량 항목 클릭 시
-    carItems.forEach(function (item) {
-        item.addEventListener('click', function () {
-            // 차량 선택 상태 표시
-            carItems.forEach(function (car) {
-                car.classList.remove('active');  // 모든 항목에서 active 클래스 제거
+    // 2️⃣ 실제 차량 선택
+    carLists.forEach(list => {
+        list.querySelectorAll('.car-item').forEach(item => {
+            item.addEventListener('click', e => {
+                e.stopPropagation();
+
+                // 전체 차량 active 제거
+                document
+                    .querySelectorAll('.car-item')
+                    .forEach(i => i.classList.remove('active'));
+
+                // 선택 차량 active
+                item.classList.add('active');
+                
             });
-            item.classList.add('active');  // 선택된 차량에 active 클래스 추가
         });
     });
-});
 
+    // 바깥 클릭 시 드롭다운 닫기 (선택 유지)
+    document.addEventListener('click', e => {
+        if (
+            !e.target.closest('.car-dropdown') &&
+            !e.target.closest('.car-lists')
+        ) {
+            carBtn.classList.remove('active');
+        }
+    });
+}
 
 
 
@@ -191,52 +204,77 @@ licenseTabs.forEach(tab => {
     });
 });
 
-// ===== 예약 버튼 클릭 시 검증 =====
-const rentBtn = document.querySelector('.rent-btn');
 
-rentBtn.addEventListener('click', (e) => {
-    e.preventDefault(); // 폼 제출 방지
 
-    let errors = [];
+// ===== 생년월일 =====
+document.querySelectorAll('.birth-dropdown').forEach(dropdown => {
+    const btn = dropdown.querySelector('.dropdown-btn');
+    const options = dropdown.querySelectorAll('.dropdown-option');
 
-    // 인수/반납
-    const dateInputs = document.querySelectorAll('input[type="date"]');
-    if (!dateInputs[0].value || !dateInputs[1].value) errors.push("인수/반납일시");
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.birth-dropdown .dropdown-btn')
+            .forEach(b => b !== btn && b.classList.remove('active'));
+        btn.classList.toggle('active');
+        btn.classList.add('selected');
+    });
 
-    // 차량
-    const selectedCar = document.querySelector('.car-item.active');
-    if (!selectedCar) errors.push("차량 선택");
+    options.forEach(option => {
+        option.addEventListener('click', () => {
+            btn.innerHTML = option.innerText + ' <i class="fa fa-caret-down"></i>';
+            btn.classList.remove('active');
+        });
+    });
+});
 
-    // 예약자 정보 (이름 + 전화번호)
-    const reserverBox = document.querySelectorAll('.box')[2];
-    const reserverName = reserverBox.querySelector('input[type="text"]').value.trim();
-    const reserverPhone = reserverBox.querySelector('input[type="tel"]').value.trim();
-    if (!reserverName || /[^가-힣a-zA-Z\s]/.test(reserverName) || !reserverPhone || !/^\d{10,11}$/.test(reserverPhone)) {
-        errors.push("예약자 정보");
-    }
-
-    // 운전자 정보 (이름 + 전화번호 + 생년월일 + 면허)
-    const driverBox = document.querySelectorAll('.box')[3];
-    const driverName = driverBox.querySelectorAll('input[type="text"]')[0].value.trim();
-    const driverPhone = driverBox.querySelectorAll('input[type="tel"]')[0].value.trim();
-    const birthSelects = driverBox.querySelectorAll('.birth-grid select');
-    const birthValid = Array.from(birthSelects).every(sel => sel.value);
-    const licenseValid = !!licenseInput.value;
-
-    if (!driverName || /[^가-힣a-zA-Z\s]/.test(driverName) ||
-        !driverPhone || !/^\d{10,11}$/.test(driverPhone) ||
-        !birthValid || !licenseValid) {
-        errors.push("운전자 정보");
-    }
-
-    // 부가서비스
-    const serviceSelect = document.querySelectorAll('.box')[4].querySelector('select');
-    if (!serviceSelect.value) errors.push("유아용품");
-
-    // 결과 처리
-    if (errors.length > 0) {
-        alert("다시 입력해주세요.\n* " + errors.join("\n* "));
-    } else {
-        alert("예약이 성공적으로 완료되었습니다!");
+document.addEventListener('click', e => {
+    if (!e.target.closest('.birth-dropdown')) {
+        document.querySelectorAll('.birth-dropdown .dropdown-btn')
+            .forEach(btn => btn.classList.remove('active'));
     }
 });
+
+// ===== 부가서비스 =====
+const serviceDropdown = document.querySelector('.service-dropdown');
+
+if (serviceDropdown) {
+    const btn = serviceDropdown.querySelector('.dropdown-btn');
+    const options = serviceDropdown.querySelectorAll('.dropdown-option');
+
+    // 드롭다운 열기
+    btn.addEventListener('click', e => {
+        e.stopPropagation();
+
+        // 🔥 다시 열 때 옵션 active 제거
+        options.forEach(o => o.classList.remove('active'));
+
+        btn.classList.toggle('active');
+    });
+
+    // 옵션 선택
+    options.forEach(option => {
+        option.addEventListener('click', e => {
+            e.stopPropagation();
+
+            // 버튼 텍스트 교체 (아이콘 유지)
+            btn.firstChild.textContent = option.innerText;
+
+            btn.classList.add('selected');
+            btn.classList.remove('active');
+
+            // 선택 표시
+            options.forEach(o => o.classList.remove('active'));
+            option.classList.add('active');
+        });
+    });
+
+    // 바깥 클릭 시 닫기
+    document.addEventListener('click', e => {
+        if (!e.target.closest('.service-dropdown')) {
+            btn.classList.remove('active');
+        }
+    });
+}
+
+
+
+// ===== 예약 버튼 클릭 시 검증 =====
