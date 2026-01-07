@@ -47,9 +47,10 @@
     margin-bottom: 8px;
     font-weight: bold;
 }
-.section:nth-of-type(even) {
+/* .section:nth-of-type(even) {
     background: #fafafa;
-}
+} */
+
 /* 더 알아보기 링크버튼 */
 .link-wrap {
     display: flex;
@@ -89,7 +90,7 @@
     text-align: center;
 }
 .search-box {
-    background: #fff;
+    background: #fafafa;
     padding: 30px 25px;
     border: 1px solid #ddd;
     border-radius: 12px;
@@ -107,7 +108,7 @@
     max-width: 280px;
     margin-right: 20px;
     padding: 30px 25px;
-    background-color: #fafafa;
+    background: #fff;
     border-radius: 20px;
     cursor: pointer;
 }
@@ -308,87 +309,60 @@
 /* ==================== 섹션3: 렌터카 추천 ==================== */
 .section-3 .car-items {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    justify-content: center;
-    gap: 70px; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+    margin: 0 auto;
 }
+
 .section-3 .car-card {
+    position: relative;
     text-decoration: none;
     color: #333;
+    border-radius: 12px;
     border: 1px solid #ddd;
-    border-radius: 10px;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     cursor: pointer;
 }
+
 .section-3 .car-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
 }
+
 .section-3 .card-image {
     width: 100%;
-    height: 310px; 
+    height: 300px;
     background-size: cover;
     background-position: center;
+    transition: transform 0.3s ease;
 }
 .section-3 .card-content {
-    padding: 20px 30px;
-    background-color: #fff;
-    flex: 0 0 auto; /* 이미지 아래로 위치 고정 */
+    padding: 20px;
+    background: #fff;
+    flex: 0 0 auto;
 }
 .section-3 .card-content h3 {
     font-size: 18px;
     margin-bottom: 8px;
     color: #555;
+    font-weight: 600;
 }
 .section-3 .card-content p {
     font-size: 15px;
     font-weight: bold;
     color: #ff5000;
 }
-.section-3 .car-card:nth-of-type(1) .card-image {
-    background-image: url(/assets/01-1.jpg);
-}
-.section-3 .car-card:nth-of-type(2) .card-image {
-    background-image: url(/assets/02-1.jpg);
-}
-.section-3 .car-card:nth-of-type(3) .card-image {
-    background-image: url(/assets/03-1.jpg);
-}
-.section-3 .car-card:nth-of-type(4) .card-image {
-    background-image: url(/assets/06-1.jpg);
-}
-.section-3 .car-card:nth-of-type(5) .card-image {
-    background-image: url(/assets/05-1.jpg);
-}
-.section-3 .car-card:nth-of-type(6) .card-image {
-    background-image: url(/assets/08-1.jpg);
-}
+.section-3 .car-card:nth-of-type(1) .card-image { background-image: url(/assets/01-1.jpg); }
+.section-3 .car-card:nth-of-type(2) .card-image { background-image: url(/assets/02-1.jpg); }
+.section-3 .car-card:nth-of-type(3) .card-image { background-image: url(/assets/03-1.jpg); }
+.section-3 .car-card:nth-of-type(4) .card-image { background-image: url(/assets/06-1.jpg); }
+.section-3 .car-card:nth-of-type(5) .card-image { background-image: url(/assets/05-1.jpg); }
+.section-3 .car-card:nth-of-type(6) .card-image { background-image: url(/assets/08-1.jpg); }
 
-.section-3 .hidden {
-    display: none;
-}
-.section-3 .more-btn-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-.section-3 .more-btn {
-    font-size: 15px;
-    margin-top: 30px;
-    padding: 20px 30px;
-    background: #ff5000;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-.section-3 .more-btn:hover {
-    background: #ff7333;
-    transition:  0.5s ease;
-}
 
 
 /* ==================== 섹션4: 카페패스 ==================== */
@@ -401,8 +375,15 @@
 .section-4 .cafe-card {
     display: block;
     text-decoration: none;
-    color: inherit;
+    color: #333;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
     cursor: pointer;
+    
 }
 .section-4 .card-image {
     border-radius: 12px;
@@ -469,20 +450,31 @@
     pointer-events: auto;
 }
 .section-4 .card-content {
-    margin-top: 25px;
+    padding: 20px;
+    flex: 0 0 auto;
+}
+.section-4 .card-content h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #ff5000;
+    font-weight: 600; 
+}
+.section-4 .card-content p {
+    font-size: 15px;
+    font-weight: bold;
+    color: #555;
+    line-height: 1.5;
+}
+.section-4 .card-content span {
+    color: #777;
+    font-size: 13px;
+    font-weight: lighter;
 }
 .section-4 .title-score {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 6px;
-}
-
-.section-4 .card-content h3 {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin: 0; 
 }
 .section-4 .score {
     display: flex;
@@ -505,17 +497,6 @@
 .section-4 .score i.fa-star {
     color: #ffbb00;
 }
-.section-4 .card-content p {
-    font-size: 15px;
-    color: #333;
-    line-height: 1.6;
-}
-.section-4 .card-content span {
-    color: #777;
-    font-size: 13px;
-}
-
-
 
 
 
