@@ -50,7 +50,6 @@
 /* .section:nth-of-type(even) {
     background: #fafafa;
 } */
-
 /* 더 알아보기 링크버튼 */
 .link-wrap {
     display: flex;
@@ -90,7 +89,7 @@
     text-align: center;
 }
 .search-box {
-    background: #fafafa;
+    background: #fff;
     padding: 30px 25px;
     border: 1px solid #ddd;
     border-radius: 12px;
@@ -108,7 +107,7 @@
     max-width: 280px;
     margin-right: 20px;
     padding: 30px 25px;
-    background: #fff;
+    background-color: #fafafa;
     border-radius: 20px;
     cursor: pointer;
 }
