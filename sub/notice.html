@@ -72,102 +72,172 @@
     
 
     <!-- ==================== 메인 ====================-->
-    <!-- ==================== 섹션: 공지사항 ==================== -->
-    <section class="section section-1" id="notice">
-        <div class="container">
-            <h2>공지사항</h2>
-            <div class="search-bar">
-                <div class="total-count">( 총 21건 )</div>
-                <div class="search-input-group">
-                    <input type="text" id="search-input" placeholder="검색어를 입력해주세요.">
-                    <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+    <main>
+        <!-- ==================== 섹션: 공지사항 ==================== -->
+        <section class="section section-1" id="notice">
+            <div class="container">
+                <h2>공지사항</h2>
+                <div class="search-bar">
+                    <div class="total-count">( 총 21건 )</div>
+                    <div class="search-input-group">
+                        <input type="text" id="search-input" placeholder="검색어를 입력해주세요.">
+                        <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+                <div class="notice-list">
+                    <!-- 공지사항 항목 -->
+                    <div class="notice-item">
+                        <div class="notice-number">21</div>
+                        <div class="notice-title"><a href="#">개인정보처리방침 개정 안내 (2025.04.15)</a></div>
+                        <div class="notice-date">2025.04.09</div>
+                    </div>
+                    <div class="notice-item">
+                        <div class="notice-number">20</div>
+                        <div class="notice-title"><a href="#">[해외렌터카] 괌 지역 오픈!</a></div>
+                        <div class="notice-date">2025.02.25</div>
+                    </div>
+                    <div class="notice-item">
+                        <div class="notice-number">19</div>
+                        <div class="notice-title"><a href="#">[해외렌터카] 오사카 지역 지점 소개!</a></div>
+                        <div class="notice-date">2024.12.04</div>
+                    </div>
+                    <div class="notice-item">
+                        <div class="notice-number">18</div>
+                        <div class="notice-title"><a href="#">[해외렌터카] 가고시마 지역 지점 소개!</a></div>
+                        <div class="notice-date">2024.11.13</div>
+                    </div>
+                    <div class="notice-item">
+                        <div class="notice-number">17</div>
+                        <div class="notice-title"><a href="#">[해외렌터카] 구마모토 지역 지점 소개!</a></div>
+                        <div class="notice-date">2024.11.13</div>
+                    </div>
+                    <div class="notice-item">
+                        <div class="notice-number">16</div>
+                        <div class="notice-title"><a href="#">[해외렌터카] 오키나와 지역 지점 소개!</a></div>
+                        <div class="notice-date">2024.11.13</div>
+                    </div>
+                    <div class="notice-item">
+                        <div class="notice-number">15</div>
+                        <div class="notice-title"><a href="#">[해외렌터카] 가루이자와 지역 지점 소개!</a></div>
+                        <div class="notice-date">2024.11.12</div>
+                    </div>
+                    <div class="notice-item">
+                        <div class="notice-number">14</div>
+                        <div class="notice-title"><a href="#">[해외렌터카] 야마가타 지역 지점 소개!</a></div>
+                        <div class="notice-date">2024.11.12</div>
+                    </div>
+                    <div class="notice-item">
+                        <div class="notice-number">13</div>
+                        <div class="notice-title"><a href="#">[해외렌터카] 센다이 지역 지점 소개!</a></div>
+                        <div class="notice-date">2024.11.12</div>
+                    </div>
+                    <div class="notice-item">
+                        <div class="notice-number">12</div>
+                        <div class="notice-title"><a href="#">[해외렌터카] 홋카이도 지역 지점 소개!</a></div>
+                        <div class="notice-date">2024.10.22</div>
+                    </div>
+                    <div class="notice-item hidden">
+                        <div class="notice-number">11</div>
+                        <div class="notice-title"><a href="#">[해외렌터카] 후쿠오카 지역 지점 소개!</a></div>
+                        <div class="notice-date">2024.10.22</div>
+                    </div>
+                    <div class="notice-item hidden">
+                        <div class="notice-number">10</div>
+                        <div class="notice-title"><a href="#">[해외렌터카] 미야코지마 지역 지점 소개!</a></div>
+                        <div class="notice-date">2024.10.14</div>
+                    </div>
+                    <div class="notice-item hidden">
+                        <div class="notice-number">9</div>
+                        <div class="notice-title"><a href="#">개인정보처리방침 개정 안내 (2024.01.09)</a></div>
+                        <div class="notice-date">2024.01.09</div>
+                    </div>
+                    <div class="notice-item hidden">
+                        <div class="notice-number">8</div>
+                        <div class="notice-title"><a href="#">[해외렌터카] 항공편 결항으로 인한 취소 안내.</a></div>
+                        <div class="notice-date">2024.01.01</div>
+                    </div>
+                    <div class="notice-item hidden">
+                        <div class="notice-number">7</div>
+                        <div class="notice-title"><a href="#">[해외렌터카] 일본 렌터카 여행에 대한 모든 것!</a></div>
+                        <div class="notice-date">2024.01.01</div>
+                    </div>
+                    <div class="notice-item hidden">
+                        <div class="notice-number">6</div>
+                        <div class="notice-title"><a href="#">렌터카 유아용품 대여 안내</a></div>
+                        <div class="notice-date">2022.11.01</div>
+                    </div>
+                    <div class="notice-item hidden">
+                        <div class="notice-number">5</div>
+                        <div class="notice-title"><a href="#">카페패스 이용 에티켓</a></div>
+                        <div class="notice-date">2022.03.11</div>
+                    </div>
+                    <div class="notice-item hidden">
+                        <div class="notice-number">4</div>
+                        <div class="notice-title"><a href="#">렌터카 인수/반납 안내</a></div>
+                        <div class="notice-date">2022.02.20</div>
+                    </div>
+                    <div class="notice-item hidden">
+                        <div class="notice-number">3</div>
+                        <div class="notice-title"><a href="#">취소/환불 안내</a></div>
+                        <div class="notice-date">2022.02.20</div>
+                    </div>
+                    <div class="notice-item hidden">
+                        <div class="notice-number">2</div>
+                        <div class="notice-title"><a href="#">카페패스 이용안내.</a></div>
+                        <div class="notice-date">2022.02.20</div>
+                    </div>
+                    <div class="notice-item hidden">
+                        <div class="notice-number">1</div>
+                        <div class="notice-title"><a href="#">렌터카 보험 안내</a></div>
+                        <div class="notice-date">2022.02.20</div>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <button class="page-number active">1</button>
+                    <button class="page-number">2</button>
+                    <button class="page-number">3</button>
                 </div>
             </div>
-            <div class="notice-list">
-                <!-- 공지사항 항목 -->
-                <div class="notice-item">
-                    <div class="notice-number">21</div>
-                    <div class="notice-title"><a href="#">개인정보처리방침 개정 안내 (2025.04.15)</a></div>
-                    <div class="notice-date">2025.04.09</div>
-                </div>
-                <div class="notice-item">
-                    <div class="notice-number">20</div>
-                    <div class="notice-title"><a href="#">[해외렌터카] 괌 지역 오픈!</a></div>
-                    <div class="notice-date">2025.02.25</div>
-                </div>
-                <div class="notice-item">
-                    <div class="notice-number">19</div>
-                    <div class="notice-title"><a href="#">[해외렌터카] 오사카 지역 지점 소개!</a></div>
-                    <div class="notice-date">2024.12.04</div>
-                </div>
-                <div class="notice-item">
-                    <div class="notice-number">18</div>
-                    <div class="notice-title"><a href="#">[해외렌터카] 가고시마 지역 지점 소개!</a></div>
-                    <div class="notice-date">2024.11.13</div>
-                </div>
-                <div class="notice-item">
-                    <div class="notice-number">17</div>
-                    <div class="notice-title"><a href="#">[해외렌터카] 구마모토 지역 지점 소개!</a></div>
-                    <div class="notice-date">2024.11.13</div>
-                </div>
-                <div class="notice-item">
-                    <div class="notice-number">16</div>
-                    <div class="notice-title"><a href="#">[해외렌터카] 오키나와 지역 지점 소개!</a></div>
-                    <div class="notice-date">2024.11.13</div>
-                </div>
-                <div class="notice-item">
-                    <div class="notice-number">15</div>
-                    <div class="notice-title"><a href="#">[해외렌터카] 가루이자와 지역 지점 소개!</a></div>
-                    <div class="notice-date">2024.11.12</div>
-                </div>
-                <div class="notice-item">
-                    <div class="notice-number">14</div>
-                    <div class="notice-title"><a href="#">[해외렌터카] 야마가타 지역 지점 소개!</a></div>
-                    <div class="notice-date">2024.11.12</div>
-                </div>
-                <div class="notice-item">
-                    <div class="notice-number">13</div>
-                    <div class="notice-title"><a href="#">[해외렌터카] 센다이 지역 지점 소개!</a></div>
-                    <div class="notice-date">2024.11.12</div>
-                </div>
-                <div class="notice-item">
-                    <div class="notice-number">12</div>
-                    <div class="notice-title"><a href="#">[해외렌터카] 홋카이도 지역 지점 소개!</a></div>
-                    <div class="notice-date">2024.10.22</div>
-                </div>
-                <div class="notice-item hidden">
-                    <div class="notice-number">11</div>
-                    <div class="notice-title"><a href="#">[해외렌터카] 후쿠오카 지역 지점 소개!</a></div>
-                    <div class="notice-date">2024.10.22</div>
-                </div>
-                <div class="notice-item hidden">
-                    <div class="notice-number">10</div>
-                    <div class="notice-title"><a href="#">[해외렌터카] 미야코지마 지역 지점 소개!</a></div>
-                    <div class="notice-date">2024.10.14</div>
-                </div>
-                <div class="notice-item hidden">
-                    <div class="notice-number">9</div>
-                    <div class="notice-title"><a href="#">개인정보처리방침 개정 안내 (2024.01.09)</a></div>
-                    <div class="notice-date">2024.01.09</div>
-                </div>
-                <div class="notice-item hidden">
-                    <div class="notice-number">8</div>
-                    <div class="notice-title"><a href="#">[해외렌터카] 항공편 결항으로 인한 취소 안내.</a></div>
-                    <div class="notice-date">2024.01.01</div>
-                </div>
-            </div>
-            <div class="pagination">
-                <button class="page-number active">1</button>
-                <button class="page-number">2</button>
-                <button class="page-number">3</button>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
 
     <!-- ==================== 푸터 ==================== -->
     <footer class="footer">
         <div class="container">
+            <!-- ===== 서비스 영역 ===== -->
+            <div class="footer-service" id="customer-service">
+                <div class="download">
+                    <div class="qr">
+                        <div class="qr-text">
+                            <h4>App 다운로드</h4>
+                            <p>제주패스 앱 설치하고<br>더 편리하게 이용하세요.</p>
+                        </div>
+                        <img src="/assets/bg_appDown.png" alt="앱다운로드QR">
+                    </div>
+                    <div class="app">
+                        <a href="#" class="google-download"><i class="fa-brands fa-google-play"></i>구글플레이</a>
+                        <a href="#" class="app-download"><i class="fa-brands fa-app-store-ios"></i>앱스토어</a>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="call">
+                    <div class="call-text">
+                        <h4>전화예약 / 고객상담</h4>
+                        <p>이용에 궁금하신 점이<br>있으신가요?</p>
+                        <div class="sns">
+                            <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="blog"><i class="fa-solid fa-blog"></i></a>
+                        </div>
+                    </div>
+                    <div class="number">
+                        <h4 class="call-number">1544-0445</h4>
+                        <p>평일 09:00 ~ 18:00<br>점심시간 12:00 ~ 13:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== 회사 정보 ===== -->
             <div class="footer-content">
                 <div class="footer-info">
                     <div class="company-notice">
@@ -176,17 +246,18 @@
                         </a>
                     </div>
                     <div class="company-about">
-                        <p>(주)캐플릭스 대표이사 : 윤형준 | 사업자등록번호 : 105-87-76000 | 통신판매신고 제2015-제주연동-43호 | 관광사업자 등록번호 :
-                            제2021-08호 제주특별자치도 제주시 신광로 21, 4층 (우)63125<br>
-                            (주)캐플릭스는 렌터카 파트너사가 제공하는 일부 렌터카에 대하여 통신판매중개자의 지위를 가지며, 해당 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게 있습니다.
-                        </p>
+                        <p>(주)캐플릭스 대표이사 : 윤형준 | 사업자등록번호 : 105-87-76000 | 통신판매신고 제2015-제주연동-43호 | 관광사업자 등록번호 : 제2021-08호
+                            제주특별자치도 제주시 신광로 21, 4층 (우)63125<br>
+                            (주)캐플릭스는 렌터카 파트너사가 제공하는 일부 렌터카에 대하여 통신판매중개자의 지위를 가지며, 해당 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게
+                            있습니다.</p>
                         <p>Copyright ⓒ KAFLIX All Rights Reserved</p>
                     </div>
                 </div>
-
-                
             </div>
         </div>
     </footer>
+
+    
+    <script src="/js/notice.js"></script>
 </body>
 </html>

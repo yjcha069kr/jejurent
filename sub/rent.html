@@ -75,265 +75,281 @@
 
 
     <!-- ================ 메인 ============ -->
-    <!-- 메인 비쥬얼 -->
-    <section class="main-visual">
-        <img src="/assets/2085166.jpg" alt="제주렌트카 메인 이미지">
-        <div class="visual-text">
-            <h1>복잡한 절차는 NO!</h1>
-            <p>원하는 시간에 원하는 차량만 선택하면 끝!</p>
-        </div>
-    </section>
-
-    <!-- ============================ 렌터카예약 ============================ -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>렌터카 예약<span>* 모든 사항은 필수 입력 사항입니다.</span></h2>
+    <main>
+        <!-- 메인 비쥬얼 -->
+        <section class="main-visual">
+            <img src="/assets/2085166.jpg" alt="제주렌트카 메인 이미지">
+            <div class="visual-text">
+                <h1>복잡한 절차는 NO!</h1>
+                <p>원하는 시간에 원하는 차량만 선택하면 끝!</p>
             </div>
-
-            <!-- 인수/반납 -->
-            <div class="box">
-                <div class="box-header">
-                    <h3>인수 / 반납 일시</h3>
+        </section>
+        <!-- ============================ 렌터카예약 ============================ -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>렌터카 예약<span>* 모든 사항은 필수 입력 사항입니다.</span></h2>
                 </div>
-                <div class="form-group-container">
-                    <div class="form-group">
-                        <label>인수 일시</label>
-                        <div class="custom-date-box calendar-box">
-                            <div class="date-input-wrap">
-                                <i class="fa-regular fa-calendar"></i>
-                                <input type="text" readonly placeholder="날짜 선택" class="date-display">
-                            </div>
-                            <div class="calendar">
-                                <div class="calendar-header">
-                                    <button type="button" class="prev-month">&lt;</button>
-                                    <span class="month-year"></span>
-                                    <button type="button" class="next-month">&gt;</button>
+                <!-- 인수/반납 -->
+                <div class="box">
+                    <div class="box-header">
+                        <h3>인수 / 반납 일시</h3>
+                    </div>
+                    <div class="form-group-container">
+                        <div class="form-group">
+                            <label>인수 일시</label>
+                            <div class="custom-date-box calendar-box">
+                                <div class="date-input-wrap">
+                                    <i class="fa-regular fa-calendar"></i>
+                                    <input type="text" readonly placeholder="날짜 선택" class="date-display">
                                 </div>
-                                <div class="calendar-body"></div>
+                                <div class="calendar">
+                                    <div class="calendar-header">
+                                        <button type="button" class="prev-month">&lt;</button>
+                                        <span class="month-year"></span>
+                                        <button type="button" class="next-month">&gt;</button>
+                                    </div>
+                                    <div class="calendar-body"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>반납 일시</label>
+                            <div class="custom-date-box calendar-box">
+                                <div class="date-input-wrap">
+                                    <i class="fa-regular fa-calendar"></i>
+                                    <input type="text" readonly placeholder="날짜 선택" class="date-display">
+                                </div>
+                                <div class="calendar">
+                                    <div class="calendar-header">
+                                        <button type="button" class="prev-month">&lt;</button>
+                                        <span class="month-year"></span>
+                                        <button type="button" class="next-month">&gt;</button>
+                                    </div>
+                                    <div class="calendar-body"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label>반납 일시</label>
-                        <div class="custom-date-box calendar-box">
-                            <div class="date-input-wrap">
-                                <i class="fa-regular fa-calendar"></i>
-                                <input type="text" readonly placeholder="날짜 선택" class="date-display">
+                </div>
+                <!-- 차량 선택 -->
+                <div class="box">
+                    <div class="box-header">
+                        <h3>차량 선택</h3>
+                    </div>
+                    <div class="form-group car-dropdown">
+                        <div class="custom-dropdown">
+                            <label>종류 선택</label>
+                            <button class="dropdown-btn">차량을 선택해주세요.<i class="fa fa-caret-down"></i></button>
+                            <div class="dropdown-options">
+                                <button class="dropdown-option" data-value="small">경형/소형</button>
+                                <button class="dropdown-option" data-value="medium">중형</button>
+                                <button class="dropdown-option" data-value="suv">SUV</button>
+                                <button class="dropdown-option" data-value="van">승합</button>
+                                <button class="dropdown-option" data-value="electric">전기</button>
                             </div>
-                            <div class="calendar">
-                                <div class="calendar-header">
-                                    <button type="button" class="prev-month">&lt;</button>
-                                    <span class="month-year"></span>
-                                    <button type="button" class="next-month">&gt;</button>
-                                </div>
-                                <div class="calendar-body"></div>
+                        </div>
+                        <!-- 차량 목록 -->
+                        <div class="car-lists">
+                            <div class="car-list" id="small">
+                                <button class="car-item">모닝</button>
+                                <button class="car-item">스파크</button>
+                                <button class="car-item">캐스퍼</button>
+                                <button class="car-item">레이</button>
+                            </div>
+                            <div class="car-list" id="medium">
+                                <button class="car-item">소나타</button>
+                                <button class="car-item">K5</button>
+                                <button class="car-item">아반떼</button>
+                                <button class="car-item">그랜저</button>
+                            </div>
+                            <div class="car-list" id="van">
+                                <button class="car-item">스타리아</button>
+                                <button class="car-item">카니발</button>
+                                <button class="car-item">스타렉스</button>
+                            </div>
+                            <div class="car-list" id="suv">
+                                <button class="car-item">베뉴</button>
+                                <button class="car-item">펠리세이드</button>
+                                <button class="car-item">싼타페</button>
+                                <button class="car-item">쏘렌토</button>
+                            </div>
+                            <div class="car-list" id="electric">
+                                <button class="car-item">아이오닉5</button>
+                                <button class="car-item">아이오닉6</button>
+                                <button class="car-item">EV6</button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-
-            <!-- 차량 선택 -->
-            <div class="box">
-                <div class="box-header">
-                    <h3>차량 선택</h3>
+                <!-- 예약자 정보 -->
+                <div class="box">
+                    <div class="box-header">
+                        <h3>예약자 정보</h3>
+                    </div>
+                    <div class="form-group">
+                        <label>예약자 이름</label>
+                        <input type="text" id="bookerName" placeholder="실명을 입력해주세요.">
+                    </div>
+                    <div class="form-group">
+                        <label>휴대전화번호</label>
+                        <input type="tel" id="bookerPhone" placeholder="- 빼고 숫자만 입력해주세요.">
+                    </div>
                 </div>
-                <div class="form-group car-dropdown">
-                    <div class="custom-dropdown">
-                        <label>종류 선택</label>
-                        <button class="dropdown-btn">차량을 선택해주세요.<i class="fa fa-caret-down"></i></button>
+                <!-- 운전자 정보 -->
+                <div class="box">
+                    <div class="box-header">
+                        <h3>운전자 정보</h3>
+                    </div>
+                    <div class="form-group">
+                        <label>운전자 이름</label>
+                        <input type="text" id="driverName" placeholder="실명을 입력해주세요.">
+                    </div>
+                    <div class="form-group">
+                        <label>휴대전화번호</label>
+                        <input type="tel" id="driverPhone" placeholder="- 빼고 숫자만 입력해주세요.">
+                    </div>
+                    <div class="form-group">
+                        <label>면허종류</label>
+                        <div class="license-tabs">
+                            <div class="license-tab" data-value="1종">1종</div>
+                            <div class="license-tab" data-value="2종">2종</div>
+                        </div>
+                        <input type="hidden" name="license" id="license">
+                    </div>
+                    <div class="form-group">
+                        <label>생년월일</label>
+                        <div class="birth-grid">
+                            <!-- 년 -->
+                            <div class="custom-dropdown birth-dropdown">
+                                <button class="dropdown-btn">년 <i class="fa fa-caret-down"></i></button>
+                                <div class="dropdown-options">
+                                    <button class="dropdown-option">2004년</button>
+                                    <button class="dropdown-option">2003년</button>
+                                    <button class="dropdown-option">2002년</button>
+                                    <button class="dropdown-option">2001년</button>
+                                    <button class="dropdown-option">2000년</button>
+                                    <button class="dropdown-option">1999년</button>
+                                    <button class="dropdown-option">1998년</button>
+                                </div>
+                            </div>
+                            <!-- 월 -->
+                            <div class="custom-dropdown birth-dropdown">
+                                <button class="dropdown-btn">월 <i class="fa fa-caret-down"></i></button>
+                                <div class="dropdown-options">
+                                    <button class="dropdown-option">1월</button>
+                                    <button class="dropdown-option">2월</button>
+                                    <button class="dropdown-option">3월</button>
+                                    <button class="dropdown-option">4월</button>
+                                    <button class="dropdown-option">5월</button>
+                                    <button class="dropdown-option">6월</button>
+                                    <button class="dropdown-option">7월</button>
+                                    <button class="dropdown-option">8월</button>
+                                    <button class="dropdown-option">9월</button>
+                                    <button class="dropdown-option">10월</button>
+                                    <button class="dropdown-option">11월</button>
+                                    <button class="dropdown-option">12월</button>
+                                </div>
+                            </div>
+                            <!-- 일 -->
+                            <div class="custom-dropdown birth-dropdown">
+                                <button class="dropdown-btn">일 <i class="fa fa-caret-down"></i></button>
+                                <div class="dropdown-options">
+                                    <button class="dropdown-option">1일</button>
+                                    <button class="dropdown-option">2일</button>
+                                    <button class="dropdown-option">3일</button>
+                                    <button class="dropdown-option">4일</button>
+                                    <button class="dropdown-option">5일</button>
+                                    <button class="dropdown-option">6일</button>
+                                    <button class="dropdown-option">7일</button>
+                                    <button class="dropdown-option">8일</button>
+                                    <button class="dropdown-option">9일</button>
+                                    <button class="dropdown-option">10일</button>
+                                    <button class="dropdown-option">11일</button>
+                                    <button class="dropdown-option">12일</button>
+                                    <button class="dropdown-option">13일</button>
+                                    <button class="dropdown-option">14일</button>
+                                    <button class="dropdown-option">15일</button>
+                                    <button class="dropdown-option">16일</button>
+                                    <button class="dropdown-option">17일</button>
+                                    <button class="dropdown-option">18일</button>
+                                    <button class="dropdown-option">19일</button>
+                                    <button class="dropdown-option">20일</button>
+                                    <button class="dropdown-option">21일</button>
+                                    <button class="dropdown-option">22일</button>
+                                    <button class="dropdown-option">23일</button>
+                                    <button class="dropdown-option">24일</button>
+                                    <button class="dropdown-option">25일</button>
+                                    <button class="dropdown-option">26일</button>
+                                    <button class="dropdown-option">27일</button>
+                                    <button class="dropdown-option">28일</button>
+                                    <button class="dropdown-option">29일</button>
+                                    <button class="dropdown-option">30일</button>
+                                    <button class="dropdown-option">31일</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 부가서비스 -->
+                <div class="box">
+                    <div class="box-header">
+                        <h3>부가 서비스<span>* 1일 기준 요금입니다.</span></h3>
+                    </div>
+                    <div class="custom-dropdown service-dropdown">
+                        <button class="dropdown-btn">선택해주세요.<i class="fa fa-caret-down"></i></button>
                         <div class="dropdown-options">
-                            <button class="dropdown-option" data-value="small">경형/소형</button>
-                            <button class="dropdown-option" data-value="medium">중형</button>
-                            <button class="dropdown-option" data-value="suv">SUV</button>
-                            <button class="dropdown-option" data-value="van">승합</button>
-                            <button class="dropdown-option" data-value="electric">전기</button>
-                        </div>
-                    </div>
-                    <!-- 차량 목록 -->
-                    <div class="car-lists">
-                        <div class="car-list" id="small">
-                            <button class="car-item">모닝</button>
-                            <button class="car-item">스파크</button>
-                            <button class="car-item">캐스퍼</button>
-                            <button class="car-item">레이</button>
-                        </div>
-                        <div class="car-list" id="medium">
-                            <button class="car-item">소나타</button>
-                            <button class="car-item">K5</button>
-                            <button class="car-item">아반떼</button>
-                            <button class="car-item">그랜저</button>
-                        </div>
-                        <div class="car-list" id="van">
-                            <button class="car-item">스타리아</button>
-                            <button class="car-item">카니발</button>
-                            <button class="car-item">스타렉스</button>
-                        </div>
-                        <div class="car-list" id="suv">
-                            <button class="car-item">베뉴</button>
-                            <button class="car-item">펠리세이드</button>
-                            <button class="car-item">싼타페</button>
-                            <button class="car-item">쏘렌토</button>
-                        </div>
-                        <div class="car-list" id="electric">
-                            <button class="car-item">아이오닉5</button>
-                            <button class="car-item">아이오닉6</button>
-                            <button class="car-item">EV6</button>
+                            <button class="dropdown-option" data-value="carseat">유아 카시트</button>
+                            <button class="dropdown-option" data-value="stroller">유모차</button>
+                            <button class="dropdown-option" data-value="fishing">낚시용품</button>
+                            <button class="dropdown-option" data-value="pet">반려견 방석</button>
+                            <button class="dropdown-option" data-value="none">선택안함</button>
                         </div>
                     </div>
                 </div>
+                <button type="submit" class="rent-btn">예약하기</button>
             </div>
-
-
-            <!-- 예약자 정보 -->
-            <div class="box">
-                <div class="box-header">
-                    <h3>예약자 정보</h3>
-                </div>
-                <div class="form-group">
-                    <label>예약자 이름</label>
-                    <input type="text" id="bookerName" placeholder="실명을 입력해주세요.">
-                </div>
-                <div class="form-group">
-                    <label>휴대전화번호</label>
-                    <input type="tel" id="bookerPhone" placeholder="- 빼고 숫자만 입력해주세요.">
-                </div>
-            </div>
-
-            <!-- 운전자 정보 -->
-            <div class="box">
-                <div class="box-header">
-                    <h3>운전자 정보</h3>
-                </div>
-                <div class="form-group">
-                    <label>운전자 이름</label>
-                    <input type="text" id="driverName" placeholder="실명을 입력해주세요.">
-                </div>
-                <div class="form-group">
-                    <label>휴대전화번호</label>
-                    <input type="tel" id="driverPhone" placeholder="- 빼고 숫자만 입력해주세요.">
-                </div>
-                <div class="form-group">
-                    <label>면허종류</label>
-                    <div class="license-tabs">
-                        <div class="license-tab" data-value="1종">1종</div>
-                        <div class="license-tab" data-value="2종">2종</div>
-                    </div>
-                    <input type="hidden" name="license" id="license">
-                </div>
-
-                <div class="form-group">
-                    <label>생년월일</label>
-                    <div class="birth-grid">
-
-                        <!-- 년 -->
-                        <div class="custom-dropdown birth-dropdown">
-                            <button class="dropdown-btn">년 <i class="fa fa-caret-down"></i></button>
-                            <div class="dropdown-options">
-                                <button class="dropdown-option">2004년</button>
-                                <button class="dropdown-option">2003년</button>
-                                <button class="dropdown-option">2002년</button>
-                                <button class="dropdown-option">2001년</button>
-                                <button class="dropdown-option">2000년</button>
-                                <button class="dropdown-option">1999년</button>
-                                <button class="dropdown-option">1998년</button>
-                            </div>
-                        </div>
-
-                        <!-- 월 -->
-                        <div class="custom-dropdown birth-dropdown">
-                            <button class="dropdown-btn">월 <i class="fa fa-caret-down"></i></button>
-                            <div class="dropdown-options">
-                                <button class="dropdown-option">1월</button>
-                                <button class="dropdown-option">2월</button>
-                                <button class="dropdown-option">3월</button>
-                                <button class="dropdown-option">4월</button>
-                                <button class="dropdown-option">5월</button>
-                                <button class="dropdown-option">6월</button>
-                                <button class="dropdown-option">7월</button>
-                                <button class="dropdown-option">8월</button>
-                                <button class="dropdown-option">9월</button>
-                                <button class="dropdown-option">10월</button>
-                                <button class="dropdown-option">11월</button>
-                                <button class="dropdown-option">12월</button>
-                            </div>
-                        </div>
-
-                        <!-- 일 -->
-                        <div class="custom-dropdown birth-dropdown">
-                            <button class="dropdown-btn">일 <i class="fa fa-caret-down"></i></button>
-                            <div class="dropdown-options">
-                                <button class="dropdown-option">1일</button>
-                                <button class="dropdown-option">2일</button>
-                                <button class="dropdown-option">3일</button>
-                                <button class="dropdown-option">4일</button>
-                                <button class="dropdown-option">5일</button>
-                                <button class="dropdown-option">6일</button>
-                                <button class="dropdown-option">7일</button>
-                                <button class="dropdown-option">8일</button>
-                                <button class="dropdown-option">9일</button>
-                                <button class="dropdown-option">10일</button>
-                                <button class="dropdown-option">11일</button>
-                                <button class="dropdown-option">12일</button>
-                                <button class="dropdown-option">13일</button>
-                                <button class="dropdown-option">14일</button>
-                                <button class="dropdown-option">15일</button>
-                                <button class="dropdown-option">16일</button>
-                                <button class="dropdown-option">17일</button>
-                                <button class="dropdown-option">18일</button>
-                                <button class="dropdown-option">19일</button>
-                                <button class="dropdown-option">20일</button>
-                                <button class="dropdown-option">21일</button>
-                                <button class="dropdown-option">22일</button>
-                                <button class="dropdown-option">23일</button>
-                                <button class="dropdown-option">24일</button>
-                                <button class="dropdown-option">25일</button>
-                                <button class="dropdown-option">26일</button>
-                                <button class="dropdown-option">27일</button>
-                                <button class="dropdown-option">28일</button>
-                                <button class="dropdown-option">29일</button>
-                                <button class="dropdown-option">30일</button>
-                                <button class="dropdown-option">31일</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-
-            </div>
-
-            <!-- 부가서비스 -->
-            <div class="box">
-                <div class="box-header">
-                    <h3>부가 서비스<span>* 1일 기준 요금입니다.</span></h3>
-                </div>
-                <div class="custom-dropdown service-dropdown">
-                    <button class="dropdown-btn">선택해주세요.<i class="fa fa-caret-down"></i></button>
-
-                    <div class="dropdown-options">
-                        <button class="dropdown-option" data-value="carseat">유아 카시트</button>
-                        <button class="dropdown-option" data-value="stroller">유모차</button>
-                        <button class="dropdown-option" data-value="fishing">낚시용품</button>
-                        <button class="dropdown-option" data-value="pet">반려견 방석</button>
-                        <button class="dropdown-option" data-value="none">선택안함</button>
-                    </div>
-                </div>
-            </div>
-
-            <button type="submit" class="rent-btn">예약하기</button>
-
-        </div>
-    </section>
+        </section>
+    </main>
 
 
 
     <!-- ==================== 푸터 ==================== -->
     <footer class="footer">
         <div class="container">
+            <!-- ===== 서비스 영역 ===== -->
+            <div class="footer-service" id="customer-service">
+                <div class="download">
+                    <div class="qr">
+                        <div class="qr-text">
+                            <h4>App 다운로드</h4>
+                            <p>제주패스 앱 설치하고<br>더 편리하게 이용하세요.</p>
+                        </div>
+                        <img src="/assets/bg_appDown.png" alt="앱다운로드QR">
+                    </div>
+                    <div class="app">
+                        <a href="#" class="google-download"><i class="fa-brands fa-google-play"></i>구글플레이</a>
+                        <a href="#" class="app-download"><i class="fa-brands fa-app-store-ios"></i>앱스토어</a>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="call">
+                    <div class="call-text">
+                        <h4>전화예약 / 고객상담</h4>
+                        <p>이용에 궁금하신 점이<br>있으신가요?</p>
+                        <div class="sns">
+                            <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="blog"><i class="fa-solid fa-blog"></i></a>
+                        </div>
+                    </div>
+                    <div class="number">
+                        <h4 class="call-number">1544-0445</h4>
+                        <p>평일 09:00 ~ 18:00<br>점심시간 12:00 ~ 13:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== 회사 정보 ===== -->
             <div class="footer-content">
                 <div class="footer-info">
                     <div class="company-notice">
@@ -342,18 +358,17 @@
                         </a>
                     </div>
                     <div class="company-about">
-                        <p>(주)캐플릭스 대표이사 : 윤형준 | 사업자등록번호 : 105-87-76000 | 통신판매신고 제2015-제주연동-43호 | 관광사업자 등록번호 :
-                            제2021-08호 제주특별자치도 제주시 신광로 21, 4층 (우)63125<br>
-                            (주)캐플릭스는 렌터카 파트너사가 제공하는 일부 렌터카에 대하여 통신판매중개자의 지위를 가지며, 해당 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게 있습니다.
-                        </p>
+                        <p>(주)캐플릭스 대표이사 : 윤형준 | 사업자등록번호 : 105-87-76000 | 통신판매신고 제2015-제주연동-43호 | 관광사업자 등록번호 : 제2021-08호
+                            제주특별자치도 제주시 신광로 21, 4층 (우)63125<br>
+                            (주)캐플릭스는 렌터카 파트너사가 제공하는 일부 렌터카에 대하여 통신판매중개자의 지위를 가지며, 해당 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게
+                            있습니다.</p>
                         <p>Copyright ⓒ KAFLIX All Rights Reserved</p>
                     </div>
                 </div>
-
-                
             </div>
         </div>
     </footer>
+
 
     <script src="/js/rent.js"></script>
 </body>

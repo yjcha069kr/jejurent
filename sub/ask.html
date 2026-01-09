@@ -72,91 +72,150 @@
     
 
     <!-- ==================== 메인 ====================-->
-    <!-- ==================== 섹션: 자주 묻는 질문 ==================== -->
-    <section class="section section-1" id="notice">
-        <div class="container">
-            <h2>자주 묻는 질문</h2>
-            <div class="search-bar">
-                <div class="total-count">( 총 58건 )</div>
-                <div class="search-input-group">
-                    <input type="text" id="search-input" placeholder="검색어를 입력해주세요.">
-                    <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+    <main>
+        <!-- ==================== 섹션: 자주 묻는 질문 ==================== -->
+        <section class="section section-1" id="notice">
+            <div class="container">
+                <h2>자주 묻는 질문</h2>
+                <div class="search-bar">
+                    <div class="total-count">( 총 58건 )</div>
+                    <div class="search-input-group">
+                        <input type="text" id="search-input" placeholder="검색어를 입력해주세요.">
+                        <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+                <div class="notice-list">
+                    <!-- 자주 묻는 질문 항목 -->
+                    <div class="notice-item">
+                        <div class="notice-number">58</div>
+                        <div class="notice-title"><a href="#">📢 제휴 카페 영업시간 안내</a></div>
+                    </div>
+                    <div class="notice-item">
+                        <div class="notice-number">57</div>
+                        <div class="notice-title"><a href="#">[사용안내] 카페패스 이용권 사용방법</a></div>
+                    </div>
+                    <div class="notice-item">
+                        <div class="notice-number">56</div>
+                        <div class="notice-title"><a href="#">[리뷰안내] 카페패스 리뷰 작성 시 혜택이 있나요?</a></div>
+                    </div>
+                    <div class="notice-item">
+                        <div class="notice-number">55</div>
+                        <div class="notice-title"><a href="#">[이용안내] 카페패스 에티켓</a></div>
+                    </div>
+                    <div class="notice-item">
+                        <div class="notice-number">54</div>
+                        <div class="notice-title"><a href="#">[렌터카 | 변경] 일정을 변경하고 싶어요</a></div>
+                    </div>
+                    <div class="notice-item">
+                        <div class="notice-number">53</div>
+                        <div class="notice-title"><a href="#">예약한 차종을 변경하고 싶어요.</a></div>
+                    </div>
+                    <div class="notice-item">
+                        <div class="notice-number">52</div>
+                        <div class="notice-title"><a href="#">예약 취소는 어떻게 하나요?</a></div>
+                    </div>
+                    <div class="notice-item">
+                        <div class="notice-number">51</div>
+                        <div class="notice-title"><a href="#">카드와 포인트를 사용하여 결제 시 취소/환불은 어떻게 되나요?</a></div>
+                    </div>
+                    <div class="notice-item">
+                        <div class="notice-number">50</div>
+                        <div class="notice-title"><a href="#">자동차 종합보험이 가입되어 있나요?</a></div>
+                    </div>
+                    <div class="notice-item">
+                        <div class="notice-number">49</div>
+                        <div class="notice-title"><a href="#">자차보험은 사고날때마다 보험처리가 가능한가요?</a></div>
+                    </div>
+                    <div class="notice-item hidden">
+                        <div class="notice-number">48</div>
+                        <div class="notice-title"><a href="#">미사용 시간에 대한 환불이 가능한가요?</a></div>
+                    </div>
+                    <div class="notice-item hidden">
+                        <div class="notice-number">47</div>
+                        <div class="notice-title"><a href="#">플러스보장만 추가/취소 가 가능한가요?</a></div>
+                    </div>
+                    <div class="notice-item hidden">
+                        <div class="notice-number">46</div>
+                        <div class="notice-title"><a href="#">08시~20시 외 차량인수/반납이 가능한가요?</a></div>
+                    </div>
+                    <div class="notice-item hidden">
+                        <div class="notice-number">45</div>
+                        <div class="notice-title"><a href="#">차량 인수와 반납은 어떻게 하나요?</a></div>
+                    </div>
+                    <div class="notice-item hidden">
+                        <div class="notice-number">44</div>
+                        <div class="notice-title"><a href="#">이용 중 시간을 연장하고 싶으면 어떻게하죠?</a></div>
+                    </div>
+                    <div class="notice-item hidden">
+                        <div class="notice-number">43</div>
+                        <div class="notice-title"><a href="#">공항에서 렌터카 차고지까지는 얼마나 소요되나요?</a></div>
+                    </div>
+                    <div class="notice-item hidden">
+                        <div class="notice-number">42</div>
+                        <div class="notice-title"><a href="#">렌트카 셔틀버스 탑승은 어디서 하나요?</a></div>
+                    </div>
+                    <div class="notice-item hidden">
+                        <div class="notice-number">41</div>
+                        <div class="notice-title"><a href="#">예약한 차량과 다른 차량이 배차되는 경우도 있나요?</a></div>
+                    </div>
+                    <div class="notice-item hidden">
+                        <div class="notice-number">40</div>
+                        <div class="notice-title"><a href="#">연료가 남았을 경우 환불받을 수 있나요?</a></div>
+                    </div>
+                    <div class="notice-item hidden">
+                        <div class="notice-number">39</div>
+                        <div class="notice-title"><a href="#">군인도 차량을 대여할 수 있나요?</a></div>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <button class="page-number active">1</button>
+                    <button class="page-number">2</button>
+                    <button class="page-number">3</button>
+                    <button class="page-number">4</button>
+                    <button class="page-number">5</button>
+                    <button class="page-number">6</button>
                 </div>
             </div>
-            <div class="notice-list">
-                <!-- 자주 묻는 질문 항목 -->
-                <div class="notice-item">
-                    <div class="notice-number">58</div>
-                    <div class="notice-title"><a href="#">📢 제휴 카페 영업시간 안내</a></div>
-                </div>
-                <div class="notice-item">
-                    <div class="notice-number">57</div>
-                    <div class="notice-title"><a href="#">[사용안내] 카페패스 이용권 사용방법</a></div>
-                </div>
-                <div class="notice-item">
-                    <div class="notice-number">56</div>
-                    <div class="notice-title"><a href="#">[리뷰안내] 카페패스 리뷰 작성 시 혜택이 있나요?</a></div>
-                </div>
-                <div class="notice-item">
-                    <div class="notice-number">55</div>
-                    <div class="notice-title"><a href="#">[이용안내] 카페패스 에티켓</a></div>
-                </div>
-                <div class="notice-item">
-                    <div class="notice-number">54</div>
-                    <div class="notice-title"><a href="#">[렌터카 | 변경] 일정을 변경하고 싶어요</a></div>
-                </div>
-                <div class="notice-item">
-                    <div class="notice-number">53</div>
-                    <div class="notice-title"><a href="#">예약한 차종을 변경하고 싶어요.</a></div>
-                </div>
-                <div class="notice-item">
-                    <div class="notice-number">52</div>
-                    <div class="notice-title"><a href="#">예약 취소는 어떻게 하나요?</a></div>
-                </div>
-                <div class="notice-item">
-                    <div class="notice-number">51</div>
-                    <div class="notice-title"><a href="#">취소한 결제 금액은 언제 확인 가능한가요?</a></div>
-                </div>
-                <div class="notice-item">
-                    <div class="notice-number">50</div>
-                    <div class="notice-title"><a href="#">카드와 포인트를 사용하여 결제 시 취소/환불은 어떻게 되나요?</a></div>
-                </div>
-                <div class="notice-item">
-                    <div class="notice-number">49</div>
-                    <div class="notice-title"><a href="#">자동차 종합보험이 가입되어 있나요?</a></div>
-                </div>
-                <div class="notice-item hidden">
-                    <div class="notice-number">48</div>
-                    <div class="notice-title"><a href="#">자차보험은 사고날때마다 보험처리가 가능한가요?</a></div>
-                </div>
-                <div class="notice-item hidden">
-                    <div class="notice-number">47</div>
-                    <div class="notice-title"><a href="#">미사용 시간에 대한 환불이 가능한가요?</a></div>
-                </div>
-                <div class="notice-item hidden">
-                    <div class="notice-number">46</div>
-                    <div class="notice-title"><a href="#">플러스보장만 추가/취소 가 가능한가요?</a></div>
-                </div>
-                <div class="notice-item hidden">
-                    <div class="notice-number">45</div>
-                    <div class="notice-title"><a href="#">08시~20시 외 차량인수/반납이 가능한가요?</a></div>
-                </div>
-            </div>
-            <div class="pagination">
-                <button class="page-number active">1</button>
-                <button class="page-number">2</button>
-                <button class="page-number">3</button>
-                <button class="page-number">4</button>
-                <button class="page-number">5</button>
-                <button class="page-number">6</button>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
 
     <!-- ==================== 푸터 ==================== -->
     <footer class="footer">
         <div class="container">
+            <!-- ===== 서비스 영역 ===== -->
+            <div class="footer-service" id="customer-service">
+                <div class="download">
+                    <div class="qr">
+                        <div class="qr-text">
+                            <h4>App 다운로드</h4>
+                            <p>제주패스 앱 설치하고<br>더 편리하게 이용하세요.</p>
+                        </div>
+                        <img src="/assets/bg_appDown.png" alt="앱다운로드QR">
+                    </div>
+                    <div class="app">
+                        <a href="#" class="google-download"><i class="fa-brands fa-google-play"></i>구글플레이</a>
+                        <a href="#" class="app-download"><i class="fa-brands fa-app-store-ios"></i>앱스토어</a>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="call">
+                    <div class="call-text">
+                        <h4>전화예약 / 고객상담</h4>
+                        <p>이용에 궁금하신 점이<br>있으신가요?</p>
+                        <div class="sns">
+                            <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="blog"><i class="fa-solid fa-blog"></i></a>
+                        </div>
+                    </div>
+                    <div class="number">
+                        <h4 class="call-number">1544-0445</h4>
+                        <p>평일 09:00 ~ 18:00<br>점심시간 12:00 ~ 13:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== 회사 정보 ===== -->
             <div class="footer-content">
                 <div class="footer-info">
                     <div class="company-notice">
@@ -165,17 +224,18 @@
                         </a>
                     </div>
                     <div class="company-about">
-                        <p>(주)캐플릭스 대표이사 : 윤형준 | 사업자등록번호 : 105-87-76000 | 통신판매신고 제2015-제주연동-43호 | 관광사업자 등록번호 :
-                            제2021-08호 제주특별자치도 제주시 신광로 21, 4층 (우)63125<br>
-                            (주)캐플릭스는 렌터카 파트너사가 제공하는 일부 렌터카에 대하여 통신판매중개자의 지위를 가지며, 해당 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게 있습니다.
-                        </p>
+                        <p>(주)캐플릭스 대표이사 : 윤형준 | 사업자등록번호 : 105-87-76000 | 통신판매신고 제2015-제주연동-43호 | 관광사업자 등록번호 : 제2021-08호
+                            제주특별자치도 제주시 신광로 21, 4층 (우)63125<br>
+                            (주)캐플릭스는 렌터카 파트너사가 제공하는 일부 렌터카에 대하여 통신판매중개자의 지위를 가지며, 해당 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게
+                            있습니다.</p>
                         <p>Copyright ⓒ KAFLIX All Rights Reserved</p>
                     </div>
                 </div>
-
-                
             </div>
         </div>
     </footer>
+
+    
+    <script src="/js/notice.js"></script>
 </body>
 </html>
