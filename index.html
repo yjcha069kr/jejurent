@@ -79,89 +79,14 @@
 
     <!-- ==================== 메인 ==================== -->
     <main>
-        <!-- 메인 비쥬얼 -->
-        <section class="main-visual">
-            <img src="/assets/pexels-hyundaimotorgroup-24304776.jpg" alt="제주렌트카 메인 이미지">
-            <div class="visual-text">
-                <h1><span>제주 렌트</span> 와 함께하는<br>즐거운 제주 여행</h1>
-                <p>편리하고 안전한 차량으로 제주를 마음껏 즐기세요!</p>
-            </div>
-        </section>
-        <!-- ==================== 섹션1: 검색바 ==================== -->
-        <section class="section section-1" id="search">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-sub">SEARCH</span>
-                    <h2>원하시는 조건을 선택해 주세요</h2>
-                </div>
-                <div class="search-box">
-                    <div class="search-filter-bar">
-                        <!-- 인수/반납 -->
-                        <div class="filter-box date-box" id="pickup-box">
-                            <label>인수 일시</label>
-                            <span class="value-display"><i class="fa-regular fa-calendar"></i>날짜 선택</span>
-                            <input type="date" class="date-input">
-                            <div class="calendar">
-                                <div class="calendar-header">
-                                    <button type="button" class="prev-month">&lt;</button>
-                                    <span class="month-year"></span>
-                                    <button type="button" class="next-month">&gt;</button>
-                                </div>
-                                <div class="calendar-body"></div>
-                            </div>
-                        </div>
-                        <div class="filter-box date-box" id="return-box">
-                            <label>반납 일시</label>
-                            <span class="value-display"><i class="fa-regular fa-calendar"></i>날짜 선택</span>
-                            <input type="date" class="date-input">
-                            <div class="calendar">
-                                <div class="calendar-header">
-                                    <button type="button" class="prev-month">&lt;</button>
-                                    <span class="month-year"></span>
-                                    <button type="button" class="next-month">&gt;</button>
-                                </div>
-                                <div class="calendar-body"></div>
-                            </div>
-                        </div>
-                        <!-- 보험 -->
-                        <div class="filter-box" id="insurance-box">
-                            <label>보험</label>
-                            <span class="value-display"><i class="fa-regular fa-pen-to-square"></i>종류 선택</span>
-                            <div class="detail-popup" id="insurance-popup">
-                                <ul class="option-list">
-                                    <li>일반자차</li>
-                                    <li>고급자차</li>
-                                    <li>제주패스케어</li>
-                                    <li>슈퍼무제한</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- 연령 -->
-                        <div class="filter-box" id="age-box">
-                            <label>운전자 연령</label>
-                            <span class="value-display"><i class="fa-regular fa-user"></i>연령 선택</span>
-                            <div class="detail-popup" id="age-popup">
-                                <ul class="option-list">
-                                    <li>만 21세 - 22세</li>
-                                    <li>만 23세 - 25세</li>
-                                    <li>만 25세 이상</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <a href="/sub/rent.html"><button class="search-button"><i class="fa-solid fa-magnifying-glass"></i>
-                                검색</button></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ========== 섹션2: 진행 중 이벤트 ========== -->
-        <section class="section section-2" id="event">
+        <!-- ========== 섹션1: 진행 중 이벤트 ========== -->
+        <section class="section section-1" id="event">
             <div class="container">
                 <div class="event">
-                    <div class="section-header">
+                    <!-- <div class="section-header">
                         <span class="section-sub">EVENT</span>
                         <h2>진행 중인 이벤트</h2>
-                    </div>
+                    </div> -->
                     <div class="event-banner">
                         <div class="slides">
                             <div class="slide">
@@ -171,30 +96,34 @@
                                     <h3>오직 제주패스에서만!<br>하리보 할인 혜택 총출동</h3>
                                     <p>입장권 및 카페 할인 받기</p>
                                 </div>
+                                <a href="#" class="slide-btn"><i class="fa-solid fa-angles-right"></i> 이벤트 보러가기</a>
                             </div>
                             <div class="slide">
-                                <img src="/assets/3368644.webp" alt="배너2">
+                                <img src="/assets/1438391.webp" alt="배너2">
                                 <div class="slide-text">
                                     <p>제휴사 혜택</p>
                                     <h3>제주패스 고객에게 드리는<br>아쿠아플라넷 20% 할인</h3>
                                     <p>입장권 및 카페 할인 받기</p>
                                 </div>
+                                <a href="#" class="slide-btn"><i class="fa-solid fa-angles-right"></i> 이벤트 보러가기</a>
                             </div>
                             <div class="slide">
-                                <img src="/assets/3025403.webp" alt="배너3">
+                                <img src="/assets/3368644.webp" alt="배너3">
                                 <div class="slide-text">
                                     <p>이전에는 없던 렌터카 서비스!</p>
                                     <h3>프리미엄 렌터카가<br>비싼 이유</h3>
                                     <p>한계를 극복한 육각형 렌터카</p>
                                 </div>
+                                <a href="#" class="slide-btn"><i class="fa-solid fa-angles-right"></i> 이벤트 보러가기</a>
                             </div>
                             <div class="slide">
-                                <img src="/assets/1438391.webp" alt="배너4">
+                                <img src="/assets/3025403.webp" alt="배너4">
                                 <div class="slide-text">
                                     <p>제주패스 | 현대캐피탈</p>
                                     <h3>현대캐피탈 EV 충전카드로<br>어디서든 편리하게 충전하세요</h3>
-                                    <p>지금 신청하시면<br>충전크레딧 3,000P 제공</p>
+                                    <p>지금 신청하시면 충전크레딧 3,000P 제공</p>
                                 </div>
+                                <a href="#" class="slide-btn"><i class="fa-solid fa-angles-right"></i> 이벤트 보러가기</a>
                             </div>
                             <div class="slide">
                                 <img src="/assets/3677991.webp" alt="배너1">
@@ -203,17 +132,90 @@
                                     <h3>오직 제주패스에서만!<br>하리보 할인 혜택 총출동</h3>
                                     <p>입장권 및 카페 할인 받기</p>
                                 </div>
+                                <a href="#" class="slide-btn"><i class="fa-solid fa-angles-right"></i> 이벤트 보러가기</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="link-wrap">
-                    <button class="link-btn" type="button">
-                        <a href="/sub/event.html"><i class="fa-solid fa-angles-right"></i> 더 많은 이벤트 보기</a>
-                    </button>
-                </div>
             </div>
         </section>
+
+        <!-- ==================== 섹션2: 검색바 ==================== -->
+<section class="section section-2" id="search">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-sub">SEARCH</span>
+            <h2>원하시는 조건을 선택해 주세요</h2>
+        </div>
+        <div class="search-box">
+            <div class="search-filter-bar">
+                
+                <!-- 인수/반납 -->
+                <div class="filter-box date-box" id="pickup-box">
+                    <label>인수 일시</label>
+                    <span class="value-display"><i class="fa-regular fa-calendar"></i> 날짜 선택</span>
+                    <input type="date" class="date-input">
+                    <div class="calendar">
+                        <div class="calendar-header">
+                            <button type="button" class="prev-month">&lt;</button>
+                            <span class="month-year"></span>
+                            <button type="button" class="next-month">&gt;</button>
+                        </div>
+                        <div class="calendar-body"></div>
+                    </div>
+                </div>
+
+                <div class="filter-box date-box" id="return-box">
+                    <label>반납 일시</label>
+                    <span class="value-display"><i class="fa-regular fa-calendar"></i> 날짜 선택</span>
+                    <input type="date" class="date-input">
+                    <div class="calendar">
+                        <div class="calendar-header">
+                            <button type="button" class="prev-month">&lt;</button>
+                            <span class="month-year"></span>
+                            <button type="button" class="next-month">&gt;</button>
+                        </div>
+                        <div class="calendar-body"></div>
+                    </div>
+                </div>
+
+                <!-- 보험 -->
+                <div class="filter-box" id="insurance-box">
+                    <label>보험</label>
+                    <span class="value-display"><i class="fa-regular fa-pen-to-square"></i> 종류 선택</span>
+                    <div class="detail-popup" id="insurance-popup">
+                        <ul class="option-list">
+                            <li>일반자차</li>
+                            <li>고급자차</li>
+                            <li>제주패스케어</li>
+                            <li>슈퍼무제한</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 연령 -->
+                <div class="filter-box" id="age-box">
+                    <label>운전자 연령</label>
+                    <span class="value-display"><i class="fa-regular fa-user"></i> 연령 선택</span>
+                    <div class="detail-popup" id="age-popup">
+                        <ul class="option-list">
+                            <li>만 21세 - 22세</li>
+                            <li>만 23세 - 25세</li>
+                            <li>만 25세 이상</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="/sub/rent.html">
+                    <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i> 검색</button>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+        
         <!-- ========== 섹션3: 렌터카 추천 ========== -->
         <section class="section section-3" id="type">
             <div class="container">
