@@ -544,28 +544,95 @@
 }
 
 
-/* ==================== 기타 문의사항 ==================== */
-.customer-service {
-    background-color: #fff8f4;
-    text-align: center;
+/* ==================== 섹션6: 기타 문의사항 ==================== */
+.section-6 {
+    margin-top: 100px;
     padding: 30px 0;
     font-size: 14px;
     color: #333;
-    border-top: 1px solid #ddd;
     line-height: 1.6;
+    border-top: 1px solid #ddd;
 }
-.customer-service p:nth-child(1) {
+.section-6 .container {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    align-items: center;
+}
+.section-6 .divider {
+    width: 1px;
+    height: 100%;
+    background-color: #ddd;
+}
+
+/* ===== 공통 ===== */
+.section-6 .download,
+.section-6 .call {
+    padding: 0 50px;
+}
+.section-6 h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.section-6 p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* ===== 왼쪽 ===== */
+.section-6 .download {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.section-6 .qr {
+    display: flex;
+    gap: 120px;
+}
+.section-6 .qr img {
+    width: 80px;
+}
+.section-6 .app {
+    display: flex;
+    gap: 20px;
+}
+.section-6 .app a {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 37px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+}
+.section-6 .app a i {
     font-size: 16px;
-    font-weight: bold;
+    margin-right: 5px;
 }
-.customer-service p > i {
-    font-size: 23px;
+/* ===== 오른쪽 ===== */
+.section-6 .call {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+}
+.section-6 .call-number {
     color: #ff5000;
-    margin-right: 4px;
 }
-.customer-service p > b {
-    font-size: 35px;;
-    color: #ff5000; 
+.section-6 .sns {
+    margin-top: 20px;
+}
+.section-6 .sns a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    color: #333;
+    text-decoration: none;
 }
 
 
