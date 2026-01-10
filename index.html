@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>제주 렌터카</title>
+    <title>제주렌트</title>
+    <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
@@ -36,42 +37,44 @@
         </div>
         <!-- ======== 메인 네비(GNB) ======== -->
         <nav class="gnb" id="gnb">
-            <ul class="menu">
-                <li>
-                    <a href="/index.html"><img src="/assets/jejurent.png" alt=""></a>
-                </li>
-                <li class="mainmenu">
-                    <a href="/sub/rent.html">렌터카 예약</a>
-                </li>
-                <li class="mainmenu">
-                    <a href="#">차량소개</a>
-                    <ul class="submenu">
-                        <li><a href="/sub/type_small.html">경형/소형</a></li>
-                        <li><a href="/sub/type_medium.html">중형</a></li>
-                        <li><a href="/sub/type_van.html">승합</a></li>
-                        <li><a href="/sub/type_suv.html">SUV/RV</a></li>
-                        <li><a href="/sub/type_electric.html">전기</a></li>
-                    </ul>
-                </li>
-                <li class="mainmenu">
-                    <a href="/sub/event.html">이벤트</a>
-                </li>
-                <li class="mainmenu">
-                    <a href="#">이용안내</a>
-                    <ul class="submenu">
-                        <li><a href="/sub/guide_use.html">렌터카 이용 안내</a></li>
-                        <li><a href="/sub/guide_insurance.html">보험 안내</a></li>
-                        <li><a href="/sub/guide_other.html">기타 유의사항</a></li>
-                    </ul>
-                </li>
-                <li class="mainmenu">
-                    <a href="#">고객센터</a>
-                    <ul class="submenu">
-                        <li><a href="/sub/notice.html">공지사항</a></li>
-                        <li><a href="/sub/ask.html">자주 묻는 질문</a></li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="container">
+                <ul class="menu">
+                    <li>
+                        <a href="/index.html"><img src="/assets/jejurent.png" alt=""></a>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="/sub/rent.html">렌터카 예약</a>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="#">차량소개</a>
+                        <ul class="submenu">
+                            <li><a href="/sub/type_small.html">경형/소형</a></li>
+                            <li><a href="/sub/type_medium.html">중형</a></li>
+                            <li><a href="/sub/type_van.html">승합</a></li>
+                            <li><a href="/sub/type_suv.html">SUV/RV</a></li>
+                            <li><a href="/sub/type_electric.html">전기</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="/sub/event.html">이벤트</a>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="#">이용안내</a>
+                        <ul class="submenu">
+                            <li><a href="/sub/guide_use.html">렌터카 이용 안내</a></li>
+                            <li><a href="/sub/guide_insurance.html">보험 안내</a></li>
+                            <li><a href="/sub/guide_other.html">기타 유의사항</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="#">고객센터</a>
+                        <ul class="submenu">
+                            <li><a href="/sub/notice.html">공지사항</a></li>
+                            <li><a href="/sub/ask.html">자주 묻는 질문</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -141,81 +144,81 @@
         </section>
 
         <!-- ==================== 섹션2: 검색바 ==================== -->
-<section class="section section-2" id="search">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-sub">SEARCH</span>
-            <h2>원하시는 조건을 선택해 주세요</h2>
-        </div>
-        <div class="search-box">
-            <div class="search-filter-bar">
-                
-                <!-- 인수/반납 -->
-                <div class="filter-box date-box" id="pickup-box">
-                    <label>인수 일시</label>
-                    <span class="value-display"><i class="fa-regular fa-calendar"></i> 날짜 선택</span>
-                    <input type="date" class="date-input">
-                    <div class="calendar">
-                        <div class="calendar-header">
-                            <button type="button" class="prev-month">&lt;</button>
-                            <span class="month-year"></span>
-                            <button type="button" class="next-month">&gt;</button>
+        <section class="section section-2" id="search">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-sub">SEARCH</span>
+                    <h2>원하시는 조건을 선택해 주세요</h2>
+                </div>
+                <div class="search-box">
+                    <div class="search-filter-bar">
+
+                        <!-- 인수/반납 -->
+                        <div class="filter-box date-box" id="pickup-box">
+                            <label>인수 일시</label>
+                            <span class="value-display"><i class="fa-regular fa-calendar"></i> 날짜 선택</span>
+                            <input type="date" class="date-input">
+                            <div class="calendar">
+                                <div class="calendar-header">
+                                    <button type="button" class="prev-month">&lt;</button>
+                                    <span class="month-year"></span>
+                                    <button type="button" class="next-month">&gt;</button>
+                                </div>
+                                <div class="calendar-body"></div>
+                            </div>
                         </div>
-                        <div class="calendar-body"></div>
-                    </div>
-                </div>
 
-                <div class="filter-box date-box" id="return-box">
-                    <label>반납 일시</label>
-                    <span class="value-display"><i class="fa-regular fa-calendar"></i> 날짜 선택</span>
-                    <input type="date" class="date-input">
-                    <div class="calendar">
-                        <div class="calendar-header">
-                            <button type="button" class="prev-month">&lt;</button>
-                            <span class="month-year"></span>
-                            <button type="button" class="next-month">&gt;</button>
+                        <div class="filter-box date-box" id="return-box">
+                            <label>반납 일시</label>
+                            <span class="value-display"><i class="fa-regular fa-calendar"></i> 날짜 선택</span>
+                            <input type="date" class="date-input">
+                            <div class="calendar">
+                                <div class="calendar-header">
+                                    <button type="button" class="prev-month">&lt;</button>
+                                    <span class="month-year"></span>
+                                    <button type="button" class="next-month">&gt;</button>
+                                </div>
+                                <div class="calendar-body"></div>
+                            </div>
                         </div>
-                        <div class="calendar-body"></div>
+
+                        <!-- 보험 -->
+                        <div class="filter-box" id="insurance-box">
+                            <label>보험</label>
+                            <span class="value-display"><i class="fa-regular fa-pen-to-square"></i> 종류 선택</span>
+                            <div class="detail-popup" id="insurance-popup">
+                                <ul class="option-list">
+                                    <li>일반자차</li>
+                                    <li>고급자차</li>
+                                    <li>제주패스케어</li>
+                                    <li>슈퍼무제한</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 연령 -->
+                        <div class="filter-box" id="age-box">
+                            <label>운전자 연령</label>
+                            <span class="value-display"><i class="fa-regular fa-user"></i> 연령 선택</span>
+                            <div class="detail-popup" id="age-popup">
+                                <ul class="option-list">
+                                    <li>만 21세 - 22세</li>
+                                    <li>만 23세 - 25세</li>
+                                    <li>만 25세 이상</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <a href="/sub/rent.html">
+                            <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i> 검색</button>
+                        </a>
+
                     </div>
                 </div>
-
-                <!-- 보험 -->
-                <div class="filter-box" id="insurance-box">
-                    <label>보험</label>
-                    <span class="value-display"><i class="fa-regular fa-pen-to-square"></i> 종류 선택</span>
-                    <div class="detail-popup" id="insurance-popup">
-                        <ul class="option-list">
-                            <li>일반자차</li>
-                            <li>고급자차</li>
-                            <li>제주패스케어</li>
-                            <li>슈퍼무제한</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- 연령 -->
-                <div class="filter-box" id="age-box">
-                    <label>운전자 연령</label>
-                    <span class="value-display"><i class="fa-regular fa-user"></i> 연령 선택</span>
-                    <div class="detail-popup" id="age-popup">
-                        <ul class="option-list">
-                            <li>만 21세 - 22세</li>
-                            <li>만 23세 - 25세</li>
-                            <li>만 25세 이상</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <a href="/sub/rent.html">
-                    <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i> 검색</button>
-                </a>
-
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-        
+
         <!-- ========== 섹션3: 렌터카 추천 ========== -->
         <section class="section section-3" id="type">
             <div class="container">
@@ -309,7 +312,8 @@
                                 </div>
                                 <span class="slide-count">1/6</span>
                                 <button type="button" class="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                                <button type="button" class="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                                <button type="button" class="next-btn"><i
+                                        class="fa-solid fa-chevron-right"></i></button>
                             </div>
                             <div class="card-content">
                                 <div class="title-score">
@@ -355,7 +359,8 @@
                                 </div>
                                 <span class="slide-count">1/8</span>
                                 <button type="button" class="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                                <button type="button" class="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                                <button type="button" class="next-btn"><i
+                                        class="fa-solid fa-chevron-right"></i></button>
                             </div>
                             <div class="card-content">
                                 <div class="title-score">
@@ -409,7 +414,8 @@
                                 </div>
                                 <span class="slide-count">1/11</span>
                                 <button type="button" class="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                                <button type="button" class="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                                <button type="button" class="next-btn"><i
+                                        class="fa-solid fa-chevron-right"></i></button>
                             </div>
                             <div class="card-content">
                                 <div class="title-score">
@@ -543,9 +549,16 @@
         </div>
     </footer>
 
+    <!-- 탑버튼 -->
+    <button id="topBtn" class="top-btn" aria-label="맨 위로 이동">
+        <i class="fa-solid fa-angle-up"></i>
+        <span>TOP</span>
+    </button>
 
     <script src="/js/main.js"></script>
     <script src="/js/calendar.js"></script>
+    <script src="/js/topbutton.js"></script>
+
 </body>
 
 </html>

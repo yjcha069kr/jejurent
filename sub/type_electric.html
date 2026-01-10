@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>제주 렌터카-경차소개</title>
+    <title>제주렌트</title>
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/type.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
+
 <body>
     <!-- ==================== 헤더 ==================== -->
     <header class="header">
@@ -28,44 +30,46 @@
                 </div>
             </div>
         </div>
-        <!-- ========== 메인 네비(GNB) ========== -->
+        <!-- ======== 메인 네비(GNB) ======== -->
         <nav class="gnb" id="gnb">
-            <ul class="menu">
-                <li>
-                    <a href="/index.html"><img src="/assets/jejurent.png" alt=""></a>
-                </li>
-                <li class="mainmenu">
-                    <a href="/sub/rent.html">렌터카 예약</a>
-                </li>
-                <li class="mainmenu">
-                    <a href="#">차량소개</a>
-                    <ul class="submenu">
-                        <li><a href="/sub/type_small.html">경형/소형</a></li>
-                        <li><a href="/sub/type_medium.html">중형</a></li>
-                        <li><a href="/sub/type_van.html">승합</a></li>
-                        <li><a href="/sub/type_suv.html">SUV/RV</a></li>
-                        <li><a href="/sub/type_electric.html">전기</a></li>
-                    </ul>
-                </li>
-                <li class="mainmenu">
-                    <a href="/sub/event.html">이벤트</a>
-                </li>
-                <li class="mainmenu">
-                    <a href="#">이용안내</a>
-                    <ul class="submenu">
-                        <li><a href="/sub/guide_use.html">렌터카 이용 안내</a></li>
-                        <li><a href="/sub/guide_insurance.html">보험 안내</a></li>
-                        <li><a href="/sub/guide_other.html">기타 유의사항</a></li>
-                    </ul>
-                </li>
-                <li class="mainmenu">
-                    <a href="#">고객센터</a>
-                    <ul class="submenu">
-                        <li><a href="/sub/notice.html">공지사항</a></li>
-                        <li><a href="/sub/ask.html">자주 묻는 질문</a></li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="container">
+                <ul class="menu">
+                    <li>
+                        <a href="/index.html"><img src="/assets/jejurent.png" alt=""></a>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="/sub/rent.html">렌터카 예약</a>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="#">차량소개</a>
+                        <ul class="submenu">
+                            <li><a href="/sub/type_small.html">경형/소형</a></li>
+                            <li><a href="/sub/type_medium.html">중형</a></li>
+                            <li><a href="/sub/type_van.html">승합</a></li>
+                            <li><a href="/sub/type_suv.html">SUV/RV</a></li>
+                            <li><a href="/sub/type_electric.html">전기</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="/sub/event.html">이벤트</a>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="#">이용안내</a>
+                        <ul class="submenu">
+                            <li><a href="/sub/guide_use.html">렌터카 이용 안내</a></li>
+                            <li><a href="/sub/guide_insurance.html">보험 안내</a></li>
+                            <li><a href="/sub/guide_other.html">기타 유의사항</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainmenu">
+                        <a href="#">고객센터</a>
+                        <ul class="submenu">
+                            <li><a href="/sub/notice.html">공지사항</a></li>
+                            <li><a href="/sub/ask.html">자주 묻는 질문</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -268,7 +272,13 @@
         </div>
     </footer>
 
+    <!-- 탑버튼 -->
+    <button id="topBtn" class="top-btn" aria-label="맨 위로 이동">
+        <i class="fa-solid fa-angle-up"></i>
+        <span>TOP</span>
+    </button>
 
     <script src="/js/type.js"></script>
+    <script src="/js/topbutton.js"></script>
 </body>
 </html>

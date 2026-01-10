@@ -1,11 +1,12 @@
-
-/* ==================== 로그인창 ======================== */
-.login {
-  margin-bottom: 100px;
-}
 .login .container {
   max-width: 400px;
-  margin: 60px auto 0;
+  margin: 120px auto 0;
+}
+.login input:focus,
+.login select:focus {
+    outline: none;
+    border: 1px solid #ff5000;
+    box-shadow: 0 0 0 1px #ff5000;
 }
 .tabs {
   display: flex;
@@ -51,14 +52,13 @@ select {
   font-size: 14px;
   color: #666;
 }
-
 input::placeholder {
   color: #ccc;
 }
 .checkbox-group {
   display: flex;
   gap: 12px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 .checkbox-group label {
   font-size: 14px;
@@ -68,7 +68,7 @@ input::placeholder {
 .login-btn, .confirm-btn {
   display: block; 
   width: 100%; 
-  margin: 0 auto 20px;
+  margin: 0 auto 30px;
   background: #ff5000;
   color: #fff;
   border: none;
@@ -128,7 +128,6 @@ input::placeholder {
   color: #3e2723;
   background: #FEE40B;
 }
-
 .notice {
   background: #f0f0f0;
   border-radius: 10px;
