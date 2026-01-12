@@ -3,23 +3,6 @@
 body {
     background-color: #f8f7f9;
 }
-::placeholder {
-    color: #ddd;
-}
-input, 
-select {
-    width: 100%;
-    padding: 13px;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    font-size: 15px;
-}
-input:focus,
-.dropdown-btn:focus {
-    outline: none;
-    border: 1px solid #ff5000;
-    box-shadow: 0 0 0 1px #ff5000;
-}
 #gnb > ul > .mainmenu:nth-child(2) > a {
     color: #ff5000;
 }
@@ -46,7 +29,7 @@ input:focus,
     width: 100%;
     text-align: center;
     color: #fff;
-    text-shadow: 0 3px 6px rgba(0,0,0,0.8);
+    text-shadow: 0 3px 6px rgba(0,0,0,1);
 }
 .visual-text h1 {
     font-size: 40px;
@@ -79,6 +62,23 @@ input:focus,
     margin-bottom: 30px;
     padding-bottom: 20px;
     border-bottom: 2px dotted #ddd;
+}
+::placeholder {
+    color: #ddd;
+}
+input, 
+select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 15px;
+}
+input:focus,
+.dropdown-btn:focus {
+    outline: none;
+    border: 1px solid #ff5000;
+    box-shadow: 0 0 0 1px #ff5000;
 }
 
 /* =============== 폼 =============== */
