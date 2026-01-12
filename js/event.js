@@ -56,6 +56,7 @@ function setupPagination(tabId, itemsPerPage = 6) {
     pageButtons.forEach((btn, idx) => {
         btn.addEventListener("click", () => {
             showPage(idx);
+            window.scrollTo({ top: 0, behavior: "smooth" });
         });
     });
 

@@ -44,3 +44,6 @@ function checkMemberInputs() {
 
 memberInputs.forEach(input => input.addEventListener("input", checkMemberInputs));
 memberInputs.forEach(input => input.addEventListener("input", checkMemberInputs));
+
+
+// 회원가입-남녀탭

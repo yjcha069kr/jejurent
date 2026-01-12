@@ -4,25 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>제주렌트</title>
+    <title>회원가입 - 제주렌트</title>
     <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/login.css"> <!-- 기존 로그인 CSS 재사용 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 
 <body>
     <!-- ==================== 헤더 ==================== -->
     <header class="header">
-        <!-- ========== 헤더 상단바 ========== -->
         <div class="top-bar">
             <div class="container">
-                <!-- 왼쪽 메뉴 -->
                 <div class="left-menu">
                     <a href="/sub/notice.html"><i class="fa-solid fa-bullhorn"></i> 공지사항</a>
                     <span>|</span>
                     <a href="/sub/ask.html"><i class="fa-regular fa-circle-question"></i> 자주 묻는 질문</a>
                 </div>
-                <!-- 오른쪽 메뉴 -->
                 <div class="right-menu">
                     <a href="/sub/login.html"><i class="fa-regular fa-user"></i> 로그인</a>
                     <span>|</span>
@@ -30,16 +27,11 @@
                 </div>
             </div>
         </div>
-        <!-- ======== 메인 네비(GNB) ======== -->
         <nav class="gnb" id="gnb">
             <div class="container">
                 <ul class="menu">
-                    <li>
-                        <a href="/index.html"><img src="/assets/jejurent.png" alt=""></a>
-                    </li>
-                    <li class="mainmenu">
-                        <a href="/sub/rent.html">렌터카 예약</a>
-                    </li>
+                    <li><a href="/index.html"><img src="/assets/jejurent.png" alt=""></a></li>
+                    <li class="mainmenu"><a href="/sub/rent.html">렌터카 예약</a></li>
                     <li class="mainmenu">
                         <a href="#">차량소개</a>
                         <ul class="submenu">
@@ -50,9 +42,7 @@
                             <li><a href="/sub/type_electric.html">전기</a></li>
                         </ul>
                     </li>
-                    <li class="mainmenu">
-                        <a href="/sub/event.html">이벤트</a>
-                    </li>
+                    <li class="mainmenu"><a href="/sub/event.html">이벤트</a></li>
                     <li class="mainmenu">
                         <a href="#">이용안내</a>
                         <ul class="submenu">
@@ -72,49 +62,50 @@
             </div>
         </nav>
     </header>
-    
 
-
-    <!-- ======================== 로그인창 ======================== -->
+    <!-- ==================== 회원가입 창 ==================== -->
     <main>
         <section class="login">
             <div class="container">
-                <div class="tabs">
-                    <button class="tab-button active" data-tab="member">회원</button>
-                    <button class="tab-button" data-tab="guest">비회원</button>
-                </div>
-                <!-- 회원 로그인 -->
-                <form id="member" class="tab-content active">
-                    <label for="email">아이디(이메일)</label>
-                    <input type="email" id="email" placeholder="아이디(이메일)를 입력해주세요.">
-                    <label for="password">비밀번호</label>
-                    <input type="password" id="password" placeholder="비밀번호를 입력해주세요.">
-                    <div class="checkbox-group">
-                        <label><input type="checkbox"> 로그인 유지</label>
-                        <label><input type="checkbox"> 아이디 저장</label>
+                <h2>회원가입</h2>
+
+                <form id="signup">
+                    <label for="signup-email">아이디(이메일)</label>
+                    <div class="email-wrapper">
+                        <input type="email" id="signup-email" placeholder="example@xxx.com">
+                        <button type="button" id="email-check-btn">중복확인</button>
                     </div>
-                    <button type="submit" class="login-btn">로그인</button>
-                    <div class="links">
-                        <a href="#">아이디 찾기</a> |
-                        <a href="#">비밀번호 찾기</a> |
-                        <a href="/sub/signup.html">회원가입</a>
+
+                    <label for="signup-password">비밀번호</label>
+                    <input type="password" id="signup-password" placeholder="비밀번호를 입력해주세요.">
+
+                    <label for="signup-password-confirm">비밀번호 확인</label>
+                    <input type="password" id="signup-password-confirm" placeholder="비밀번호를 다시 입력해주세요.">
+
+                    <div class="gender-group">
+                        <label>성별</label>
+                        <div class="gender-tabs">
+                            <div class="gender-tab" data-value="남">남</div>
+                            <div class="gender-tab" data-value="여">여</div>
+                        </div>
+                        <input type="hidden" name="gender" id="gender" value="">
                     </div>
-                    <div class="social-login">
-                        <span>간편 로그인</span>
-                        <button type="button" class="social-btn naver">N</button>
-                        <button type="button" class="social-btn kakaotalk"><i class="fa-brands fa-kakao-talk"></i></button>
-                    </div>
-                </form>
-                <!-- 비회원 로그인(현재 창에선 안보임) -->
-                <form id="guest" class="tab-content">
-                    <p class="notice">비회원으로 구매 시 고객정보와 발급된 예약번호를 입력해주세요.</p>
-                    <label for="guest-name">이름</label>
-                    <input type="text" id="guest-name" placeholder="이름을 입력해주세요.">
-                    <label for="phone">휴대전화</label>
-                    <input type="tel" id="phone" placeholder="- 없이 번호만 입력해주세요.">
-                    <label for="reservation-number">예약번호</label>
-                    <input type="text" id="reservation-number" placeholder="예약번호를 입력해주세요.">
-                    <button type="submit" class="confirm-btn" disabled>확인</button>
+
+                    <label for="signup-name">이름</label>
+                    <input type="text" id="signup-name" placeholder="실명을 입력해주세요.">
+
+                    <label for="signup-birth">생년월일</label>
+                    <input type="text" id="signup-birth" placeholder="생년월일 6자리를 입력해주세요. 예: 960324">
+
+                    
+                    <label for="signup-phone">휴대전화번호</label>
+                    <input type="text" id="signup-phone" placeholder="- 빼고 숫자만 입력해주세요.">
+
+                    
+
+                    <button type="submit" class="signup-btn">확인</button>
+
+                    <p>이미 계정이 있으신가요? <a href="/sub/login.html">로그인</a></p>
                 </form>
             </div>
         </section>
@@ -123,7 +114,7 @@
     <!-- ==================== 푸터 ==================== -->
     <footer class="footer">
         <div class="container">
-            <!-- ===== 서비스 영역 ===== -->
+            <!-- 기존 로그인 페이지와 동일한 푸터 -->
             <div class="footer-service" id="customer-service">
                 <div class="download">
                     <div class="qr">
@@ -155,7 +146,6 @@
                 </div>
             </div>
 
-            <!-- ===== 회사 정보 ===== -->
             <div class="footer-content">
                 <div class="footer-info">
                     <div class="company-notice">
@@ -176,6 +166,26 @@
     </footer>
 
     <script src="/js/login.js"></script>
+    <script>
+        // 남녀 탭버튼
+        document.addEventListener('DOMContentLoaded', () => {
+            const genderTabs = document.querySelectorAll('.gender-tab');
+            const genderInput = document.getElementById('gender');
+
+            genderTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // 모든 탭에서 active 제거
+                    genderTabs.forEach(t => t.classList.remove('active'));
+                    // 클릭한 탭만 active 추가
+                    tab.classList.add('active');
+                    genderInput.value = tab.dataset.value;
+                });
+            });
+
+            genderTabs.forEach(t => t.classList.remove('active'));
+            genderInput.value = "";
+        });
+    </script>
 </body>
 
 </html>

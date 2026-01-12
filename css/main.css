@@ -74,7 +74,7 @@
 .slide-text {
     position: absolute;
     top: 43%;
-    left: 140px;
+    left: 180px;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
@@ -96,7 +96,7 @@
 .slide-btn {
     position: absolute;
     bottom: 72px; 
-    left: 140px;
+    left: 180px;
     padding: 10px 25px;
     font-size: 14px;
     color: #fff;
@@ -257,6 +257,7 @@
     color: #fff;
 }
 .detail-popup {
+    font-size: 15px;
     display: none; 
     position: absolute;
     top: 100%;
