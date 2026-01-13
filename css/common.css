@@ -71,7 +71,7 @@ h2 {
     background: #fff;
     padding: 10px 0 30px;
     font-size: 13px;
-    color: #333;
+    color: #777;
 }
 .header .top-bar .container {
     display: flex;
@@ -87,7 +87,7 @@ h2 {
 .header .top-bar .left-menu a,
 .header .top-bar .right-menu a {
     text-decoration: none;
-    color: #333;
+    color: #777;
 }
 /* ========== 메인 네비(GNB) ========== */
 .gnb {
