@@ -69,7 +69,7 @@ h2 {
 }
 .header .top-bar {
     background: #fff;
-    padding: 10px 10px 17px;
+    padding: 10px 0 30px;
     font-size: 13px;
     color: #333;
 }
@@ -94,18 +94,17 @@ h2 {
     display: flex; 
     align-items: center;
     justify-content: center;
-    padding: 30px 0;
+    padding: 15px;
 }
 /* 로고 */
 .gnb img {
     height: 60px;
-    width: auto; 
     vertical-align: middle;
 }
 .menu {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     gap: 130px;
     padding: 0;
     margin: 0;
