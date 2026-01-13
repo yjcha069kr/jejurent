@@ -26,32 +26,28 @@
 .search-bar input {
     width: 250px;
     padding: 10px;
-    font-size: 16px;
+    font-size: 15px;
     border-radius: 5px;
     border: 1px solid #ddd;
 }
-
 .search-bar button {
     background-color: #ff5000;
     color: white;
     border: none;
     cursor: pointer;
-    padding: 10px 15px;
+    padding: 10px 13px;
     font-size: 16px;
     border-radius: 5px;
 }
-
 .search-bar button:hover {
     background-color: #ff7333;
 }
-
 .notice-list {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0;
+    padding-bottom: 20px;
     list-style: none;
 }
-
 .notice-item {
     display: flex;
     justify-content: space-between;
@@ -64,18 +60,15 @@
 .hidden {
     display: none;
 }
-
 .notice-item:hover {
     background-color: #f7f7f7;
 }
-
 .notice-number {
     font-size: 16px;
     color: #777;
     width: 30px;
     text-align: center;
 }
-
 .notice-title {
     font-size: 16px;
     flex-grow: 1;
@@ -83,23 +76,19 @@
     font-weight: bold;
     margin-left: 20px;
 }
-
 .notice-title a {
     color: #333;
     text-decoration: none;
 }
-
 .notice-title a:hover {
     color: #ff5000;
 }
-
 .notice-date {
     font-size: 13px;
     color: #555;
     margin-left: 20px;
     white-space: nowrap;
 }
-
 .pagination {
     display: flex;
     justify-content: center;
@@ -119,12 +108,10 @@
     text-align: center;
     border-radius: 50%;
 }
-
 .pagination button:hover {
     background-color: #ff5000;
     color: #fff;
 }
-
 .pagination button.active {
     background-color: #ff5000;
     color: #fff;
