@@ -150,21 +150,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 /* ==================== 섹션3: 렌터카 카드 더보기 ==================== */
-const section3 = document.querySelector('.section-3');
+document.addEventListener('DOMContentLoaded', () => {
+    const wrapper = document.querySelector('.section-3 .car-items-wrapper');
+    const track = wrapper.querySelector('.car-items');
+    const cards = track.querySelectorAll('.car-card');
+    const dotsContainer = wrapper.querySelector('.slider-dots');
 
-if (section3) {
-    const showMoreBtn = section3.querySelector('.more-btn');
-    const hiddenCards = section3.querySelectorAll('.car-card.hidden');
+    const visibleCards = 3; // 화면에 보이는 카드 수
+    let currentIndex = 0;
 
-    if (showMoreBtn) {
-        showMoreBtn.addEventListener('click', () => {
-            hiddenCards.forEach(card => {
-                card.classList.remove('hidden');
-            });
-            showMoreBtn.style.display = 'none';
+    const totalCards = cards.length;
+    const totalPages = totalCards - visibleCards + 1;
+
+    // 페이지네이션 버튼 생성
+    for (let i = 0; i < totalPages; i++) {
+        const dot = document.createElement('button');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+            currentIndex = i;
+            updateSlide();
+        });
+        dotsContainer.appendChild(dot);
+    }
+
+    function updateSlide() {
+        const cardWidth = cards[0].offsetWidth;
+        const gap = parseInt(window.getComputedStyle(track).gap);
+        const translateX = (cardWidth + gap) * currentIndex;
+        track.style.transform = `translateX(-${translateX}px)`;
+
+        // active dot
+        dotsContainer.querySelectorAll('button').forEach((btn, idx) => {
+            btn.classList.toggle('active', idx === currentIndex);
         });
     }
-}
+
+    updateSlide();
+
+    // 화면 크기 바뀔 때 재계산
+    window.addEventListener('resize', updateSlide);
+});
+
 
 
 
