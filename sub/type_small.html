@@ -13,7 +13,7 @@
 <body>
     <!-- ==================== 헤더 ==================== -->
     <header class="header">
-        <!-- ========== 헤더 상단바 ========== -->
+        <!-- ======== 헤더 상단바 ======== -->
         <div class="top-bar">
             <div class="container">
                 <!-- 왼쪽 메뉴 -->
@@ -33,10 +33,18 @@
         <!-- ======== 메인 네비(GNB) ======== -->
         <nav class="gnb" id="gnb">
             <div class="container">
+                <!-- 로고 -->
+                <a href="/index.html" class="logo">
+                    <img src="/assets/jejurent.svg" alt="로고">
+                </a>
+                <!-- 햄버거 버튼 -->
+                <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <!-- 메뉴 -->
                 <ul class="menu">
-                    <li>
-                        <a href="/index.html"><img src="/assets/jejurent.svg" alt=""></a>
-                    </li>
                     <li class="mainmenu">
                         <a href="/sub/rent.html">렌터카 예약</a>
                     </li>
@@ -89,7 +97,7 @@
         <section class="section section-1" id="small">
             <div class="container">
                 <h2>경형/소형</h2>
-                <p><span>▶</span> 제주 시내 관광과 가까운 명소를 둘러보기에 적합합니다. <br><span>▶</span> 주차가 쉽고 연비가 좋아 1~2인 여행객에게 편리하며, 짐이 많지 않은 여행이나 경제적인 여행에 최적화되어 있습니다.</p>
+                <p><span>▶</span> 제주 시내 관광과 가까운 명소를 둘러보기에 적합합니다. <br><span>▶</span> 주차가 쉽고 연비가 좋아 1~2인 여행객에게 편리하며, 경제적인 여행에 최적화되어 있습니다.</p>
                 <div class="tab-panel" id="compact">
                     <div class="car-container">
                         <!-- 캐스퍼 -->
@@ -252,5 +260,6 @@
 
     <script src="/js/type.js"></script>
     <script src="/js/topbutton.js"></script>
+    <script src="/js/hamburger.js"></script>
 </body>
 </html>

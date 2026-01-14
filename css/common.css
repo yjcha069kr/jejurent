@@ -41,6 +41,7 @@ body {
 /* ======================== 모든 페이지 공통  ======================== */
 .container { 
     max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
 }
 main {
@@ -90,23 +91,33 @@ h2 {
 }
 /* ========== 메인 네비(GNB) ========== */
 .gnb {
-    display: flex; 
+    padding: 10px 0;
+}
+.gnb .container {
+    display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 15px;
+    justify-content: space-between;
 }
 /* 로고 */
 .gnb img {
     height: 60px;
     vertical-align: middle;
 }
+/*  햄버거 버튼 */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 22px;
+    position: relative;
+}
 .menu {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 130px;
-    padding: 0;
-    margin: 0;
 }
 .menu > li {
     position: relative;
@@ -324,4 +335,175 @@ h2 {
 .company-notice a {
     text-decoration: none;
     color: #333;
+}
+
+
+/* ****************** 모바일웹 반응형 ****************** */
+@media (max-width: 768px) {
+    /* == 모든 페이지 공통 == */
+    .container {
+        padding: 0 25px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    .header .top-bar {
+        font-size: 14px;
+    }
+    .header .top-bar i {
+        display: none;
+    }
+    /* == 메인 네비(GNB) == */
+    .hamburger {
+        display: block;
+        width: 20px;
+        height: 25px;
+        position: relative;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: #000;
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 75%;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 90px 25px;
+        gap: 20px;
+        transition: right 0.3s ease;
+        z-index: 999;
+        overflow-y: auto;
+    }
+    .menu.active {
+        right: 0;
+    }
+    .menu > li {
+        width: 100%;
+    }
+    .menu > li > a {
+        font-size: 18px;
+        padding: 12px 0;
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+    /* 서브메뉴 (모바일에서는 항상 표시) */
+    .submenu {
+        position: relative;
+        top: auto;
+        left: auto;
+        border: none;
+        padding: 10px 0 10px 15px;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    .submenu li a {
+        font-size: 15px;
+        padding: 8px 0;
+        color: #555;
+    }
+    /* 데스크탑 hover 효과 무력화 */
+    .menu > li.mainmenu:hover > .submenu {
+        opacity: 1;
+        visibility: visible;
+    }
+    .menu {
+        gap: 0;
+    }
+
+    /* == 푸터 == */
+    .footer {
+        margin-top: 80px;
+        text-align: left;
+    }
+    .footer .container {
+        padding: 0 20px;
+    }
+    .footer h4 {
+        font-size: 16px;
+    }
+    .footer .footer-service {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 0;
+    }
+    .footer .footer-service p {
+        font-size: 13px;
+    }
+    .footer .footer-service .divider {
+        display: none;
+    }
+    .footer .footer-service .download {
+        padding: 0;
+        gap: 15px;
+    }
+    .footer .footer-service .qr {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .footer .footer-service .qr img {
+        width: 70px;
+    }
+    .footer .footer-service .app {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px;
+        font-size: 12px;
+    }
+    .footer .footer-service .app a {
+        justify-content: center;
+        padding: 8px 20px;
+    }
+    .footer .footer-service .call {
+        padding: 0;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    .footer .footer-service .sns {
+        margin-top: 10px;
+    }
+    .footer .footer-content {
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 15px;
+    }
+    .footer-info p {
+        margin: 12px 0;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+    .company-notice p {
+        font-size: 14px;
+    }
+
+    /* == 탑버튼 == */
+    .top-btn {
+        width: 45px;
+        height: 45px;
+        right: 15px;  
+        bottom: 15px; 
+    }
+    .top-btn i {
+        font-size: 14px;
+        margin-bottom: 2px;
+    }
+    .top-btn span {
+        font-size: 10px;
+    }
 }

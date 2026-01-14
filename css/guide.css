@@ -63,16 +63,20 @@
     display: flex;
     justify-content: center;
     margin: 20px 0;
+    gap: 20px; 
 }
+
 .step-card {
-    width: 260px;
-    border: 1px solid #ddd;
-    padding: 40px;
-    margin-bottom: 40px;
+    width: 260px;  
+    height: 200px; 
+    padding: 40px; 
+    margin: 0;  
     text-align: center;
     position: relative;
     background: #fff;
     box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;  
 }
 .step-num {
     position: absolute;
@@ -169,6 +173,11 @@
 }
 .insurance-table {
     width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.insurance-table table {
+    width: 100%;
     border-collapse: collapse;
     color: #333;
     font-size: 16px;
@@ -181,8 +190,11 @@
     padding: 25px 10px;
 }
 .insurance-table thead th {
-    background-color: #fff3e6;
+    background-color: #fff3e6; 
     font-weight: bold;
+}
+.insurance-table thead th:nth-child(4) {
+    color: #ff5000;
 }
 .insurance-table tbody th {
     background-color: #fff3e6;
@@ -191,19 +203,15 @@
 .insurance-table td {
     color: #555;
 }
-.insurance-table thead th:nth-child(4) {
-    color: #ff5000;
-    background-color: #fff3e6;
-}
+.insurance-table tbody td:nth-child(1),
 .insurance-table tbody td:nth-child(4) {
-    background-color: #fff3e6;
     color: #333;
+    background-color: #fff3e6;
 }
 .word p {
     margin-top: 10px;
     font-size: 14px;
 }
-
 
 /* ========== 섹션3: 기타 유의사항 ========== */
 .todo p {
@@ -249,4 +257,170 @@
 .accident-box span, .other-box span {
     font-size: 13px;
     color: #ff5000;
+}
+
+
+
+/* ****************** 모바일 웹 반응형 ****************** */
+@media (max-width: 768px) {
+    /* ===== 공통 ===== */
+    .section h2 {
+        margin: 0;
+    }
+    .section p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-top: 10px;
+    }
+    .section h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    .reserve-box,
+    .step-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+    .main-visual {
+        display: none;
+    }
+    /* ===== 렌터카 이용 안내 ===== */
+    .guide-ready {
+        width: 100%;
+        padding: 18px;
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    .guide-box h4 {
+        font-size: 18px;
+    }
+    .guide-row {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        justify-items: center;
+        gap: 20px;               
+        margin: 20px 0;
+    }
+    .guide-steps {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .step-card {
+        width: 200px;
+        height: auto; 
+        padding: 20px; 
+        margin: 0; 
+        text-align: center;
+    }
+    .step-card i {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    .step-arrow {
+        display: none;
+    }
+    /* ===== 렌터카 예약 안내 ===== */
+    .section-1-1 h2 {
+        margin-bottom: 10px;
+    }
+    .reserve-guide-boxes,
+    .reserve-box-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;        
+        margin-top: 20px;
+    }
+    .reserve-box {
+        padding: 18px;
+        text-align: left;
+    }
+    .reserve-box p {
+        padding-left: 0;
+        margin-bottom: 6px;
+    }
+    /* ===== 보험 안내 ===== */
+    .section-2 p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    .section-2 p > span {
+        font-size: 9px;
+    }
+    .insurance-table table {
+        width: 100%;
+    font-size: 13px;
+    display: table;
+    white-space: normal;
+    word-break: break-word;
+    border-collapse: collapse;
+    }
+    .insurance-table th,
+    .insurance-table td {
+        padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+    }
+    .insurance-table thead th {
+        font-size: 13px; 
+    }
+    .insurance-table thead th:nth-child(4) {
+        color: #ff5000;
+    }
+    .insurance-table tbody th {
+        font-size: 13px;
+    }
+    .insurance-table td {
+        font-size: 13px;
+    }
+    .insurance-table tbody td:nth-child(1),
+    .insurance-table tbody td:nth-child(4) {
+        background-color: #fff3e6;
+        color: #333;
+    }
+    .word p {
+        font-size: 12px;
+        margin-top: 8px;
+        line-height: 1.6;
+    }
+    /* ===== 기타 유의사항 ===== */
+    .accident-box,
+    .other-box {   
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+    .accident-card, .other-card {
+        padding: 18px;
+        margin: 0; 
+        text-align: center;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #fff;
+        box-sizing: border-box;
+    }
+    .accident-card i, .other-card i {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    .accident-card h4, .other-card h4 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .accident-card p, .other-card p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 5px;
+    }
+    .accident-box span, .other-box span {
+        font-size: 12px;
+    }
+    .todo p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin: 10px 0 30px 0;
+    }
 }

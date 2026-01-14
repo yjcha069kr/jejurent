@@ -44,7 +44,7 @@
     font-size: 16px;
     color: #555;
     margin-bottom: 40px;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 .section p > span {
     font-size: 10px;
@@ -129,51 +129,40 @@
 }
 
 
-/* ==================== 모바일 반응형 ==================== */
+
+/* ****************** 모바일웹 반응형 ****************** */
 @media (max-width: 768px) {
     .main-visual {
-        height: 230px;
-    }
-    .visual-text {
-        width: 100%;
-        text-shadow: 0 3px 6px rgba(0,0,0,0.8);
-    }
-    .visual-text h1 {
-        font-size: 23px;
-        margin-bottom: 10px;
-    }
-    .visual-text p {
-        font-size: 13px;
+        display: none;
     }
     .section h2 {
-        font-size: 25px;
-        margin-bottom: 15px;
+        margin: 0;
     }
     .section p {
         font-size: 14px;
-        margin-bottom: 25px;
+        line-height: 1.6;
+        margin-top: 10px;
+    }
+    .section p > span {
+        font-size: 9px;
     }
     .car-container {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 50px;
-        padding: 0 80px; 
-        margin: 0 auto; 
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
     .card-image img {
-        height: 180px;
-    }
-    .card-content {
-        padding: 20px;
+        height: 160px;
     }
     .card-content h3 {
-        font-size: 18px;
-        margin-bottom: 20px;
+        font-size: 22px;
     }
-    .car-content-info .info {
-        font-size: 14px;
+    .car-content-info .label,
+    .car-content-info .value {
+        font-size: 16px;
     }
     .btn1 {
-        font-size: 14px;
-        padding: 10px 0;
+        font-size: 15px;
+        padding: 12px;
     }
 }

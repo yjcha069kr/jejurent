@@ -108,8 +108,6 @@
     flex-grow: 1;
 }
 
-
-
 /* notice_insurance.html 표 */
 table {
     width: 100%;
@@ -126,4 +124,72 @@ thead {
 th, td {
     border: 1px solid #ddd; 
     padding: 10px;
+}
+
+
+
+
+/* ****************** 모바일웹 반응형 ****************** */
+@media (max-width: 768px) {
+    .section .container,
+    .sub_title,
+    .content,
+    .post-navigation {
+        width: 100%;
+    }
+    .section h2 {
+        font-size: 24px; 
+        margin: 0 0 20px 0; 
+        border-bottom: 2px dotted #ddd;
+        padding-bottom: 20px; 
+        box-sizing: border-box;
+    }
+    .sub_title {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 20px;
+    }
+    .sub_title h3 {
+        font-size: 18px;
+        margin: 0;
+    }
+    .sub_title span {
+        font-size: 13px;
+        color: #555;
+    }
+    .content {
+        margin: 40px 0;
+    }
+    .content p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    table {
+        width: 100%;
+        font-size: 13px;
+        display: table;
+        white-space: normal;
+        word-break: break-word;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 8px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+    thead {
+        font-size: 13px;
+    }
+    .list-button {
+        width: 30%;
+        padding: 15px;
+        margin: 20px 0 40px;
+        font-size: 15px;
+    }
+    .post-navigation {
+        font-size: 14px;
+    }
+    .post-navigation .post {
+        gap: 10px;
+        padding: 15px 0;
+    }
 }

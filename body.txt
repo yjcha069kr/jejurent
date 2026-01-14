@@ -1,321 +1,89 @@
-@charset "utf-8";
-
-#gnb > ul > .mainmenu:nth-child(2) > a {
-    color: #ff5000;
-}
-
-/* ============ 메인 비쥬얼 ========== */
-.main-visual {
-    position: relative;
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-    margin-bottom: 30px;
-}
-.main-visual img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 0 73%;
-}
-.visual-text {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    color: #fff;
-    text-shadow: 0 3px 6px rgba(0,0,0,0.8);
-    text-align: center; 
-}
-.visual-text h1 {
-    font-size: 48px;
-    margin-bottom: 15px;
-}
-.visual-text p {
-    font-size: 25px;
-}
-
-
-/* ===================== 렌터카예약 공통 ========================== */
-.section h2 {
-    margin-left: 200px;
-}
-.section span {
-    margin-left: 20px;
-    font-size: 12px;
-    font-weight: lighter;
-    color: #ff5000;
-}
-body {
-    background-color: #f8f7f9;
-}
-.box {
-    border: 1px solid #ddd;
-    width: 60%;
-    margin: 0 auto 30px;
-    border-radius: 12px;
-    padding: 30px;
-    background: #fff;
-}
-.box h3 {
-    font-size: 22px;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    border-bottom: 2px dotted #ddd;
-}
-.form-group-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-.form-group {
-    margin-bottom: 25px;
-}
-
-.form-group label {
-    font-size: 16px;
-    font-weight: bold;
-}
-input, select {
-    width: 100%;
-    padding: 13px; 
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    margin-top: 5px;
-    font-size: 15px;
-}
-::placeholder {
-    color: #ddd;
-}
-
-/* 인수/반납 */
-.custom-date-box {
-    position: relative;
-}
-.date-input-wrap {
-    width: 100%;
-    position: relative;
-    display: inline-block;
-}
-
-.date-display {
-    padding-right: 40px;
-    height: 40px;
-}
-
-.date-input-wrap i {
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #999;
-    pointer-events: none; /* 클릭 방해 안 하게 */
-}
-.calendar {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 20px;
-    display: none;
-    z-index: 50;
-}
-.calendar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    font-size: 16px;
-    font-weight: bold;
-}
-.calendar-header button {
-    background: #ff5000;
-    border: none;
-    color: #fff;
-    border-radius: 50%;
-    padding: 5px 8px;
-    cursor: pointer;
-}
-.calendar-header .month-year {
-    color: #000;
-    font-size: 16px;
-    font-weight: bold;
-}
-.calendar-body {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
-    text-align: center;
-}
-.calendar-day {
-    font-size: 15px;
-    font-weight: bold;
-}
-.calendar-date {
-    font-size: 13px;
-    padding: 10px 0;
-    border-radius: 8px;
-    cursor: pointer;
-}
-.calendar-date:hover {
-    background: #ff5000;
-    color: #fff;
-}
-.calendar-date.disabled {
-    color: #ccc;
-    cursor: not-allowed;
-    pointer-events: none;
-}
-
-
-/* 차량 선택 & 생년월일 드롭다운 */
-.custom-dropdown {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-}
-.fa-caret-down {
-    color: #333;
-}
-.dropdown-btn {
-    width: 100%;
-    padding: 11px;
-    font-size: 15px;
-    text-align: left;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    background-color: #fff;
-    cursor: pointer;
-    color: #ddd;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.custom-dropdown .dropdown-btn.selected {
-    color: #000;
-    height: 45px;
-}
-.dropdown-btn.active {
-    background-color: #fff; 
-    color: #000;
-}
-.dropdown-btn.active + .dropdown-options {
-    display: block;
-}
-.dropdown-options {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    z-index: 999;
-}
-.dropdown-option {
-    padding: 10px 20px;
-    font-size: 15px;
-    cursor: pointer;
-    color: #333;
-    background: #fff;
-    border: none;
-    border-radius: 12px;
-    width: 100%;
-    text-align: left;
-}
-.dropdown-option:hover {
-    background-color: #ff5000;
-    color: #fff;
-}
-.dropdown-option.active {
-    background-color: #ff5000;
-    color: #fff;
-}
-.car-lists {
-    margin-top: 20px;
-}
-.car-list {
-    display: none;
-    margin-top: 15px;
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.car-item {
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    cursor: pointer;
-    text-align: center;
-    margin-bottom: 10px;
-    width: 100%;
-    max-width: 150px;
-    background-color: #fff;
-    color: #333;
-    font-size: 15px;
-}
-.car-item.active {
-    background-color: #ff5000;
-    border-color: #ff5000;
-    color: #fff;
-}
-#small.active,
-#medium.active,
-#suv.active,
-#van.active,
-#electric.active {
-    display: flex !important;
-}
-
-
-
-/* 운전자 정보 */
-.license-tabs {
-    display: flex;
-    gap: 5px;
-}
-.license-tab {
-    font-size: 15px;
-    width: 100px;
-    height: 45px;
-    text-align: center;
-    padding: 13px;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    cursor: pointer;
-    margin-top: 5px;
-}
-.license-tab.active {
-    background: #ff5000;
-    color: #fff;
-}
-.birth-grid {
-    display: flex;
-    gap: 10px;
-    margin-top: 5px;
-}
-.birth-grid .custom-dropdown {
-    flex: 1;
-}
-
-
-/* 예약하기 버튼 */
-.rent-btn {
-    width: 10%;
-    display: block;
-    margin: 0 auto;
-    background: #ff5000;
-    color: #fff;
-    border: none;
-    border-radius: 12px;
-    padding: 17px;
-    font-size: 16px;
-    cursor: pointer;
-}
-.rent-btn:hover {
-    background: #ff7333;
-}
+<!-- ==================== 메인 ==================== -->
+    <main>
+        <!-- 메인 비쥬얼 -->
+        <section class="main-visual">
+            <img src="/assets/cristofer-maximilian--fW7YPjhifk-unsplash.jpg" alt="제주렌트카 메인 이미지">
+            <div class="visual-text">
+                <h1>렌터카 보험, 걱정 없이 준비하세요!</h1>
+                <p>안전한 제주 여행을 위해 꼭 필요한 보험 정보를 알아보세요.</p>
+            </div>
+        </section>
+        <!-- ========== 섹션2: 보험 안내 ========== -->
+        <section class="section section-2" id="insurance_guide">
+            <div class="container">
+                <div class="section-header">
+                    <h2>보험 안내</h2>
+                    <p>
+                        <span>▶</span> 일반자차, 고급자차, 제주패스케어, 슈퍼무제한의 차이를 한눈에 확인하실 수 있습니다.<br>
+                        <span>▶</span> 제주패스와 제휴된 모든 렌터카 회사는 종합보험에 가입되어 있습니다.<br>
+                        <span>▶</span> 렌터카 회사가 가입한 종합보험의 보상 범위는 대인(상대방 신체) / 대물(상대방 차량) / 자손(나의 신체)에 한정하며, 대여한 렌터카의 파손(자차)은 보상범위에 포함되어 있지 않습니다.<br>
+                        <span>▶</span> 불필요한 비용지출을 방지하고자, 모든 차량 예약은 자차보험(차량손해면책제도) 가입을 의무화하고 있습니다.
+                    </p>
+                </div>
+                <div class="insurance-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>구분</th>
+                                <th>일반자차</th>
+                                <th>고급자차</th>
+                                <th>제주패스케어</th>
+                                <th>슈퍼무제한</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>면책금</td>
+                                <td>면책금 발생</td>
+                                <td>면제</td>
+                                <td>면제</td>
+                                <td>면제</td>
+                            </tr>
+                            <tr>
+                                <td>휴차보상료</td>
+                                <td>보장불가</td>
+                                <td>보장불가<br>(일부 업체 보장)</td>
+                                <td>면제</td>
+                                <td>면제</td>
+                            </tr>
+                            <tr>
+                                <td>보상한도</td>
+                                <td>차종별 한도 내 보장</td>
+                                <td>차종별 한도 내 보장</td>
+                                <td>통합 500만원<br>한도 내 보상</td>
+                                <td>무제한</td>
+                            </tr>
+                            <tr>
+                                <td>단독사고</td>
+                                <td>보장불가</td>
+                                <td>보장불가<br>(일부 업체 보장)</td>
+                                <td>통합 500만원<br>한도 내 보상</td>
+                                <td>면제</td>
+                            </tr>
+                            <tr>
+                                <td>휠/타이어</td>
+                                <td>보장불가</td>
+                                <td>보장불가</td>
+                                <td>통합 500만원<br>한도 내 보상</td>
+                                <td>면제</td>
+                            </tr>
+                            <tr>
+                                <td>특별 보장 항목</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>비행기 연착 시간만큼 보상<br>차량 변경 시 120% 보상<br>인수 당일 노쇼 처리 없음</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="word">
+                    <p>* 면책금: 차량 손해 발생 시, 운전자가 지불해야하는 비용<br>
+                        * 보상한도: 가입한 자차보험(차량손해면책제도)의 사고 처리비용 한도<br>
+                        * 단독사고: 과실 유무와 상관없이 주/정차된 차량 및 시설물을 접촉하거나 본인 과실 100% 사고의 경우<br>
+                        * 특별 보장항목: 제주패스케어 고객에게만 드리는 특별 보장
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>

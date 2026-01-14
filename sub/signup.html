@@ -13,13 +13,16 @@
 <body>
     <!-- ==================== 헤더 ==================== -->
     <header class="header">
+        <!-- ======== 헤더 상단바 ======== -->
         <div class="top-bar">
             <div class="container">
+                <!-- 왼쪽 메뉴 -->
                 <div class="left-menu">
                     <a href="/sub/notice.html"><i class="fa-solid fa-bullhorn"></i> 공지사항</a>
                     <span>|</span>
                     <a href="/sub/ask.html"><i class="fa-regular fa-circle-question"></i> 자주 묻는 질문</a>
                 </div>
+                <!-- 오른쪽 메뉴 -->
                 <div class="right-menu">
                     <a href="/sub/login.html"><i class="fa-regular fa-user"></i> 로그인</a>
                     <span>|</span>
@@ -27,11 +30,24 @@
                 </div>
             </div>
         </div>
+        <!-- ======== 메인 네비(GNB) ======== -->
         <nav class="gnb" id="gnb">
             <div class="container">
+                <!-- 로고 -->
+                <a href="/index.html" class="logo">
+                    <img src="/assets/jejurent.svg" alt="로고">
+                </a>
+                <!-- 햄버거 버튼 -->
+                <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <!-- 메뉴 -->
                 <ul class="menu">
-                    <li><a href="/index.html"><img src="/assets/jejurent.svg" alt=""></a></li>
-                    <li class="mainmenu"><a href="/sub/rent.html">렌터카 예약</a></li>
+                    <li class="mainmenu">
+                        <a href="/sub/rent.html">렌터카 예약</a>
+                    </li>
                     <li class="mainmenu">
                         <a href="#">차량소개</a>
                         <ul class="submenu">
@@ -42,7 +58,9 @@
                             <li><a href="/sub/type_electric.html">전기</a></li>
                         </ul>
                     </li>
-                    <li class="mainmenu"><a href="/sub/event.html">이벤트</a></li>
+                    <li class="mainmenu">
+                        <a href="/sub/event.html">이벤트</a>
+                    </li>
                     <li class="mainmenu">
                         <a href="#">이용안내</a>
                         <ul class="submenu">
@@ -62,6 +80,7 @@
             </div>
         </nav>
     </header>
+
 
     <!-- ==================== 회원가입 창 ==================== -->
     <main>
@@ -166,6 +185,7 @@
     </footer>
 
     <script src="/js/login.js"></script>
+    <script src="/js/hamburger.js"></script>
     <script>
         // 남녀 탭버튼
         document.addEventListener('DOMContentLoaded', () => {

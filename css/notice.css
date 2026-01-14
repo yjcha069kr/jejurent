@@ -116,3 +116,79 @@
     background-color: #ff5000;
     color: #fff;
 }
+
+
+
+
+/* ****************** 모바일웹 반응형 ****************** */
+@media (max-width: 768px) {
+    .section-1 h2 {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .search-bar {
+        margin-left: 0;
+        margin-right: 0;
+        border-top: 2px dotted #ddd;
+        display: flex;
+        align-items: center; 
+        gap: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .total-count {
+        font-size: 14px;
+        color: #555;
+        white-space: nowrap;
+        flex: 0 0 auto; 
+    }
+    .search-input-group {
+        display: flex;
+        flex: 1; 
+        gap: 5px;
+        min-width: 0;
+    }
+    .search-input-group input {
+        flex: 1;
+        min-width: 0; 
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+    }
+    .search-input-group button {
+        flex: 0 0 auto; 
+        padding: 10px;
+        font-size: 14px; 
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .notice-item {
+        flex-direction: column; 
+        align-items: flex-start;
+        padding: 10px 0;
+        gap: 8px; 
+    }
+    .notice-number,
+    .notice-title,
+    .notice-date {
+        width: 100%;
+        text-align: left;
+        margin-left: 0;
+    }
+    .notice-number {
+        font-size: 18px;
+        color: #777;
+    }
+    .notice-title {
+        font-size: 15px;
+        font-weight: bold;
+        color: #333;
+    }
+    .notice-date {
+        font-size: 13px;
+        color: #555;
+    }
+}

@@ -196,3 +196,29 @@ h2 {
   color: #ff5000;
   margin-left: 10px;
 }
+
+
+
+/* ****************** 모바일 웹 반응형: 로그인 & 회원가입 input 공통 ****************** */
+@media (max-width: 768px) {
+    /* ===== 공통: 모든 input, select 모바일 대응 ===== */
+    .login input[type="email"],
+    .login input[type="password"],
+    .login input[type="text"],
+    .login input[type="tel"],
+    .login select,
+    #signup input,
+    #signup select {
+        width: 100%;
+        box-sizing: border-box; 
+    }
+
+    .email-wrapper {
+        flex-direction: row;
+        gap: 10px;  
+    }
+
+    .email-wrapper input {
+        flex: 1;  
+    }
+}

@@ -134,4 +134,45 @@
 
 
 
-
+/* ****************** 모바일웹 반응형 ****************** */
+@media (max-width: 768px) {
+    .section h2 {
+        margin: 0;
+    }
+    .event-header {
+        flex-direction: column;
+        align-items: start;
+        gap: 15px;
+    }
+    .event-tabs {
+        width: 100%;
+    }
+    .tab-btn {
+        flex: 1;
+        padding: 10px;
+        font-size: 14px;
+    }
+    .section-event .search-bar {
+        margin: 20px 0;
+    }
+    .event-list {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 10px;
+        margin-top: 30px;
+    }
+    .event-text {
+        margin-top: 12px;
+    }
+    .event-title {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+    .event-date {
+        font-size: 13px;
+    }
+    .event-badge.end {
+        font-size: 13px;
+        padding: 8px 18px;
+    }
+}

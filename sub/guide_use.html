@@ -13,7 +13,7 @@
 <body>
     <!-- ==================== 헤더 ==================== -->
     <header class="header">
-        <!-- ========== 헤더 상단바 ========== -->
+        <!-- ======== 헤더 상단바 ======== -->
         <div class="top-bar">
             <div class="container">
                 <!-- 왼쪽 메뉴 -->
@@ -33,10 +33,18 @@
         <!-- ======== 메인 네비(GNB) ======== -->
         <nav class="gnb" id="gnb">
             <div class="container">
+                <!-- 로고 -->
+                <a href="/index.html" class="logo">
+                    <img src="/assets/jejurent.svg" alt="로고">
+                </a>
+                <!-- 햄버거 버튼 -->
+                <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <!-- 메뉴 -->
                 <ul class="menu">
-                    <li>
-                        <a href="/index.html"><img src="/assets/jejurent.svg" alt=""></a>
-                    </li>
                     <li class="mainmenu">
                         <a href="/sub/rent.html">렌터카 예약</a>
                     </li>
@@ -81,8 +89,8 @@
         <section class="main-visual">
             <img src="/assets/cristofer-maximilian--fW7YPjhifk-unsplash.jpg" alt="제주렌트카 메인 이미지">
             <div class="visual-text">
-                <h1>쉽고 빠른 차량 예약으로 제주 여행 준비 완료!</h1>
-                <p>편리한 차량 예약과 간단한 이용 방법으로, 제주 여행 준비가 한층 쉬워집니다.</p>
+                <h1>제주 여행, 예약은 간단하게!</h1>
+                <p>간편한 예약으로 제주 여행을 준비하세요.</p>
             </div>
         </section>
         <!-- ========== 섹션1: 렌터카 이용 안내 ========== -->
@@ -283,5 +291,6 @@
     </button>
 
     <script src="/js/topbutton.js"></script>
+    <script src="/js/hamburger.js"></script>
 </body>
 </html>
