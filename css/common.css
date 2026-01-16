@@ -356,7 +356,7 @@ h2 {
     /* == 메인 네비(GNB) == */
     .hamburger {
         display: block;
-        width: 20px;
+        width: 25px;
         height: 25px;
         position: relative;
         background: none;
