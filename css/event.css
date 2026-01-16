@@ -3,14 +3,13 @@
 #gnb .menu > .mainmenu:nth-child(3) > a {
     color: #ff5000;
 }
-
 .hidden {
     display: none;
 }
 /* ==================== 이벤트 섹션 ==================== */
 .section h2 {
     margin-bottom: 40px;
-    margin-left: 200px;
+    margin-left: 150px;
 }
 .event-header {
     display: flex;
@@ -18,7 +17,7 @@
     align-items: center;
 }
 .event-tabs {
-    margin-right: 200px;
+    margin-right: 150px;
     display: flex;
     gap: 5px;
 }
@@ -45,7 +44,7 @@
 /* 섹션 구분선 */
 .section-event .search-bar {
     border-top: 2px dotted #ddd;
-    margin: 0 200px;
+    margin: 0 150px;
 }
 
 /* ==================== 카드공통 ==================== */
