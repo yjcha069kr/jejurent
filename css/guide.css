@@ -65,7 +65,6 @@
     margin: 20px 0;
     gap: 20px; 
 }
-
 .step-card {
     width: 260px;  
     height: 200px; 
@@ -76,7 +75,6 @@
     background: #fff;
     box-sizing: border-box;
     border: 1px solid #ddd;
-    border-radius: 8px;  
 }
 .step-num {
     position: absolute;
