@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-#gnb > ul > .mainmenu:nth-child(4) > a {
+#gnb .menu > .mainmenu:nth-child(3) > a {
     color: #ff5000;
 }
 

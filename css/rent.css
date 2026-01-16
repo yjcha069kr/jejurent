@@ -1,10 +1,10 @@
 @charset "utf-8";
 
+#gnb .menu > .mainmenu:nth-child(1) > a {
+    color: #ff5000;
+}
 body {
     background-color: #f8f7f9;
-}
-#gnb > ul > .mainmenu:nth-child(2) > a {
-    color: #ff5000;
 }
 
 /* =============== 메인 비주얼 =============== */

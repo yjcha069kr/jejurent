@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-#gnb > ul > .mainmenu:nth-child(5) > a {
+#gnb .menu > .mainmenu:nth-child(4) > a {
     color: #ff5000;
 }
 /* ======================== 메인 비쥬얼 ======================== */
