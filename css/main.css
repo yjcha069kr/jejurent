@@ -299,11 +299,11 @@
 }
 .section-3 .car-items {
     display: flex;
-    gap: 60px;
+    gap: 30px;
     transition: transform 0.4s ease;
 }
 .section-3 .car-card {
-    flex: 0 0 calc((100% - 125px) / 3); /* 한 화면에 3장 */
+    flex: 0 0 calc((100% - 95px) / 4); /* 한 화면에 4장 */
     background: #fff;
     text-decoration: none;
     padding: 12px 12px 28px;

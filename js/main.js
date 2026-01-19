@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cards = track.querySelectorAll('.car-card');
     const dotsContainer = wrapper.querySelector('.slider-dots');
 
-    const visibleCards = 3; // 화면에 보이는 카드 수
+    const visibleCards = 4; // 화면에 보이는 카드 수
     let currentIndex = 0;
 
     const totalCards = cards.length;
