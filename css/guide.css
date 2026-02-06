@@ -275,15 +275,21 @@
     /* ===== 공통 ===== */
     .section h2 {
         margin: 0;
+        font-size: 24px;
+    }
+    .section-header {
+        margin-left: 0px;
     }
     .section p {
         font-size: 14px;
         line-height: 1.6;
         margin-top: 10px;
+        margin-left: 0px;
     }
     .section h3 {
         font-size: 18px;
         margin-bottom: 12px;
+        margin-left: 0px;
     }
     .reserve-box,
     .step-card {
@@ -358,31 +364,25 @@
     .section-2 p > span {
         font-size: 9px;
     }
-    .insurance-table table {
+    .insurance-table {
         width: 100%;
-    font-size: 13px;
-    display: table;
-    white-space: normal;
-    word-break: break-word;
-    border-collapse: collapse;
+        margin-left: 0;
+    }
+    .insurance-table table {
+        font-size: 13px;
+        display: table;
+        white-space: normal;
+        word-break: break-word;
+        border-collapse: collapse;
     }
     .insurance-table th,
     .insurance-table td {
         padding: 8px;
-    text-align: center;
-    border: 1px solid #ddd;
-    }
-    .insurance-table thead th {
-        font-size: 13px; 
+        text-align: center;
+        border: 1px solid #ddd;
     }
     .insurance-table thead th:nth-child(4) {
         color: #ff5000;
-    }
-    .insurance-table tbody th {
-        font-size: 13px;
-    }
-    .insurance-table td {
-        font-size: 13px;
     }
     .insurance-table tbody td:nth-child(1),
     .insurance-table tbody td:nth-child(4) {
@@ -401,6 +401,7 @@
         grid-template-columns: 1fr;
         gap: 15px;
         margin-bottom: 30px;
+        margin-left: 0px;
     }
     .accident-card, .other-card {
         padding: 18px;
