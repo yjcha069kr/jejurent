@@ -94,7 +94,7 @@ h2 {
 }
 /* ========== 메인 네비(GNB) ========== */
 .gnb {
-    padding: 10px 0;
+    padding: 15px 0;
 }
 .gnb .container {
     display: flex;
@@ -103,7 +103,7 @@ h2 {
 }
 /* 로고 */
 .gnb img {
-    height: 60px;
+    height: 47px;
     vertical-align: middle;
 }
 /*  햄버거 버튼 */
